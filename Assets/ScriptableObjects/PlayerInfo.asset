@@ -16,5 +16,5 @@ MonoBehaviour:
   VerticalLookMultiplier: 0.1
   ForceMultiplier: 0.15
   SpeedRunningMultiplicator: 2
-  JumpForce: 1
+  JumpForce: 0.5
   GravityMultiplicator: 0.01
