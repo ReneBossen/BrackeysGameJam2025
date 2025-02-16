@@ -75,6 +75,7 @@ namespace Brackeys.Player
 
         public void OnInteract(InputAction.CallbackContext value)
         {
+            Debug.Log("Test");
             _interactions.FirstOrDefault(x => x.CanInteract)?.Interact(this);
         }
 
