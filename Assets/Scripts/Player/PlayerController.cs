@@ -33,7 +33,7 @@ namespace Brackeys.Player
             var tArea = GetComponentInChildren<TriggerArea>();
             tArea.OnTriggerEnterEvent.AddListener((Collider c) =>
             {
-                if (TryGetComponent<IInteractable>(out var i))
+                if (c.TryGetComponent<IInteractable>(out var i))
                 {
                     _interactions.Add(i);
                 }
@@ -75,7 +75,7 @@ namespace Brackeys.Player
 
         public void OnInteract(InputAction.CallbackContext value)
         {
-            Debug.Log("Test");
+            Debug.Log("hello");
             _interactions.FirstOrDefault(x => x.CanInteract)?.Interact(this);
         }
 
@@ -112,6 +112,7 @@ namespace Brackeys.Player
         public void SetWeapon(IWeapon weapon)
         {
             GetComponent<PlayerInput>().CurrentWeapon = weapon;
+            Debug.Log("[PLY] Equipped weapon changed");
         }
     }
 }
