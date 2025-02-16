@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 1711871811491423034, guid: 813b1c7e7b95e3642b6f9576e04b9ded, type: 3}
   PropulsionForce: 8
+  MaxBounceCount:
+    Min: 3
+    Max: 5
