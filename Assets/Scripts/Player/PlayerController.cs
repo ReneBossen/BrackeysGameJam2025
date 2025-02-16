@@ -17,36 +17,15 @@ namespace Brackeys.Player
         private float _headRotation;
 
         private CharacterController _controller;
-        private InputSystem _inputSystem;
         private bool _isSprinting;
         private float _verticalSpeed;
 
         private Vector2 _mov;
 
-        private void Awake()
-        {
-            _inputSystem = new InputSystem();
-
-            _inputSystem.Player.Move.performed += OnMovement;
-            _inputSystem.Player.Look.performed += OnLook;
-            _inputSystem.Player.Jump.performed += OnJump;
-            _inputSystem.Player.Sprint.performed += OnSprint;
-        }
-
         private void Start()
         {
             _controller = GetComponent<CharacterController>();
             Cursor.lockState = CursorLockMode.Locked;
-        }
-
-        private void OnEnable()
-        {
-            _inputSystem.Enable();
-        }
-
-        private void OnDisable()
-        {
-            _inputSystem.Disable();
         }
 
         private void FixedUpdate()
