@@ -1,4 +1,5 @@
 using Brackeys.Player;
+using Brackeys.SceneLoader;
 using UnityEngine;
 
 namespace Brackeys.Props
@@ -15,6 +16,7 @@ namespace Brackeys.Props
             }
 
             Debug.Log("[WIN] Player won!");
+            SceneLoader.SceneLoader.LoadScene(SceneName.Game);
         }
     }
 }
