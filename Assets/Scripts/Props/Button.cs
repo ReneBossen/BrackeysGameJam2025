@@ -6,6 +6,7 @@ namespace Brackeys.Props
     public class Button : MonoBehaviour, IShootable
     {
         [SerializeField] private GameObject _connectedObject;
+        [SerializeField] private Material _onHitMat;
 
         private void Start()
         {
@@ -27,6 +28,13 @@ namespace Brackeys.Props
             {
                 component?.OnActivate();
             }
+
+            var path = GetComponent<FollowPath>();
+            if (path != null)
+            {
+                path.StopMoving();
+            }
+            GetComponentInChildren<Renderer>().material = _onHitMat;
         }
     }
 }

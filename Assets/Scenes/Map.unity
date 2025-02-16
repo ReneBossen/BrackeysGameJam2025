@@ -7603,6 +7603,10 @@ PrefabInstance:
       value: Button
       objectReference: {fileID: 0}
     - target: {fileID: 4432311437212782612, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: _onHitMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 352c8401a17e8a84d8d028a9e0e1c619, type: 2}
+    - target: {fileID: 4432311437212782612, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
       propertyPath: _connectedObject
       value: 
       objectReference: {fileID: 1369794353}
@@ -7652,7 +7656,7 @@ PrefabInstance:
       objectReference: {fileID: 713923286}
     - target: {fileID: 5344726147177707311, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
       propertyPath: m_VersionIndex
-      value: 322
+      value: 331
       objectReference: {fileID: 0}
     - target: {fileID: 5455036145558439771, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
       propertyPath: m_Mesh

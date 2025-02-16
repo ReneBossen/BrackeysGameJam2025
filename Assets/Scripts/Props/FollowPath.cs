@@ -10,6 +10,8 @@ namespace Brackeys.Props
         private int _currentWaypointIndex;
         private int _nextWaypointIndex;
 
+        private bool _isMoving = true;
+
         private void Start()
         {
             _currentWaypointIndex = 0;
@@ -23,9 +25,14 @@ namespace Brackeys.Props
             MoveTowardsNextWaypoint();
         }
 
+        public void StopMoving()
+        {
+            _isMoving = false;
+        }
+
         private void MoveTowardsNextWaypoint()
         {
-            if (!waypoints.Any())
+            if (!waypoints.Any() || !_isMoving)
             {
                 return;
             }
