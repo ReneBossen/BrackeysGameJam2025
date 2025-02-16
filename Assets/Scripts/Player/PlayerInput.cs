@@ -31,6 +31,7 @@ namespace Brackeys.Player
             _inputSystem.Player.Sprint.performed += pc.OnSprint;
             _inputSystem.Player.Jump.performed += pc.OnJump;
             _inputSystem.Player.Look.performed += pc.OnLook;
+            _inputSystem.Player.Interact.performed += pc.OnInteract;
         }
 
         private void OnEnable()

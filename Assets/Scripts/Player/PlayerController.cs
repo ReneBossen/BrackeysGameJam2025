@@ -1,6 +1,7 @@
 using Brackeys.Player.Interaction;
 using Brackeys.SO;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -69,6 +70,11 @@ namespace Brackeys.Player
             }
 
             _controller.Move(moveDir);
+        }
+
+        public void OnInteract(InputAction.CallbackContext value)
+        {
+            _interactions.FirstOrDefault(x => x.CanInteract)?.Interact(this);
         }
 
         public void OnMovement(InputAction.CallbackContext value)

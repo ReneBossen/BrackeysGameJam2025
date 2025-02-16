@@ -766,7 +766,7 @@ GameObject:
   - component: {fileID: 897018271}
   - component: {fileID: 897018272}
   - component: {fileID: 897018273}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: InteractionDetection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
