@@ -1,4 +1,7 @@
+using Brackeys.Player.Interaction;
 using Brackeys.SO;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,7 +11,6 @@ namespace Brackeys.Player
     {
         [SerializeField]
         private PlayerInfo _info;
-
 
         [SerializeField]
         private Transform _head;
@@ -20,10 +22,25 @@ namespace Brackeys.Player
 
         private Vector2 _mov;
 
-        private void Start()
+        private List<IInteractable> _interactions = new();
+
+        private void Awake()
         {
             _controller = GetComponent<CharacterController>();
             Cursor.lockState = CursorLockMode.Locked;
+
+            var tArea = GetComponentInChildren<TriggerArea>();
+            tArea.OnTriggerEnterEvent.AddListener((Collider c) =>
+            {
+                if (TryGetComponent<IInteractable>(out var i))
+                {
+                    _interactions.Add(i);
+                }
+            });
+            tArea.OnTriggerExitEvent.AddListener((Collider c) =>
+            {
+                _interactions.RemoveAll(x => x.GameObject.GetInstanceID() == c.gameObject.GetInstanceID());
+            });
         }
 
         private void FixedUpdate()
@@ -53,6 +70,11 @@ namespace Brackeys.Player
             }
 
             _controller.Move(moveDir);
+        }
+
+        public void OnInteract(InputAction.CallbackContext value)
+        {
+            _interactions.FirstOrDefault(x => x.CanInteract)?.Interact(this);
         }
 
         public void OnMovement(InputAction.CallbackContext value)

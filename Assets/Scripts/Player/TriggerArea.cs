@@ -1,0 +1,19 @@
+using UnityEngine;
+using UnityEngine.Events;
+
+namespace Brackeys.Player
+{
+    public class TriggerArea : MonoBehaviour
+    {
+        public UnityEvent<Collider> OnTriggerEnterEvent { get; } = new();
+        public UnityEvent<Collider> OnTriggerExitEvent { get; } = new();
+
+        private void OnTriggerEnter(Collider other)
+        {
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+        }
+    }
+}

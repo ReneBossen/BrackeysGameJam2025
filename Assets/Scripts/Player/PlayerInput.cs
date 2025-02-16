@@ -9,14 +9,21 @@ namespace Brackeys.Player
     {
         private InputSystem _inputSystem;
 
+        [SerializeField]
+        private Transform _gunEnd;
+
         //Not Assigned
         private IWeapon _currentWeapon;
 
+        private Camera _cam;
+
         private void Awake()
         {
+            _cam = Camera.main;
+
             _inputSystem = new InputSystem();
             _inputSystem.Player.Fire.performed += OnFire;
-            _inputSystem.Player.Reload.performed += OnReload;
+            // _inputSystem.Player.Reload.performed += OnReload; // TODO
 
             var pc = GetComponent<PlayerController>();
             _inputSystem.Player.Move.performed += pc.OnMovement;
@@ -24,6 +31,7 @@ namespace Brackeys.Player
             _inputSystem.Player.Sprint.performed += pc.OnSprint;
             _inputSystem.Player.Jump.performed += pc.OnJump;
             _inputSystem.Player.Look.performed += pc.OnLook;
+            _inputSystem.Player.Interact.performed += pc.OnInteract;
         }
 
         private void OnEnable()
@@ -40,13 +48,8 @@ namespace Brackeys.Player
         {
             if (_currentWeapon != null)
             {
-                _currentWeapon.Fire();
+                _currentWeapon.Fire(_gunEnd.position, _cam.transform.forward);
             }
-        }
-
-        private void OnReload(InputAction.CallbackContext context)
-        {
-            //_currentWeapon.Reload();
         }
     }
 }

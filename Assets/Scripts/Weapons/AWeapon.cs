@@ -1,4 +1,5 @@
 using Brackeys.SO;
+using UnityEngine;
 
 namespace Brackeys.Weapons
 {
@@ -7,6 +8,6 @@ namespace Brackeys.Weapons
     {
         public T Info { set; get; }
 
-        public abstract void Fire();
+        public abstract void Fire(Vector3 spawnPos, Vector3 forward);
     }
 }
