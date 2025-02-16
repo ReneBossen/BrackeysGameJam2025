@@ -9,14 +9,16 @@ namespace Brackeys.Props
 
         public void OnShot()
         {
-            Debug.Log("ButtonShot");
             ActivateConnectedObject();
         }
 
         private void ActivateConnectedObject()
         {
             _connectedObject.TryGetComponent<IActivateable>(out IActivateable component);
-            component?.OnActivate();
+            if (component.CanActivate)
+            {
+                component?.OnActivate();
+            }
         }
     }
 }

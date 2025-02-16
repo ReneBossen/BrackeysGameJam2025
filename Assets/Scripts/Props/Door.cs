@@ -5,9 +5,13 @@ namespace Brackeys.Props
 {
     public class Door : MonoBehaviour, IActivateable
     {
+        public bool CanActivate { private set; get; } = true;
+
         public void OnActivate()
         {
-            Debug.Log("[DOOR] Winning Door Activated");
+            CanActivate = false;
+
+            gameObject.SetActive(false);
         }
     }
 }
