@@ -6,5 +6,6 @@ namespace Brackeys.SO
     public class ProjectileWeaponInfo : AWeaponInfo
     {
         public GameObject Bullet;
+        public float PropulsionForce;
     }
 }

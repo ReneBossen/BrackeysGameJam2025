@@ -15,8 +15,12 @@ namespace Brackeys.Player
         //Not Assigned
         private IWeapon _currentWeapon;
 
+        private Camera _cam;
+
         private void Awake()
         {
+            _cam = Camera.main;
+
             _inputSystem = new InputSystem();
             _inputSystem.Player.Fire.performed += OnFire;
             // _inputSystem.Player.Reload.performed += OnReload; // TODO
@@ -43,7 +47,7 @@ namespace Brackeys.Player
         {
             if (_currentWeapon != null)
             {
-                _currentWeapon.Fire();
+                _currentWeapon.Fire(_gunEnd.position, _cam.transform.forward);
             }
         }
     }
