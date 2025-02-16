@@ -1,11 +1,15 @@
 using Brackeys.SO;
-using UnityEngine;
 
 namespace Brackeys.Weapons
 {
-    public class ProjectileWeapon : MonoBehaviour, IWeapon
+    public class ProjectileWeapon : IWeapon<ProjectileWeaponInfo>
     {
-        public AWeaponInfo Info { set; get; }
+        public ProjectileWeapon(ProjectileWeaponInfo info)
+        {
+            Info = info;
+        }
+
+        public ProjectileWeaponInfo Info { set; get; }
 
         public void Fire()
         {
