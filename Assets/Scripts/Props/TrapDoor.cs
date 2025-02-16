@@ -1,21 +1,12 @@
-using Brackeys.Interfaces;
 using UnityEngine;
 
 namespace Brackeys.Props
 {
-    public class TrapDoor : MonoBehaviour, IActivateable
+    public class TrapDoor : MonoBehaviour
     {
-        public bool CanActivate { get; } = true;
-        public bool CanDeactivate { get; } = true;
-
-        public void OnActivate()
+        public void Toggle()
         {
-            gameObject.SetActive(true);
-        }
-
-        public void OnDeactivate()
-        {
-            gameObject.SetActive(false);
+            gameObject.SetActive(!gameObject.activeInHierarchy);
         }
     }
 }

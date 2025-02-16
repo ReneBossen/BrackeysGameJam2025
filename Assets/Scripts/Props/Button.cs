@@ -32,7 +32,7 @@ namespace Brackeys.Props
             var path = GetComponent<FollowPath>();
             if (path != null)
             {
-                path.StopMoving();
+                path.enabled = false;
             }
             GetComponentInChildren<Renderer>().material = _onHitMat;
         }

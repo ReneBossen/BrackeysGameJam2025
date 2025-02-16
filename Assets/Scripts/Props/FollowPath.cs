@@ -12,6 +12,11 @@ namespace Brackeys.Props
 
         private bool _isMoving = true;
 
+        public void ToggleMove()
+        {
+            _isMoving = !_isMoving;
+        }
+
         private void Start()
         {
             _currentWaypointIndex = 0;
@@ -23,11 +28,6 @@ namespace Brackeys.Props
         private void Update()
         {
             MoveTowardsNextWaypoint();
-        }
-
-        public void StopMoving()
-        {
-            _isMoving = false;
         }
 
         private void MoveTowardsNextWaypoint()
