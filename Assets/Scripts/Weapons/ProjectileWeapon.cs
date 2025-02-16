@@ -16,7 +16,7 @@ namespace Brackeys.Weapons
         {
             var bullet = GameObject.Instantiate(Info.Bullet, spawnPos, Quaternion.identity);
             bullet.GetComponent<Rigidbody>().linearVelocity = forward * Info.PropulsionForce;
-            bullet.GetComponent<Bullet>().BounceLeft = Info.MaxBounceCount.GetValue();
+            bullet.GetComponent<Bullet>().Info = Info;
         }
     }
 }
