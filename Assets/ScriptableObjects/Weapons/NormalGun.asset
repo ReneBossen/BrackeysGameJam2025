@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7261cef0ff3d5b84d88a3218c20651e8, type: 3}
-  m_Name: SampleProjectileWeapon
+  m_Name: NormalGun
   m_EditorClassIdentifier: 
   Bullet: {fileID: 3633914027833077882, guid: 11f5efd7445ea68499315b66ea91f5ce, type: 3}
   PropulsionForce: 20
