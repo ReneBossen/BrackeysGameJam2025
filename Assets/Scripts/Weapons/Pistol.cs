@@ -9,13 +9,12 @@ namespace Brackeys.Weapons
 
         public override void Fire()
         {
-            Debug.Log("Firing");
-            //GameObject bullet = Instantiate(_bulletPrefab, BulletSpawnPoint.transform.position, BulletSpawnPoint.transform.rotation);
+            Debug.Log("Pistol Fire Triggered");
         }
 
         public override void Reload()
         {
-            Debug.Log("Reloading");
+            Debug.Log("Pistol Reload Triggered");
         }
     }
 }
