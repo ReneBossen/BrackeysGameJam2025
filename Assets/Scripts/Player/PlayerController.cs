@@ -1,8 +1,6 @@
-using Brackeys.Settings.InputSystem;
 using Brackeys.SO;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using InputSystem = Brackeys.Settings.InputSystem.InputSystem;
 
 namespace Brackeys.Player
 {
