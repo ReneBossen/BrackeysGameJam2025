@@ -5,12 +5,8 @@ namespace Brackeys.Weapons
 {
     public class ProjectileWeapon : AWeapon<ProjectileWeaponInfo>
     {
-        public ProjectileWeapon(ProjectileWeaponInfo info)
-        {
-            Info = info;
-        }
-
-        public ProjectileWeaponInfo Info { set; get; }
+        public ProjectileWeapon(ProjectileWeaponInfo info) : base(info)
+        { }
 
         public override void Fire(Vector3 spawnPos, Vector3 forward)
         {

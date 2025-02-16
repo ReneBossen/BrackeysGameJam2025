@@ -12,5 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7261cef0ff3d5b84d88a3218c20651e8, type: 3}
   m_Name: NormalGun
   m_EditorClassIdentifier: 
+  ReloadTime: 0.2
+  SpawnOnImpact: {fileID: 0}
+  DurationBeforeDelete: 0
+  DoesExplode: 0
+  ExplosionRadius: 0
   Bullet: {fileID: 3633914027833077882, guid: 11f5efd7445ea68499315b66ea91f5ce, type: 3}
   PropulsionForce: 20
+  MaxBounceCount:
+    Min: 1
+    Max: 1

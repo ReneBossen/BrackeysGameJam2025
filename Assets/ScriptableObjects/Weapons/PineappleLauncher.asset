@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7261cef0ff3d5b84d88a3218c20651e8, type: 3}
   m_Name: PineappleLauncher
   m_EditorClassIdentifier: 
+  ReloadTime: 1
   SpawnOnImpact: {fileID: 8554889161274158733, guid: 7493edf8ceee3ce42aa1d13f0c7c3fbe, type: 3}
   DurationBeforeDelete: 0.5
   DoesExplode: 1

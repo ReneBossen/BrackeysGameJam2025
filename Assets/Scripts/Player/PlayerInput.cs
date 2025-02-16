@@ -1,4 +1,5 @@
 using Brackeys.Weapons;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using InputSystem = Brackeys.Settings.InputSystem.InputSystem;
@@ -16,6 +17,8 @@ namespace Brackeys.Player
         public IWeapon CurrentWeapon { set; private get; }
 
         private Camera _cam;
+
+        private bool _canShoot = true;
 
         private void Awake()
         {
@@ -46,10 +49,18 @@ namespace Brackeys.Player
 
         private void OnFire(InputAction.CallbackContext context)
         {
-            if (CurrentWeapon != null)
+            if (CurrentWeapon != null && _canShoot)
             {
                 CurrentWeapon.Fire(_gunEnd.position, _cam.transform.forward);
+                _canShoot = false;
+                StartCoroutine(Reload());
             }
+        }
+
+        private IEnumerator Reload()
+        {
+            yield return new WaitForSeconds(CurrentWeapon.BaseInfo.ReloadTime);
+            _canShoot = true;
         }
     }
 }
