@@ -1042,6 +1042,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4994263924722968536, guid: 898a1359f22dd1246ae0c819875dd08b, type: 3}
+      propertyPath: '_weapons.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 96009a179146e4c4994d2f80f91d71fd, type: 2}
     - target: {fileID: 6880247616815655811, guid: 898a1359f22dd1246ae0c819875dd08b, type: 3}
       propertyPath: m_Name
       value: VendingMachine
