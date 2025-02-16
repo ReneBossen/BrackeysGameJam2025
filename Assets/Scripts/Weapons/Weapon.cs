@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Brackeys.Weapon
+namespace Brackeys.Weapons
 {
     public abstract class Weapon : MonoBehaviour, IWeapon
     {
@@ -8,10 +8,5 @@ namespace Brackeys.Weapon
 
         public abstract void Fire();
         public abstract void Reload();
-
-        public void Throw()
-        {
-            Debug.Log("Throwing weapon");
-        }
     }
 }
