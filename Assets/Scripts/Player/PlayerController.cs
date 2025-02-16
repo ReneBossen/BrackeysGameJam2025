@@ -9,7 +9,6 @@ namespace Brackeys.Player
         [SerializeField]
         private PlayerInfo _info;
 
-
         [SerializeField]
         private Transform _head;
         private float _headRotation;

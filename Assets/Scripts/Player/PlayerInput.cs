@@ -9,6 +9,9 @@ namespace Brackeys.Player
     {
         private InputSystem _inputSystem;
 
+        [SerializeField]
+        private Transform _gunEnd;
+
         //Not Assigned
         private IWeapon _currentWeapon;
 
@@ -16,7 +19,7 @@ namespace Brackeys.Player
         {
             _inputSystem = new InputSystem();
             _inputSystem.Player.Fire.performed += OnFire;
-            _inputSystem.Player.Reload.performed += OnReload;
+            // _inputSystem.Player.Reload.performed += OnReload; // TODO
 
             var pc = GetComponent<PlayerController>();
             _inputSystem.Player.Move.performed += pc.OnMovement;
@@ -42,11 +45,6 @@ namespace Brackeys.Player
             {
                 _currentWeapon.Fire();
             }
-        }
-
-        private void OnReload(InputAction.CallbackContext context)
-        {
-            //_currentWeapon.Reload();
         }
     }
 }
