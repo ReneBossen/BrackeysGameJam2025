@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnOnImpact: {fileID: 8554889161274158733, guid: 7493edf8ceee3ce42aa1d13f0c7c3fbe, type: 3}
   DurationBeforeDelete: 0.5
+  DoesExplode: 1
+  ExplosionRadius: 2
   Bullet: {fileID: 1711871811491423034, guid: 813b1c7e7b95e3642b6f9576e04b9ded, type: 3}
   PropulsionForce: 8
   MaxBounceCount:

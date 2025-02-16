@@ -1,4 +1,5 @@
 using Brackeys.Interfaces;
+using Brackeys.Manager;
 using Brackeys.SO;
 using UnityEngine;
 
@@ -20,10 +21,6 @@ namespace Brackeys.Weapons
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.TryGetComponent<IShootable>(out var shootable))
-            {
-                shootable.OnShot();
-            }
             _bounceLeft--;
             if (_bounceLeft <= 0)
             {
@@ -31,6 +28,23 @@ namespace Brackeys.Weapons
                 {
                     Destroy(Instantiate(Info.SpawnOnImpact, collision.contacts[0].point, Quaternion.identity), Info.DurationBeforeDelete);
                 }
+
+                if (Info.DoesExplode)
+                {
+                    DebugManager.Instance.AddSphere(Info.ExplosionRadius, Color.red, 1f, collision.contacts[0].point);
+                    foreach (var s in Physics.OverlapSphere(collision.contacts[0].point, Info.ExplosionRadius, LayerMask.GetMask("Prop")))
+                    {
+                        if (s.TryGetComponent<IShootable>(out var shootable))
+                        {
+                            shootable.OnShot();
+                        }
+                    }
+                }
+                else if (collision.gameObject.TryGetComponent<IShootable>(out var shootable))
+                {
+                    shootable.OnShot();
+                }
+
                 Destroy(gameObject);
             }
         }

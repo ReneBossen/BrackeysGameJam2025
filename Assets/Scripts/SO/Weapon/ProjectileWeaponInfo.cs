@@ -5,6 +5,7 @@ namespace Brackeys.SO
     [CreateAssetMenu(menuName = "ScriptableObject/Weapon/ProjectileWeapon", fileName = "ProjectileWeapon")]
     public class ProjectileWeaponInfo : AWeaponInfo
     {
+        [Header("Projectile")]
         [Tooltip("Prefab spawned when shooting")] public GameObject Bullet;
         [Tooltip("Base force of the bullet")] public float PropulsionForce = 10f;
 
