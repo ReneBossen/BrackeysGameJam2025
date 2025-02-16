@@ -1,10 +1,13 @@
 using Brackeys.Interfaces;
 using UnityEngine;
 
-public class Door : MonoBehaviour, IActivateable
+namespace Brackeys.Props
 {
-    public void OnActivate()
+    public class Door : MonoBehaviour, IActivateable
     {
-        throw new System.NotImplementedException();
+        public void OnActivate()
+        {
+            Debug.Log("[DOOR] Winning Door Activated");
+        }
     }
 }
