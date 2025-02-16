@@ -2,9 +2,10 @@ using Brackeys.SO;
 
 namespace Brackeys.Weapons
 {
-    public interface IWeapon
+    public interface IWeapon<T>
+        where T : AWeaponInfo
     {
-        public AWeaponInfo Info { set; get; }
+        public T Info { set; get; }
 
         public void Fire();
     }
