@@ -1,3 +1,4 @@
+using Brackeys.Weapons;
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,6 +9,9 @@ namespace Brackeys.Player
     public class PlayerInput : MonoBehaviour
     {
         private InputSystem _inputSystem;
+
+        //Not Assigned
+        private Weapon _currentWeapon;
 
         private void Awake()
         {
@@ -28,12 +32,12 @@ namespace Brackeys.Player
 
         private void OnFire(InputAction.CallbackContext context)
         {
-            Debug.Log("Player Fired");
+            //_currentWeapon.Fire();
         }
 
         private void OnReload(InputAction.CallbackContext context)
         {
-            Debug.Log("Player Reloaded");
+            //_currentWeapon.Reload();
         }
     }
 }
