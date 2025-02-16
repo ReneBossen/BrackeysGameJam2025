@@ -13,7 +13,7 @@ namespace Brackeys.Player
         private Transform _gunEnd;
 
         //Not Assigned
-        private IWeapon _currentWeapon;
+        public IWeapon CurrentWeapon { set; private get; }
 
         private Camera _cam;
 
@@ -46,9 +46,9 @@ namespace Brackeys.Player
 
         private void OnFire(InputAction.CallbackContext context)
         {
-            if (_currentWeapon != null)
+            if (CurrentWeapon != null)
             {
-                _currentWeapon.Fire(_gunEnd.position, _cam.transform.forward);
+                CurrentWeapon.Fire(_gunEnd.position, _cam.transform.forward);
             }
         }
     }

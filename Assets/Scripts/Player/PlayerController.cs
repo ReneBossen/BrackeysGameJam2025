@@ -1,5 +1,6 @@
 using Brackeys.Player.Interaction;
 using Brackeys.SO;
+using Brackeys.Weapons;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -105,6 +106,11 @@ namespace Brackeys.Player
         public void OnSprint(InputAction.CallbackContext value)
         {
             _isSprinting = value.ReadValueAsButton();
+        }
+
+        public void SetWeapon(IWeapon weapon)
+        {
+            GetComponent<PlayerInput>().CurrentWeapon = weapon;
         }
     }
 }
