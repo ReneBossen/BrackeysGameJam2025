@@ -7,6 +7,14 @@ namespace Brackeys.Props
     {
         [SerializeField] private GameObject _connectedObject;
 
+        private void Start()
+        {
+            if (_connectedObject == null)
+            {
+                Debug.LogError($"[BTN] {gameObject.name} has no connectedObject");
+            }
+        }
+
         public void OnShot()
         {
             ActivateConnectedObject();
