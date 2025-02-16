@@ -33,6 +33,7 @@ namespace Brackeys.Player
             var tArea = GetComponentInChildren<TriggerArea>();
             tArea.OnTriggerEnterEvent.AddListener((Collider c) =>
             {
+                Debug.Log($"Collision detected with {c.name}");
                 if (TryGetComponent<IInteractable>(out var i))
                 {
                     _interactions.Add(i);
@@ -111,6 +112,7 @@ namespace Brackeys.Player
         public void SetWeapon(IWeapon weapon)
         {
             GetComponent<PlayerInput>().CurrentWeapon = weapon;
+            Debug.Log("[PLY] Equipped weapon changed");
         }
     }
 }

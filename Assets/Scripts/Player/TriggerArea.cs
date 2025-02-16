@@ -10,10 +10,12 @@ namespace Brackeys.Player
 
         private void OnTriggerEnter(Collider other)
         {
+            OnTriggerEnterEvent.Invoke(other);
         }
 
         private void OnTriggerExit(Collider other)
         {
+            OnTriggerExitEvent.Invoke(other);
         }
     }
 }
