@@ -1,4 +1,6 @@
+using Brackeys.Player.Interaction;
 using Brackeys.SO;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,10 +21,25 @@ namespace Brackeys.Player
 
         private Vector2 _mov;
 
-        private void Start()
+        private List<IInteractable> _interactions = new();
+
+        private void Awake()
         {
             _controller = GetComponent<CharacterController>();
             Cursor.lockState = CursorLockMode.Locked;
+
+            var tArea = GetComponentInChildren<TriggerArea>();
+            tArea.OnTriggerEnterEvent.AddListener((Collider c) =>
+            {
+                if (TryGetComponent<IInteractable>(out var i))
+                {
+                    _interactions.Add(i);
+                }
+            });
+            tArea.OnTriggerExitEvent.AddListener((Collider c) =>
+            {
+                _interactions.RemoveAll(x => x.GameObject.GetInstanceID() == c.gameObject.GetInstanceID());
+            });
         }
 
         private void FixedUpdate()
