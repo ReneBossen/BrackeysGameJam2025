@@ -24,8 +24,7 @@ namespace Brackeys.Props
             {
                 pc.SetWeapon(new ProjectileWeapon(wInfo));
             }
-
-            throw new NotImplementedException();
+            else throw new NotImplementedException();
         }
     }
 }

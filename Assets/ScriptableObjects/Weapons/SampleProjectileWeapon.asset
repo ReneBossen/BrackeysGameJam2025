@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: SampleProjectileWeapon
   m_EditorClassIdentifier: 
   Bullet: {fileID: 3633914027833077882, guid: 11f5efd7445ea68499315b66ea91f5ce, type: 3}
+  PropulsionForce: 20
