@@ -22,6 +22,7 @@ namespace Brackeys.Player
         private float _verticalSpeed;
 
         private Vector2 _mov;
+        private Vector3 _startingPos;
 
         private List<IInteractable> _interactions = new();
 
@@ -42,6 +43,15 @@ namespace Brackeys.Player
             {
                 _interactions.RemoveAll(x => x.GameObject.GetInstanceID() == c.gameObject.GetInstanceID());
             });
+
+            _startingPos = transform.position;
+        }
+
+        public void ResetPosition()
+        {
+            _controller.enabled = false;
+            transform.position = _startingPos;
+            _controller.enabled = true;
         }
 
         private void FixedUpdate()

@@ -1,5 +1,4 @@
 using Brackeys.Player;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Brackeys.Props
@@ -8,14 +7,13 @@ namespace Brackeys.Props
     {
         private void OnTriggerEnter(Collider collider)
         {
-            collider.TryGetComponent<PlayerController>(out PlayerController controller);
-
-            if (controller == null)
+            if (!collider.TryGetComponent<PlayerController>(out var controller))
             {
                 return;
             }
 
             Debug.Log("[WIN] Player won!");
+            controller.ResetPosition();
             LevelManager.Instance.ReloadScene();
         }
     }
