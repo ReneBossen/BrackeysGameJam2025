@@ -2,7 +2,7 @@ using Brackeys.SO;
 
 namespace Brackeys.Weapons
 {
-    public class ProjectileWeapon : IWeapon<ProjectileWeaponInfo>
+    public class ProjectileWeapon : AWeapon<ProjectileWeaponInfo>
     {
         public ProjectileWeapon(ProjectileWeaponInfo info)
         {
@@ -11,7 +11,7 @@ namespace Brackeys.Weapons
 
         public ProjectileWeaponInfo Info { set; get; }
 
-        public void Fire()
+        public override void Fire()
         {
 
         }
