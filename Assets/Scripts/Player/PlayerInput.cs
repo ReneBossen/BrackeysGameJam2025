@@ -16,6 +16,9 @@ namespace Brackeys.Player
         [SerializeField]
         private Transform _handsWeaponTransform;
 
+        [SerializeField]
+        private Transform _gunModelTransform;
+
         private GameObject _weaponModelInstance;
         private IWeapon _currentWeapon;
         public IWeapon CurrentWeapon
@@ -71,7 +74,7 @@ namespace Brackeys.Player
         {
             if (CurrentWeapon != null && _canShoot)
             {
-                CurrentWeapon.Fire(_gunEnd.position, _cam.transform.forward);
+                CurrentWeapon.Fire(_gunEnd.position, _cam.transform.forward, _gunModelTransform.position);
                 _canShoot = false;
                 StartCoroutine(Reload());
             }
