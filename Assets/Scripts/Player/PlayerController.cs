@@ -51,6 +51,7 @@ namespace Brackeys.Player
         {
             _controller.enabled = false;
             transform.position = _startingPos;
+            SetWeapon(null);
             _controller.enabled = true;
         }
 

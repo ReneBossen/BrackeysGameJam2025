@@ -16,8 +16,26 @@ namespace Brackeys.Player
         [SerializeField]
         private Transform _handsWeaponTransform;
 
-        //Not Assigned
-        public IWeapon CurrentWeapon { set; private get; }
+        private GameObject _weaponModelInstance;
+        private IWeapon _currentWeapon;
+        public IWeapon CurrentWeapon
+        {
+            set
+            {
+                if (_weaponModelInstance != null)
+                {
+                    Destroy(_weaponModelInstance);
+                }
+                _currentWeapon = value;
+                if (_currentWeapon != null)
+                {
+                    _weaponModelInstance = Instantiate(_currentWeapon.BaseInfo.WeaponModel, _handsWeaponTransform);
+                    _weaponModelInstance.transform.rotation = _currentWeapon.BaseInfo.WeaponModel.transform.rotation;
+                    _weaponModelInstance.transform.localPosition = Vector3.zero;
+                }
+            }
+            private get => _currentWeapon;
+        }
 
         private Camera _cam;
 

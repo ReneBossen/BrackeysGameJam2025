@@ -669,7 +669,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2105305551}
   - component: {fileID: 2105305550}
-  - component: {fileID: 2105305549}
   - component: {fileID: 2105305548}
   m_Layer: 0
   m_Name: HandCameras
@@ -722,14 +721,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!81 &2105305549
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105305547}
-  m_Enabled: 1
 --- !u!20 &2105305550
 Camera:
   m_ObjectHideFlags: 0
@@ -925,18 +916,6 @@ PrefabInstance:
       propertyPath: _handsWeaponTransform
       value: 
       objectReference: {fileID: 2105305551}
-    - target: {fileID: 4028154274115954881, guid: d833479aa53495f47bddee9004f50acb, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4081131711990172548, guid: d833479aa53495f47bddee9004f50acb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5215326346295095437, guid: d833479aa53495f47bddee9004f50acb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
