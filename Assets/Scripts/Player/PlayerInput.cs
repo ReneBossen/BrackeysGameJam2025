@@ -88,6 +88,14 @@ namespace Brackeys.Player
             }
         }
 
+        public void AddAmmo()
+        {
+            if (CurrentWeapon.AddAmmo())
+            {
+                _ejectionTarget.SetActive(true);
+            }
+        }
+
         private IEnumerator Reload()
         {
             yield return new WaitForSeconds(CurrentWeapon.BaseInfo.ReloadTime);

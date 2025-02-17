@@ -7,5 +7,8 @@ namespace Brackeys.Weapons
     {
         public AWeaponInfo BaseInfo { get; }
         public void Fire(Vector3 spawnPos, Vector3 forward, Vector3 gunModel);
+
+        /// <returns>Is the weapon full of ammo</returns>
+        public bool AddAmmo();
     }
 }
