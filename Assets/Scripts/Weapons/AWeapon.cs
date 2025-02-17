@@ -29,6 +29,7 @@ namespace Brackeys.Weapons
 
                     go.GetComponent<Rigidbody>().linearVelocity = (Quaternion.Euler(0f, -90f, 0f) * forward).normalized * Random.Range(2f, 5f);
                 }
+                _currentAmmoCount = 0;
             }
         }
     }

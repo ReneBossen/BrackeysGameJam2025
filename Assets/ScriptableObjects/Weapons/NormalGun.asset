@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NormalGun
   m_EditorClassIdentifier: 
   ReloadTime: 0.2
-  WeaponModel: {fileID: 919132149155446097, guid: a0261f5762fc0624caae861626506467, type: 3}
+  WeaponModel: {fileID: 5634481841708876003, guid: 1485a6e9b6c6f4c46b412ce610d7d33b, type: 3}
   RequiresExternalAmmosCount: 2
   EjectAmmoGameObject: {fileID: 9018547533121435566, guid: 068f4abe8e2225b4b89325c0655ee46c, type: 3}
   SpawnOnImpact: {fileID: 0}

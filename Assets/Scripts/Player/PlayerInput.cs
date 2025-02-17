@@ -1,5 +1,6 @@
 using Brackeys.Weapons;
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using InputSystem = Brackeys.Settings.InputSystem.InputSystem;
@@ -20,6 +21,7 @@ namespace Brackeys.Player
         private Transform _gunModelTransform;
 
         private GameObject _weaponModelInstance;
+        private GameObject _ejectionTarget;
         private IWeapon _currentWeapon;
         public IWeapon CurrentWeapon
         {
@@ -34,6 +36,7 @@ namespace Brackeys.Player
                 {
                     _weaponModelInstance = Instantiate(_currentWeapon.BaseInfo.WeaponModel, _handsWeaponTransform);
                     _weaponModelInstance.transform.localPosition = Vector3.zero;
+                    _ejectionTarget = _weaponModelInstance.GetComponentsInChildren<MeshRenderer>().FirstOrDefault(x => x.CompareTag("GunEffectTarget")).gameObject;
                 }
             }
             private get => _currentWeapon;
@@ -76,6 +79,10 @@ namespace Brackeys.Player
             if (CurrentWeapon != null && _canShoot)
             {
                 CurrentWeapon.Fire(_gunEnd.position, _cam.transform.forward, _gunModelTransform.position);
+                if (CurrentWeapon.BaseInfo.EjectAmmoGameObject)
+                {
+                    _ejectionTarget.SetActive(false);
+                }
                 _canShoot = false;
                 StartCoroutine(Reload());
             }
