@@ -17,6 +17,9 @@ namespace Brackeys.Player
         private Transform _head;
         private float _headRotation;
 
+        [SerializeField]
+        private GameObject _pressToInteract;
+
         private CharacterController _controller;
         private bool _isSprinting;
         private float _verticalSpeed;
@@ -28,6 +31,7 @@ namespace Brackeys.Player
 
         private void Awake()
         {
+            _pressToInteract.SetActive(false);
             _controller = GetComponent<CharacterController>();
             Cursor.lockState = CursorLockMode.Locked;
 
@@ -100,6 +104,8 @@ namespace Brackeys.Player
             }
 
             _controller.Move(moveDir * _info.MovementSpeed * Time.deltaTime);
+
+            _pressToInteract.SetActive(_interactions.Any(x => x.CanInteract));
         }
 
         public void OnInteract(InputAction.CallbackContext value)
