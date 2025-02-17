@@ -52,6 +52,7 @@ namespace Brackeys.Player
             _inputSystem.Player.Move.performed += pc.OnMovement;
             _inputSystem.Player.Move.canceled += pc.OnMovement; // For movements we need to know when we stopped moving too
             _inputSystem.Player.Sprint.performed += pc.OnSprint;
+            _inputSystem.Player.Sprint.canceled += pc.OnSprint; // For sprinting we need to know when we stopped sprinting too
             _inputSystem.Player.Jump.performed += pc.OnJump;
             _inputSystem.Player.Look.performed += pc.OnLook;
             _inputSystem.Player.Interact.performed += pc.OnInteract;
