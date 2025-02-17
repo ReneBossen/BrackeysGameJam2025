@@ -55,7 +55,7 @@ namespace Brackeys.Player
             _controller.enabled = true;
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             var pos = _mov;
             Vector3 desiredMove = transform.forward * pos.y + transform.right * pos.x;
@@ -81,7 +81,7 @@ namespace Brackeys.Player
                 moveDir.y += _verticalSpeed;
             }
 
-            _controller.Move(moveDir);
+            _controller.Move(moveDir * _info.MovementSpeed * Time.deltaTime);
         }
 
         public void OnInteract(InputAction.CallbackContext value)
