@@ -10,6 +10,7 @@ namespace Brackeys.Props
     {
         [SerializeField] private UnityEvent _callbacks;
         public bool CanInteract => true;
+        public GameObject GameObject => gameObject;
 
         private bool _isOn = false;
 
@@ -23,7 +24,6 @@ namespace Brackeys.Props
             PullLever();
         }
 
-        public GameObject GameObject => gameObject;
 
         private void PullLever()
         {
@@ -32,10 +32,10 @@ namespace Brackeys.Props
             int rotationAngle = _isOn ? 30 : -30;
             transform.Rotate(rotationAngle, 0, 0);
 
-            CallActivate();
+            InvokeCallbacks();
         }
 
-        private void CallActivate()
+        private void InvokeCallbacks()
         {
             _callbacks.Invoke();
         }

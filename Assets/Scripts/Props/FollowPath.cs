@@ -11,6 +11,8 @@ namespace Brackeys.Props
         private int _nextWaypointIndex;
 
         private bool _isMoving = true;
+        private const float _distanceFromWaypoint = 0.5f;
+
 
         public void ToggleMove()
         {
@@ -40,7 +42,7 @@ namespace Brackeys.Props
             transform.position = Vector3.MoveTowards(transform.position, waypoints[_nextWaypointIndex].position,
                 4f * Time.deltaTime);
 
-            if (Vector3.Distance(transform.position, waypoints[_nextWaypointIndex].position) < 1)
+            if (Vector3.Distance(transform.position, waypoints[_nextWaypointIndex].position) < _distanceFromWaypoint)
             {
                 UpdateWaypointIndex();
             }
