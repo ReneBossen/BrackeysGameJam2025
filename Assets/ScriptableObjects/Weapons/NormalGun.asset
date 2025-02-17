@@ -22,7 +22,7 @@ MonoBehaviour:
   DurationBeforeDelete: 0
   DoesExplode: 0
   ExplosionRadius: 0
-  Bullet: {fileID: 3633914027833077882, guid: 11f5efd7445ea68499315b66ea91f5ce, type: 3}
+  Bullet: {fileID: 435832457546945569, guid: 4bd302d130dcb674089c49e00b0b0254, type: 3}
   PropulsionForce: 20
   MaxBounceCount:
     Min: 1
