@@ -30,7 +30,6 @@ namespace Brackeys.Player
                 if (_currentWeapon != null)
                 {
                     _weaponModelInstance = Instantiate(_currentWeapon.BaseInfo.WeaponModel, _handsWeaponTransform);
-                    _weaponModelInstance.transform.rotation = _currentWeapon.BaseInfo.WeaponModel.transform.rotation;
                     _weaponModelInstance.transform.localPosition = Vector3.zero;
                 }
             }
