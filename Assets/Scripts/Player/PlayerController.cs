@@ -41,7 +41,10 @@ namespace Brackeys.Player
             });
             tArea.OnTriggerExitEvent.AddListener((Collider c) =>
             {
-                _interactions.RemoveAll(x => x.GameObject.GetInstanceID() == c.gameObject.GetInstanceID());
+                if (c.gameObject.TryGetComponent<IInteractable>(out var i))
+                {
+                    Unregister(i);
+                }
             });
 
             _startingPos = transform.position;
@@ -49,7 +52,17 @@ namespace Brackeys.Player
 
         public void Unregister(IInteractable i)
         {
-            _interactions.RemoveAll(x => x.GameObject.GetInstanceID() == i.GameObject.GetInstanceID());
+            _interactions.RemoveAll(x =>
+            {
+                try
+                {
+                    return x.GameObject.GetInstanceID() == i.GameObject.GetInstanceID();
+                }
+                catch // Unity shitting itself
+                {
+                    return true;
+                }
+            });
         }
 
         public void ResetPosition()

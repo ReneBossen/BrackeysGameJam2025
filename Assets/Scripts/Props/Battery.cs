@@ -9,7 +9,7 @@ namespace Brackeys.Props
     {
         private Collider _triggerColl;
 
-        public bool CanInteract => true;
+        public bool CanInteract { set; get; }
 
         public GameObject GameObject => gameObject;
 
@@ -29,12 +29,17 @@ namespace Brackeys.Props
 
         private void OnCollisionEnter(Collision collision)
         {
-            _triggerColl.enabled = true;
+            if (!collision.collider.CompareTag("Player") && collision.collider.name != name && !CanInteract) // Avoid battery colliding with players or between each other for detection
+            {
+                Debug.Log($"[BAT] Battery collided with {collision.collider.name}");
+                _triggerColl.enabled = true;
+                CanInteract = true;
+            }
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player"))
+            if (other.CompareTag("Player") && CanInteract)
             {
                 other.GetComponent<PlayerInput>().AddAmmo();
                 other.GetComponent<PlayerController>().Unregister(this);
