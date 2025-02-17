@@ -8,6 +8,9 @@ namespace Brackeys.SO
     {
         [Header("Configuration")]
 
+        [Tooltip("Movement speed of the player")]
+        public float MovementSpeed;
+
         [Range(0, 10f)]
         [Tooltip("Sensitivity of mouse on X axis")]
         public float HorizontalLookMultiplier = .1f;
