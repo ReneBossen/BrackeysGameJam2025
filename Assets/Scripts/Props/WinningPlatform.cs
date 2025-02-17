@@ -14,7 +14,7 @@ namespace Brackeys.Props
 
             Debug.Log("[WIN] Player won!");
             controller.ResetPosition();
-            VendingMachine.Instance.CanInteract = true;
+            VendingMachine.Instance.ResetMachine();
             LevelManager.Instance.ReloadScene();
         }
     }

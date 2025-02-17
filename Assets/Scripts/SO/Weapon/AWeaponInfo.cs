@@ -7,6 +7,10 @@ namespace Brackeys.SO
         public float ReloadTime;
         public GameObject WeaponModel;
 
+        [Header("Metadata")]
+        public string NameKey;
+        public string DescriptionKey;
+
         [Header("Ammos")]
         [Tooltip("Does this weapon need an external source of ammo to shoot, 0 to disable")] public int RequiresExternalAmmosCount;
         [Tooltip("If not null, the ammo will be ejected fromthe gun on every shoot")] public GameObject EjectAmmoGameObject;

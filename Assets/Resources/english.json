@@ -1,5 +1,12 @@
 {
     "lang": "English",
 
-    "pressInteract" : "Press 'E' to interact"
+    "pressInteract" : "Press 'E' to interact",
+
+    "vendingTitle": "Nothing Can Go Wrong",
+    "pendingCoin": "Insert a coin",
+    "laserGunName": "SX-648 Laser Gun",
+    "laserGunDesc": "Convert electricity into a powerful plasma ball (battery included, do not microwave)",
+    "pineappleGunName": "Fruit launcher (pineapple version)",
+    "pineappleGunDesc": "Re-use everyday kitchen ingredient into a delicious (but deadly) cocktail of explosion"
 }
