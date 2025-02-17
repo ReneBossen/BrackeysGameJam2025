@@ -47,6 +47,11 @@ namespace Brackeys.Player
             _startingPos = transform.position;
         }
 
+        public void Unregister(IInteractable i)
+        {
+            _interactions.RemoveAll(x => x.GameObject.GetInstanceID() == i.GameObject.GetInstanceID());
+        }
+
         public void ResetPosition()
         {
             _controller.enabled = false;
