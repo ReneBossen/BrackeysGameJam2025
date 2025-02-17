@@ -24,7 +24,6 @@ namespace Brackeys.Props
             PullLever();
         }
 
-
         private void PullLever()
         {
             _isOn = !_isOn;

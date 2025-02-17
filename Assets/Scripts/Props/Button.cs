@@ -1,20 +1,14 @@
 using Brackeys.Interfaces;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Brackeys.Props
 {
     public class Button : MonoBehaviour, IShootable
     {
-        [SerializeField] private GameObject _connectedObject;
+        [SerializeField] private UnityEvent _callbacks;
         [SerializeField] private Material _onHitMat;
-
-        private void Start()
-        {
-            if (_connectedObject == null)
-            {
-                Debug.LogError($"[BTN] {gameObject.name} has no connectedObject");
-            }
-        }
 
         public void OnShot()
         {
@@ -23,18 +17,20 @@ namespace Brackeys.Props
 
         private void ActivateConnectedObject()
         {
-            _connectedObject.TryGetComponent<IActivateable>(out IActivateable component);
-            if (component.CanActivate)
-            {
-                component?.OnActivate();
-            }
+            InvokeCallbacks();
 
-            var path = GetComponent<FollowPath>();
+            FollowPath path = GetComponent<FollowPath>();
             if (path != null)
             {
                 path.enabled = false;
             }
+
             GetComponentInChildren<Renderer>().material = _onHitMat;
+        }
+
+        private void InvokeCallbacks()
+        {
+            _callbacks.Invoke();
         }
     }
 }
