@@ -26,7 +26,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555277105559565664}
   m_LocalRotation: {x: 0.0000019387548, y: 0.7071068, z: 0.7071068, w: 0.0000019387548}
-  m_LocalPosition: {x: 0, y: 0, z: 0.01333}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0069}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000000027939677, y: -0.00241}
+  m_AnchoredPosition: {x: -0.0000000027939677, y: -0.0025000013}
   m_SizeDelta: {x: 0.01, y: 0.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &4182864396774600917
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 7363931333353610686}
   - component: {fileID: 1679617530161349757}
   m_Layer: 9
-  m_Name: DispenserTitle (1)
+  m_Name: DispenserName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -399,7 +399,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000000027939677, y: -0.00241}
+  m_AnchoredPosition: {x: -0.0000000027939677, y: -0.0025}
   m_SizeDelta: {x: 0.01, y: 0.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &5734339784600156468
@@ -532,7 +532,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.0017158987, y: 0.0017267105, z: 0.0017429728, w: -0.0014359327}
+  m_margin: {x: 0.0019041505, y: 0.008338882, z: 0.0018856467, w: -0.0031486563}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
