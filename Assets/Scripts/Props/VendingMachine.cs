@@ -1,4 +1,3 @@
-using Brackeys.Animations;
 using Brackeys.Player;
 using Brackeys.Player.Interaction;
 using Brackeys.SO;

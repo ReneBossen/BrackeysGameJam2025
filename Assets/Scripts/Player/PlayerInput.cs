@@ -13,6 +13,9 @@ namespace Brackeys.Player
         [SerializeField]
         private Transform _gunEnd;
 
+        [SerializeField]
+        private Transform _handsWeaponTransform;
+
         //Not Assigned
         public IWeapon CurrentWeapon { set; private get; }
 
