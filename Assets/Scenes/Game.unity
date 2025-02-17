@@ -921,6 +921,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3802658133771417516, guid: d833479aa53495f47bddee9004f50acb, type: 3}
+      propertyPath: _handsWeaponTransform
+      value: 
+      objectReference: {fileID: 2105305551}
     - target: {fileID: 4028154274115954881, guid: d833479aa53495f47bddee9004f50acb, type: 3}
       propertyPath: m_Enabled
       value: 1
