@@ -119,38 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &78925776 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 913522242949246412, guid: d833479aa53495f47bddee9004f50acb, type: 3}
-  m_PrefabInstance: {fileID: 6945515504104550145}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &78925784
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 78925776}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &361486375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,6 +1065,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3749167148446659239, guid: d833479aa53495f47bddee9004f50acb, type: 3}
+      propertyPath: _amount
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749167148446659239, guid: d833479aa53495f47bddee9004f50acb, type: 3}
+      propertyPath: _smooth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749167148446659239, guid: d833479aa53495f47bddee9004f50acb, type: 3}
+      propertyPath: _frequency
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 3802658133771417516, guid: d833479aa53495f47bddee9004f50acb, type: 3}
       propertyPath: _handsWeaponTransform
       value: 
@@ -1105,13 +1085,18 @@ PrefabInstance:
       propertyPath: _pressToInteract
       value: 
       objectReference: {fileID: 1315062538}
+    - target: {fileID: 8275812809213859777, guid: d833479aa53495f47bddee9004f50acb, type: 3}
+      propertyPath: AmplitudeGain
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275812809213859777, guid: d833479aa53495f47bddee9004f50acb, type: 3}
+      propertyPath: FrequencyGain
+      value: 0.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 913522242949246412, guid: d833479aa53495f47bddee9004f50acb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 78925784}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d833479aa53495f47bddee9004f50acb, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

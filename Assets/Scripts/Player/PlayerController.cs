@@ -22,6 +22,7 @@ namespace Brackeys.Player
 
         private Rigidbody _rb;
         private CharacterController _controller;
+        private Headbob _headbob;
         private bool _isSprinting;
         private float _verticalSpeed;
 
@@ -35,6 +36,8 @@ namespace Brackeys.Player
             _pressToInteract.SetActive(false);
             _rb = GetComponent<Rigidbody>();
             _controller = GetComponent<CharacterController>();
+            _headbob = GetComponentInChildren<Headbob>();
+
             Cursor.lockState = CursorLockMode.Locked;
 
             var tArea = GetComponentInChildren<TriggerArea>();
@@ -106,6 +109,7 @@ namespace Brackeys.Player
             }
 
             _controller.Move(moveDir * _info.MovementSpeed * Time.deltaTime);
+            _headbob.ApplyHeadbob(moveDir, _controller.isGrounded, _isSprinting);
 
             _pressToInteract.SetActive(_interactions.Any(x => x.CanInteract));
         }
