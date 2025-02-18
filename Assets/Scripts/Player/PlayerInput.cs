@@ -22,6 +22,7 @@ namespace Brackeys.Player
 
         private GameObject _weaponModelInstance;
         private GameObject _ejectionTarget;
+        private PlayerController _pc;
         private IWeapon _currentWeapon;
         public IWeapon CurrentWeapon
         {
@@ -54,14 +55,14 @@ namespace Brackeys.Player
             _inputSystem.Player.Fire.performed += OnFire;
             // _inputSystem.Player.Reload.performed += OnReload; // TODO
 
-            var pc = GetComponent<PlayerController>();
-            _inputSystem.Player.Move.performed += pc.OnMovement;
-            _inputSystem.Player.Move.canceled += pc.OnMovement; // For movements we need to know when we stopped moving too
-            _inputSystem.Player.Sprint.performed += pc.OnSprint;
-            _inputSystem.Player.Sprint.canceled += pc.OnSprint; // For sprinting we need to know when we stopped sprinting too
-            _inputSystem.Player.Jump.performed += pc.OnJump;
-            _inputSystem.Player.Look.performed += pc.OnLook;
-            _inputSystem.Player.Interact.performed += pc.OnInteract;
+            _pc = GetComponent<PlayerController>();
+            _inputSystem.Player.Move.performed += _pc.OnMovement;
+            _inputSystem.Player.Move.canceled += _pc.OnMovement; // For movements we need to know when we stopped moving too
+            _inputSystem.Player.Sprint.performed += _pc.OnSprint;
+            _inputSystem.Player.Sprint.canceled += _pc.OnSprint; // For sprinting we need to know when we stopped sprinting too
+            _inputSystem.Player.Jump.performed += _pc.OnJump;
+            _inputSystem.Player.Look.performed += _pc.OnLook;
+            _inputSystem.Player.Interact.performed += _pc.OnInteract;
         }
 
         private void OnEnable()
@@ -82,6 +83,10 @@ namespace Brackeys.Player
                 if (CurrentWeapon.BaseInfo.EjectAmmoGameObject)
                 {
                     _ejectionTarget.SetActive(false);
+                }
+                if (CurrentWeapon.BaseInfo.StunDuration > 0f)
+                {
+                    _pc.Stun(CurrentWeapon.BaseInfo.StunDuration, CurrentWeapon.BaseInfo.ForceThrowback);
                 }
                 _canShoot = false;
                 StartCoroutine(Reload());
