@@ -10,6 +10,8 @@ namespace Brackeys.Props
 
         [SerializeField] private Material _validationMat;
 
+        public bool IsActivated { private set; get; }
+
         public void OnShot()
         {
             ActivateConnectedObject();
@@ -17,10 +19,13 @@ namespace Brackeys.Props
             var mats = r.materials;
             mats[1] = _validationMat;
             r.materials = mats;
+            IsActivated = true;
         }
 
         private void ActivateConnectedObject()
         {
+            if (IsActivated) return;
+
             InvokeCallbacks();
 
             FollowPath path = GetComponent<FollowPath>();
