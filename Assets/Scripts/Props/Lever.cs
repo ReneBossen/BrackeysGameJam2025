@@ -28,8 +28,7 @@ namespace Brackeys.Props
         {
             _isOn = !_isOn;
 
-            int rotationAngle = _isOn ? 30 : -30;
-            transform.Rotate(rotationAngle, 0, 0);
+            transform.Rotate(0f, 0f, 180f);
 
             InvokeCallbacks();
         }
