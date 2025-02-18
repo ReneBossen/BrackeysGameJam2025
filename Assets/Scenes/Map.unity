@@ -10086,6 +10086,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaypointShooting
       objectReference: {fileID: 0}
+    - target: {fileID: 4346651942929564502, guid: 8c140a1eeeb13f742a8ae085410f6ed5, type: 3}
+      propertyPath: _emplacement
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8033409551742386935, guid: 8c140a1eeeb13f742a8ae085410f6ed5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6
@@ -10577,10 +10581,6 @@ PrefabInstance:
     - target: {fileID: 7196309829314740369, guid: 6922df25d4698114699561dd4a808f0c, type: 3}
       propertyPath: m_Name
       value: robot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7196309829314740369, guid: 6922df25d4698114699561dd4a808f0c, type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7536137384526961195, guid: 6922df25d4698114699561dd4a808f0c, type: 3}
       propertyPath: m_LocalPosition.x

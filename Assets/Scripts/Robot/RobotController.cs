@@ -1,8 +1,11 @@
 using Brackeys.Manager;
 using Brackeys.Player;
 using Brackeys.Player.Interaction;
+using Brackeys.Robot;
+using Brackeys.Translation;
 using Brackeys.VN;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Brakeys.Robot
@@ -21,9 +24,23 @@ namespace Brakeys.Robot
 
         public GameObject GameObject => gameObject;
 
+        private RobotWaypoint _targetWaypoint;
+
         public void Interact(PlayerController pc)
         {
-            _display.ToDisplay = "Hello";
+            _display.ToDisplay = Translate.Instance.Tr(
+                _targetWaypoint.Emplacement switch
+                {
+                    Emplacement.Dispenser when LevelStateManager.Instance.HasWeaponEquipped => "robot_dispenser_weaponTaken",
+                    Emplacement.Dispenser => "robot_dispenser_pendingWeapon",
+
+                    Emplacement.ButtonMove when LevelStateManager.Instance.IsObjMoveDone => "robot_buttonMove_done",
+                    Emplacement.ButtonMove when LevelStateManager.Instance.IsObjMoveMoving => "robot_buttonMove_notDoneMoving",
+                    Emplacement.ButtonMove => "robot_buttonMove_notDoneNotMoving",
+
+                    _ => throw new System.NotImplementedException()
+                }
+            );
         }
 
         private void Awake()
@@ -46,6 +63,7 @@ namespace Brakeys.Robot
             }
             transform.LookAt(RobotManager.Instance.PlayerTransform, Vector3.up);
             transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
+            _targetWaypoint = target;
         }
     }
 }

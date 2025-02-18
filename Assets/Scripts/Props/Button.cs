@@ -11,6 +11,7 @@ namespace Brackeys.Props
         [SerializeField] private Material _validationMat;
 
         public bool IsActivated { private set; get; }
+        public bool IsMoving => GetComponent<FollowPath>().enabled;
 
         public void OnShot()
         {

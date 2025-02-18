@@ -16,6 +16,7 @@ namespace Brackeys.Manager
         }
 
         public bool IsObjMoveDone => _objMove.IsActivated;
+        public bool IsObjMoveMoving => _objMove.IsMoving;
         public bool IsObjGlassDone => _objGlass.IsActivated;
 
         public bool HasWeaponEquipped => ResourceManager.Instance.PlayerInput.CurrentWeapon != null;
