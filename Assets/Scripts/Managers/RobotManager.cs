@@ -24,6 +24,8 @@ namespace Brackeys.Manager
             _waypoints.Add(waypoint);
         }
 
+        public Transform PlayerTransform => _playerT;
+
         public RobotWaypoint GetClosestWaypoint()
         {
             return _waypoints.OrderBy(x => Vector3.Distance(_playerT.position, x.transform.position)).First();

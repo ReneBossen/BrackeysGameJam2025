@@ -27,6 +27,7 @@ namespace Brakeys.Robot
             {
                 _rb.linearVelocity = (target.transform.position - transform.position).normalized * _speed;
             }
+            transform.LookAt(RobotManager.Instance.PlayerTransform, Vector3.up);
         }
     }
 }
