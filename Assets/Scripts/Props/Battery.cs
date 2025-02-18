@@ -1,5 +1,6 @@
 using Brackeys.Player;
 using Brackeys.Player.Interaction;
+using Brackeys.Statics;
 using System.Linq;
 using UnityEngine;
 
@@ -29,7 +30,7 @@ namespace Brackeys.Props
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (!collision.collider.CompareTag("Player") && collision.collider.name != name && !CanInteract) // Avoid battery colliding with players or between each other for detection
+            if (!collision.collider.CompareTag(StringHelper.PLAYER_TAG) && collision.collider.name != name && !CanInteract) // Avoid battery colliding with players or between each other for detection
             {
                 Debug.Log($"[BAT] Battery collided with {collision.collider.name}");
                 _triggerColl.enabled = true;
@@ -39,7 +40,7 @@ namespace Brackeys.Props
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player") && CanInteract)
+            if (other.CompareTag(StringHelper.PLAYER_TAG) && CanInteract)
             {
                 other.GetComponent<PlayerInput>().AddAmmo();
                 other.GetComponent<PlayerController>().Unregister(this);
