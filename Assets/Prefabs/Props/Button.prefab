@@ -127,6 +127,7 @@ MonoBehaviour:
   _callbacks:
     m_PersistentCalls:
       m_Calls: []
+  _validationMat: {fileID: 2100000, guid: 352c8401a17e8a84d8d028a9e0e1c619, type: 2}
 --- !u!114 &2819890647957567329
 MonoBehaviour:
   m_ObjectHideFlags: 0

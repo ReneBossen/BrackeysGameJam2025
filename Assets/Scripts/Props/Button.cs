@@ -8,9 +8,15 @@ namespace Brackeys.Props
     {
         [SerializeField] private UnityEvent _callbacks;
 
+        [SerializeField] private Material _validationMat;
+
         public void OnShot()
         {
             ActivateConnectedObject();
+            var r = GetComponent<Renderer>();
+            var mats = r.materials;
+            mats[1] = _validationMat;
+            r.materials = mats;
         }
 
         private void ActivateConnectedObject()
