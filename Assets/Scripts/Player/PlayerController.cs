@@ -1,6 +1,7 @@
 using Brackeys.Player.Interaction;
 using Brackeys.SO;
 using Brackeys.Weapons;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -108,6 +109,21 @@ namespace Brackeys.Player
             _controller.Move(moveDir * _info.MovementSpeed * Time.deltaTime);
 
             _pressToInteract.SetActive(_interactions.Any(x => x.CanInteract));
+        }
+
+        public void Stun(float stunDuration, float throwForce)
+        {
+            StartCoroutine(StunCoroutine(stunDuration, throwForce));
+        }
+
+        private IEnumerator StunCoroutine(float stunDuration, float throwForce)
+        {
+            _controller.enabled = false;
+            _rb.isKinematic = false;
+            _rb.AddForce(-_head.forward * throwForce, ForceMode.Impulse);
+            yield return new WaitForSeconds(stunDuration);
+            _rb.isKinematic = true;
+            _controller.enabled = true;
         }
 
         public void OnInteract(InputAction.CallbackContext value)
