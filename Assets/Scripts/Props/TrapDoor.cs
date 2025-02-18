@@ -6,14 +6,20 @@ namespace Brackeys.Props
     {
         [SerializeField] private bool _startsOpen;
 
+        private BoxCollider _collider;
+        private bool _isOpen;
+
         private void Start()
         {
-            //gameObject.SetActive(_startsInScene);
+            _collider = GetComponent<BoxCollider>();
+            _collider.enabled = !_startsOpen;
+            _isOpen = !_startsOpen;
         }
 
         public void Toggle()
         {
-            gameObject.SetActive(!gameObject.activeInHierarchy);
+            _isOpen = !_isOpen;
+            _collider.enabled = _isOpen;
         }
     }
 }
