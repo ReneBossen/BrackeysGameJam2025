@@ -1,14 +1,30 @@
 using Brackeys.Manager;
+using Brackeys.Player;
+using Brackeys.Player.Interaction;
+using Brackeys.VN;
+using TMPro;
 using UnityEngine;
 
 namespace Brakeys.Robot
 {
-    public class RobotController : MonoBehaviour
+    public class RobotController : MonoBehaviour, IInteractable
     {
         [SerializeField]
         private float _speed;
 
+        [SerializeField]
+        private TextDisplay _display;
+
         private Rigidbody _rb;
+
+        public bool CanInteract => true;
+
+        public GameObject GameObject => gameObject;
+
+        public void Interact(PlayerController pc)
+        {
+            _display.ToDisplay = "Hello";
+        }
 
         private void Awake()
         {
