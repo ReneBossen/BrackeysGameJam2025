@@ -34,6 +34,7 @@ namespace Brakeys.Robot
                     Emplacement.Dispenser when LevelStateManager.Instance.HasWeaponEquipped => "robot_dispenser_weaponTaken",
                     Emplacement.Dispenser => "robot_dispenser_pendingWeapon",
 
+                    Emplacement.ButtonMove when !LevelStateManager.Instance.HasWeaponEquipped => "robot_button_needWeapon",
                     Emplacement.ButtonMove when LevelStateManager.Instance.IsObjMoveDone => "robot_buttonMove_done",
                     Emplacement.ButtonMove when LevelStateManager.Instance.IsObjMoveMoving => "robot_buttonMove_notDoneMoving",
                     Emplacement.ButtonMove => "robot_buttonMove_notDoneNotMoving",
