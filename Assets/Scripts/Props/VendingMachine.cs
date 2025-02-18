@@ -59,7 +59,7 @@ namespace Brackeys.Props
             _weaponNameText.text = Translate.Instance.Tr(weapon.NameKey);
             _weaponNameDescription.text = Translate.Instance.Tr(weapon.DescriptionKey);
 
-            _animator.Play(AnimationNames.OpenVendingMachine);
+            _animator.Play(AnimationNames.FlapOpen);
 
             if (weapon is ProjectileWeaponInfo wInfo)
             {
