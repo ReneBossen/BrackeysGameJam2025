@@ -110,7 +110,10 @@ namespace Brackeys.Player
             }
 
             _controller.Move(moveDir * _info.MovementSpeed * Time.deltaTime);
-            _headbob.ApplyHeadbob(moveDir, _controller.isGrounded, _isSprinting);
+            if (_info.ApplyHeadbob)
+            {
+                _headbob.ApplyHeadbob(moveDir, _controller.isGrounded, _isSprinting);
+            }
 
             _pressToInteract.SetActive(_interactions.Any(x => x.CanInteract));
         }
