@@ -19,4 +19,4 @@ MonoBehaviour:
   SpeedRunningMultiplicator: 2
   JumpForce: 0.4
   GravityMultiplicator: 0.0005
-  ApplyHeadbob: 0
+  ApplyHeadbob: 1
