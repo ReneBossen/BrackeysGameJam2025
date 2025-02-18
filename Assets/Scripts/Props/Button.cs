@@ -7,7 +7,6 @@ namespace Brackeys.Props
     public class Button : MonoBehaviour, IShootable
     {
         [SerializeField] private UnityEvent _callbacks;
-        [SerializeField] private Material _onHitMat;
 
         public void OnShot()
         {
@@ -23,8 +22,6 @@ namespace Brackeys.Props
             {
                 path.enabled = false;
             }
-
-            GetComponentInChildren<Renderer>().material = _onHitMat;
         }
 
         private void InvokeCallbacks()

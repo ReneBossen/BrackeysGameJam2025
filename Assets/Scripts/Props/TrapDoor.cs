@@ -4,11 +4,11 @@ namespace Brackeys.Props
 {
     public class TrapDoor : MonoBehaviour
     {
-        [SerializeField] private bool _startsInScene;
+        [SerializeField] private bool _startsOpen;
 
         private void Start()
         {
-            gameObject.SetActive(_startsInScene);
+            //gameObject.SetActive(_startsInScene);
         }
 
         public void Toggle()
