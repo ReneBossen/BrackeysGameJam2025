@@ -1025,6 +1025,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2378200792916671746, guid: d833479aa53495f47bddee9004f50acb, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378200792916671746, guid: d833479aa53495f47bddee9004f50acb, type: 3}
+      propertyPath: m_Size.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378200792916671746, guid: d833479aa53495f47bddee9004f50acb, type: 3}
+      propertyPath: m_Size.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378200792916671746, guid: d833479aa53495f47bddee9004f50acb, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378200792916671746, guid: d833479aa53495f47bddee9004f50acb, type: 3}
+      propertyPath: m_Center.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378200792916671746, guid: d833479aa53495f47bddee9004f50acb, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378200792916671746, guid: d833479aa53495f47bddee9004f50acb, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 503
+      objectReference: {fileID: 0}
     - target: {fileID: 3070466938222918044, guid: d833479aa53495f47bddee9004f50acb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1065,18 +1093,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3749167148446659239, guid: d833479aa53495f47bddee9004f50acb, type: 3}
-      propertyPath: _amount
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 3749167148446659239, guid: d833479aa53495f47bddee9004f50acb, type: 3}
-      propertyPath: _smooth
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3749167148446659239, guid: d833479aa53495f47bddee9004f50acb, type: 3}
-      propertyPath: _frequency
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 3802658133771417516, guid: d833479aa53495f47bddee9004f50acb, type: 3}
       propertyPath: _handsWeaponTransform
       value: 
@@ -1085,14 +1101,6 @@ PrefabInstance:
       propertyPath: _pressToInteract
       value: 
       objectReference: {fileID: 1315062538}
-    - target: {fileID: 8275812809213859777, guid: d833479aa53495f47bddee9004f50acb, type: 3}
-      propertyPath: AmplitudeGain
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 8275812809213859777, guid: d833479aa53495f47bddee9004f50acb, type: 3}
-      propertyPath: FrequencyGain
-      value: 0.75
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

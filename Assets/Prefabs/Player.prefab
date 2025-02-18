@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7839846900510014831}
   - component: {fileID: 4028154274115954881}
   - component: {fileID: 7510652678204246396}
+  - component: {fileID: 2378200792916671746}
   - component: {fileID: 6004005091884648793}
   - component: {fileID: 4213081577477282244}
   - component: {fileID: 3802658133771417516}
@@ -115,6 +116,27 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &2378200792916671746
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913522242949246412}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!143 &6004005091884648793
 CharacterController:
   m_ObjectHideFlags: 0
@@ -137,7 +159,7 @@ CharacterController:
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.001
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4213081577477282244
@@ -371,6 +393,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a34844c7aafb4ee4f8c884c25199f204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _amount: 0.05
+  _frequency: 30
+  _smooth: 20
 --- !u!1 &7293652038179056696
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,6 +691,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NoiseProfile: {fileID: 11400000, guid: 46965f9cbaf525742a6da4c2172a99cd, type: 2}
   PivotOffset: {x: 0, y: 0, z: 0}
-  AmplitudeGain: 0.5
-  FrequencyGain: 0.5
+  AmplitudeGain: 0.75
+  FrequencyGain: 0.75
   m_NoiseOffsets: {x: 0, y: 0, z: 0}
