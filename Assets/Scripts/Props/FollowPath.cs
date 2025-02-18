@@ -24,6 +24,11 @@ namespace Brackeys.Props
             _currentWaypointIndex = 0;
             _nextWaypointIndex = 1;
 
+            if (!waypoints.Any() || !_isMoving)
+            {
+                return;
+            }
+
             transform.position = waypoints[_currentWaypointIndex].position;
         }
 
