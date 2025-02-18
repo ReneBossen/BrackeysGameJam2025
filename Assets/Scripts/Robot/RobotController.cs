@@ -29,6 +29,7 @@ namespace Brakeys.Robot
         private void Awake()
         {
             _rb = GetComponent<Rigidbody>();
+            _display.ToDisplay = null;
         }
 
         private void Update()
@@ -44,6 +45,7 @@ namespace Brakeys.Robot
                 _rb.linearVelocity = (target.transform.position - transform.position).normalized * _speed;
             }
             transform.LookAt(RobotManager.Instance.PlayerTransform, Vector3.up);
+            transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
         }
     }
 }

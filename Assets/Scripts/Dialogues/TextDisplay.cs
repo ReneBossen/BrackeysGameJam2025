@@ -23,13 +23,14 @@ namespace Brackeys.VN
                 _index = 0;
                 _timer = _displaySpeedRef;
                 _text.text = string.Empty;
-                _toDisplay = value.Replace("\r", ""); // Remove \r cause we don't care
-                SplitVertical();
+                if (value != null)
+                {
+                    _toDisplay = value.Replace("\r", ""); // Remove \r cause we don't care
+                    SplitVertical();
+                }
             }
             private get => _toDisplay;
         }
-
-        public event EventHandler OnDisplayDone;
 
         public bool IsDisplayDone => _index == _toDisplay.Length;
 
@@ -67,22 +68,6 @@ namespace Brackeys.VN
             _toDisplay = res.TrimStart();
         }
 
-        /// <summary>
-        /// Either display the rest of the text or start with the remaining one
-        /// </summary>
-        public void ForceDisplay()
-        {
-            if (_index < _toDisplay.Length)
-            {
-                _text.text = _toDisplay;
-                _index = _toDisplay.Length;
-                if (IsDisplayDone)
-                {
-                    OnDisplayDone?.Invoke(this, new());
-                }
-            }
-        }
-
         private void Awake()
         {
             _text = GetComponent<TMP_Text>();
@@ -90,18 +75,21 @@ namespace Brackeys.VN
 
         private void Update()
         {
-            if (_toDisplay != null && _index < _toDisplay.Length)
+            if (_toDisplay != null)
             {
-                _timer -= Time.deltaTime;
-                if (_timer <= 0f)
+                if (_index < _toDisplay.Length)
                 {
-                    _timer = _displaySpeedRef;
-                    _text.text += _toDisplay[_index];
-                    _index++;
-                    if (IsDisplayDone)
+                    _timer -= Time.deltaTime;
+                    if (_timer <= 0f)
                     {
-                        OnDisplayDone?.Invoke(this, new());
+                        _timer = _displaySpeedRef;
+                        _text.text += _toDisplay[_index];
+                        _index++;
                     }
+                }
+                else if (_timer < -2f)
+                {
+                    ToDisplay = null;
                 }
             }
         }
