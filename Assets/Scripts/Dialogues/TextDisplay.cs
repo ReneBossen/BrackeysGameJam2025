@@ -28,6 +28,7 @@ namespace Brackeys.VN
                     _toDisplay = value.Replace("\r", ""); // Remove \r cause we don't care
                     SplitVertical();
                 }
+                else _toDisplay = null;
             }
             private get => _toDisplay;
         }
@@ -87,9 +88,13 @@ namespace Brackeys.VN
                         _index++;
                     }
                 }
-                else if (_timer < -2f)
+                else if (_timer > -2f)
                 {
-                    ToDisplay = null;
+                    _timer -= Time.deltaTime;
+                    if (_timer <= -2f)
+                    {
+                        ToDisplay = null;
+                    }
                 }
             }
         }
