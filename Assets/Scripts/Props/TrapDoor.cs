@@ -11,7 +11,7 @@ namespace Brackeys.Props
 
         private void Start()
         {
-            _collider = GetComponent<BoxCollider>();
+            _collider = GetComponentInChildren<BoxCollider>();
             _collider.enabled = !_startsOpen;
             _isOpen = !_startsOpen;
         }

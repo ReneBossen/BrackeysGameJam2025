@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a8ae619652dc04c4b840728360d6ee81, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a8ae619652dc04c4b840728360d6ee81, type: 3}
       propertyPath: m_LocalPosition.y
@@ -64,6 +64,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -3030117595261548499, guid: a8ae619652dc04c4b840728360d6ee81, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: -3030117595261548499, guid: a8ae619652dc04c4b840728360d6ee81, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.477
+      objectReference: {fileID: 0}
+    - target: {fileID: -3030117595261548499, guid: a8ae619652dc04c4b840728360d6ee81, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a8ae619652dc04c4b840728360d6ee81, type: 3}
       propertyPath: m_Name
       value: trapdoor
@@ -75,7 +87,36 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a8ae619652dc04c4b840728360d6ee81, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6850950503227080298}
+    - targetCorrespondingSourceObject: {fileID: -83280395563113922, guid: a8ae619652dc04c4b840728360d6ee81, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3023739953979123166}
   m_SourcePrefab: {fileID: 100100000, guid: a8ae619652dc04c4b840728360d6ee81, type: 3}
+--- !u!1 &4431054796548407677 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -83280395563113922, guid: a8ae619652dc04c4b840728360d6ee81, type: 3}
+  m_PrefabInstance: {fileID: 4874693837235938115}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &3023739953979123166
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4431054796548407677}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019559415, y: 0.02000002, z: 0.005558413}
+  m_Center: {x: 0.007379708, y: 0.003000007, z: -0.0075420565}
 --- !u!1 &5721557134587911698 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a8ae619652dc04c4b840728360d6ee81, type: 3}
@@ -93,4 +134,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de40818141daf94e95b7fca935bd30c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startsInScene: 0
+  _startsOpen: 0
