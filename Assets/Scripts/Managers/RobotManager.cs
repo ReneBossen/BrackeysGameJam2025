@@ -1,3 +1,4 @@
+using Brackeys.Props;
 using Brackeys.Robot;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,8 @@ namespace Brackeys.Manager
         {
             _waypoints.Add(waypoint);
         }
+
+        public Transform PlayerTransform => _playerT;
 
         public RobotWaypoint GetClosestWaypoint()
         {

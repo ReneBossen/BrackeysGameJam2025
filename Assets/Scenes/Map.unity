@@ -2305,6 +2305,25 @@ Transform:
   - {fileID: 2073620432}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &472311416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7339233132392988995, guid: c9cb9924f569c5243aa27ab398fd7d32, type: 3}
+  m_PrefabInstance: {fileID: 820643638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &472311419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472311416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857fbec2cec02874a8217e4bb846af90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objMove: {fileID: 6326443947146200410}
+  _objGlass: {fileID: 2073620434}
 --- !u!1 &558299799
 GameObject:
   m_ObjectHideFlags: 0
@@ -3255,7 +3274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2268806778232053977, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
       propertyPath: m_Name
-      value: Button
+      value: ButtonGlass
       objectReference: {fileID: 0}
     - target: {fileID: 2819890647957567329, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
       propertyPath: waypoints.Array.size
@@ -3308,7 +3327,7 @@ PrefabInstance:
       objectReference: {fileID: 1242981299}
     - target: {fileID: 7339233132392988995, guid: c9cb9924f569c5243aa27ab398fd7d32, type: 3}
       propertyPath: m_Name
-      value: BalloonManager
+      value: LevelManager
       objectReference: {fileID: 0}
     - target: {fileID: 7481363552401461090, guid: c9cb9924f569c5243aa27ab398fd7d32, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3362,7 +3381,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7992981703417762711, guid: c9cb9924f569c5243aa27ab398fd7d32, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1242981300}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7339233132392988995, guid: c9cb9924f569c5243aa27ab398fd7d32, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 472311419}
   m_SourcePrefab: {fileID: 100100000, guid: c9cb9924f569c5243aa27ab398fd7d32, type: 3}
 --- !u!4 &820643639 stripped
 Transform:
@@ -10170,13 +10192,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaypointShooting
       objectReference: {fileID: 0}
+    - target: {fileID: 4346651942929564502, guid: 8c140a1eeeb13f742a8ae085410f6ed5, type: 3}
+      propertyPath: _emplacement
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8033409551742386935, guid: 8c140a1eeeb13f742a8ae085410f6ed5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 8033409551742386935, guid: 8c140a1eeeb13f742a8ae085410f6ed5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8033409551742386935, guid: 8c140a1eeeb13f742a8ae085410f6ed5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10298,6 +10324,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1456838690901162595, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
   m_PrefabInstance: {fileID: 652629839}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2073620434 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1721364843983546319, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+  m_PrefabInstance: {fileID: 652629839}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c0f6c2ce56a92b4a831af67204c459c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2101873574
 GameObject:
   m_ObjectHideFlags: 0
@@ -10658,14 +10695,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2868477029637530709, guid: 6922df25d4698114699561dd4a808f0c, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6310786545949196773, guid: 6922df25d4698114699561dd4a808f0c, type: 3}
-      propertyPath: _speed
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7196309829314740369, guid: 6922df25d4698114699561dd4a808f0c, type: 3}
       propertyPath: m_Name
       value: robot
@@ -10713,7 +10742,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3006208559824664204, guid: 6922df25d4698114699561dd4a808f0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 6922df25d4698114699561dd4a808f0c, type: 3}
 --- !u!43 &2123931661
 Mesh:
@@ -11120,7 +11152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2268806778232053977, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
       propertyPath: m_Name
-      value: Button
+      value: ButtonMove
       objectReference: {fileID: 0}
     - target: {fileID: 2819890647957567329, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
@@ -11171,6 +11203,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7185d845da26ed743832ca4439496c38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6326443947146200410 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1721364843983546319, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+  m_PrefabInstance: {fileID: 6326443947146200407}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c0f6c2ce56a92b4a831af67204c459c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6599301502786421936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11189,7 +11232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8033409551742386935, guid: 8c140a1eeeb13f742a8ae085410f6ed5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8033409551742386935, guid: 8c140a1eeeb13f742a8ae085410f6ed5, type: 3}
       propertyPath: m_LocalPosition.z

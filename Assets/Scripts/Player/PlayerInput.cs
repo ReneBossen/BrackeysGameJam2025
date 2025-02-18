@@ -40,7 +40,7 @@ namespace Brackeys.Player
                     _ejectionTarget = _weaponModelInstance.GetComponentsInChildren<MeshRenderer>().FirstOrDefault(x => x.CompareTag("GunEffectTarget")).gameObject;
                 }
             }
-            private get => _currentWeapon;
+            get => _currentWeapon;
         }
 
         private Camera _cam;
