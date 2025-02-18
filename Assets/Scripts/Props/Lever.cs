@@ -29,19 +29,18 @@ namespace Brackeys.Props
 
         public void Interact(PlayerController pc)
         {
-            _animator.SetBool("PullLever", true);
             PullLever();
         }
 
         public void OnShot()
         {
-            _animator.SetBool("PullLever", true);
             PullLever();
         }
 
         private void PullLever()
         {
             _isOn = !_isOn;
+            _animator.SetBool("PullLever", true);
             _animator.Play(_isOn ? AnimationNames.LeverUp : AnimationNames.LeverDown);
         }
 
