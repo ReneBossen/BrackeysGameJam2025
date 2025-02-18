@@ -2,6 +2,7 @@ using System;
 using System.Text;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Brackeys.VN
 {
@@ -13,7 +14,7 @@ namespace Brackeys.VN
 
         private int _index;
 
-        private const float _displaySpeedRef = .01f;
+        private const float _displaySpeedRef = .03f;
 
         private string _toDisplay;
         public string ToDisplay
@@ -34,6 +35,8 @@ namespace Brackeys.VN
         }
 
         public bool IsDisplayDone => _index == _toDisplay.Length;
+
+        public UnityEvent OnDone { get; } = new();
 
         /// <summary>
         /// Makes sure the current text vertically fit in the box
@@ -86,6 +89,7 @@ namespace Brackeys.VN
                         _timer = _displaySpeedRef;
                         _text.text += _toDisplay[_index];
                         _index++;
+                        if (IsDisplayDone) OnDone.Invoke();
                     }
                 }
                 else if (_timer > -2f)

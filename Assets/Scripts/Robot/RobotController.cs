@@ -4,8 +4,6 @@ using Brackeys.Player.Interaction;
 using Brackeys.Robot;
 using Brackeys.Translation;
 using Brackeys.VN;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Brakeys.Robot
@@ -26,6 +24,8 @@ namespace Brakeys.Robot
 
         private RobotWaypoint _targetWaypoint;
 
+        private Animator _anim;
+
         public void Interact(PlayerController pc)
         {
             _display.ToDisplay = Translate.Instance.Tr(
@@ -42,12 +42,20 @@ namespace Brakeys.Robot
                     _ => throw new System.NotImplementedException()
                 }
             );
+            _anim.SetBool("IsSpeaking", true);
         }
 
         private void Awake()
         {
             _rb = GetComponent<Rigidbody>();
             _display.ToDisplay = null;
+
+            _anim = GetComponent<Animator>();
+            _display.OnDone.AddListener(() =>
+            {
+                Debug.Log("done");
+                _anim.SetBool("IsSpeaking", false);
+            });
         }
 
         private void Update()
