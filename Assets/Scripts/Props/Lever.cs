@@ -21,6 +21,12 @@ namespace Brackeys.Props
             _animator = GetComponent<Animator>();
         }
 
+        private void Start()
+        {
+            _animator.SetBool("IdleDown", false);
+            _animator.SetBool("PullLever", false);
+        }
+
         public void Interact(PlayerController pc)
         {
             _animator.SetBool("PullLever", true);
