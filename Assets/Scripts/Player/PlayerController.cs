@@ -20,6 +20,7 @@ namespace Brackeys.Player
         [SerializeField]
         private GameObject _pressToInteract;
 
+        private Rigidbody _rb;
         private CharacterController _controller;
         private bool _isSprinting;
         private float _verticalSpeed;
@@ -32,6 +33,7 @@ namespace Brackeys.Player
         private void Awake()
         {
             _pressToInteract.SetActive(false);
+            _rb = GetComponent<Rigidbody>();
             _controller = GetComponent<CharacterController>();
             Cursor.lockState = CursorLockMode.Locked;
 
