@@ -22,6 +22,11 @@ namespace Brackeys.Player
         [SerializeField]
         private GameObject _pressToInteract;
 
+        [SerializeField]
+        private List<AudioClip> _footstepsWalk;
+        private AudioSource _audioSource;
+        private float _footstepDelay;
+
         private Rigidbody _rb;
         private CharacterController _controller;
         private Headbob _headbob;
@@ -39,6 +44,7 @@ namespace Brackeys.Player
             _rb = GetComponent<Rigidbody>();
             _controller = GetComponent<CharacterController>();
             _headbob = GetComponentInChildren<Headbob>();
+            _audioSource = GetComponentInChildren<AudioSource>();
 
             Cursor.lockState = CursorLockMode.Locked;
 
@@ -110,6 +116,7 @@ namespace Brackeys.Player
                 moveDir.y += _verticalSpeed;
             }
 
+            var p = transform.position;
             _controller.Move(moveDir * _info.MovementSpeed * Time.deltaTime);
             if (_info.ApplyHeadbob)
             {
@@ -117,6 +124,21 @@ namespace Brackeys.Player
             }
 
             _pressToInteract.SetActive(_interactions.Any(x => x.CanInteract));
+
+            if (_controller.isGrounded)
+            {
+                _footstepDelay -= Vector3.SqrMagnitude(p - transform.position);
+                if (_footstepDelay < 0f)
+                {
+                    var clipIndex = Random.Range(1, _footstepsWalk.Count);
+                    var clip = _footstepsWalk[clipIndex];
+                    _footstepsWalk.RemoveAt(clipIndex);
+                    _footstepsWalk.Insert(0, clip);
+
+                    _audioSource.PlayOneShot(clip);
+                    _footstepDelay += _info.FootstepDelay * (_isSprinting ? _info.FootstepDelayRunMultiplier : 1f);
+                }
+            }
         }
 
         public void Stun(float stunDuration, float throwForce)
