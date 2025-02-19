@@ -1,6 +1,7 @@
 using Brackeys.Player.Interaction;
 using Brackeys.SO;
 using Brackeys.Weapons;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -16,8 +17,14 @@ namespace Brackeys.Player
         [SerializeField]
         private Transform _head;
         private float _headRotation;
+        public Transform Head => _head;
 
+        [SerializeField]
+        private GameObject _pressToInteract;
+
+        private Rigidbody _rb;
         private CharacterController _controller;
+        private Headbob _headbob;
         private bool _isSprinting;
         private float _verticalSpeed;
 
@@ -28,7 +35,11 @@ namespace Brackeys.Player
 
         private void Awake()
         {
+            _pressToInteract.SetActive(false);
+            _rb = GetComponent<Rigidbody>();
             _controller = GetComponent<CharacterController>();
+            _headbob = GetComponentInChildren<Headbob>();
+
             Cursor.lockState = CursorLockMode.Locked;
 
             var tArea = GetComponentInChildren<TriggerArea>();
@@ -41,10 +52,28 @@ namespace Brackeys.Player
             });
             tArea.OnTriggerExitEvent.AddListener((Collider c) =>
             {
-                _interactions.RemoveAll(x => x.GameObject.GetInstanceID() == c.gameObject.GetInstanceID());
+                if (c.gameObject.TryGetComponent<IInteractable>(out var i))
+                {
+                    Unregister(i);
+                }
             });
 
             _startingPos = transform.position;
+        }
+
+        public void Unregister(IInteractable i)
+        {
+            _interactions.RemoveAll(x =>
+            {
+                try
+                {
+                    return x.GameObject.GetInstanceID() == i.GameObject.GetInstanceID();
+                }
+                catch // Unity shitting itself
+                {
+                    return true;
+                }
+            });
         }
 
         public void ResetPosition()
@@ -77,11 +106,32 @@ namespace Brackeys.Player
             else
             {
                 // We are currently jumping, reduce our jump velocity by gravity and apply it
-                _verticalSpeed += Physics.gravity.y * _info.GravityMultiplicator;
+                _verticalSpeed += Physics.gravity.y * _info.GravityMultiplicator * Time.deltaTime;
                 moveDir.y += _verticalSpeed;
             }
 
             _controller.Move(moveDir * _info.MovementSpeed * Time.deltaTime);
+            if (_info.ApplyHeadbob)
+            {
+                _headbob.ApplyHeadbob(moveDir, _controller.isGrounded, _isSprinting);
+            }
+
+            _pressToInteract.SetActive(_interactions.Any(x => x.CanInteract));
+        }
+
+        public void Stun(float stunDuration, float throwForce)
+        {
+            StartCoroutine(StunCoroutine(stunDuration, throwForce));
+        }
+
+        private IEnumerator StunCoroutine(float stunDuration, float throwForce)
+        {
+            _controller.enabled = false;
+            _rb.isKinematic = false;
+            _rb.AddForce(-_head.forward * throwForce, ForceMode.Impulse);
+            yield return new WaitForSeconds(stunDuration);
+            _rb.isKinematic = true;
+            _controller.enabled = true;
         }
 
         public void OnInteract(InputAction.CallbackContext value)

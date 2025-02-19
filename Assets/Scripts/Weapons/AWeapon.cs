@@ -19,7 +19,7 @@ namespace Brackeys.Weapons
 
         protected bool CanShoot => _currentAmmoCount >= BaseInfo.RequiresExternalAmmosCount;
 
-        public virtual void Fire(Vector3 spawnPos, Vector3 forward, Vector3 gunModel)
+        public virtual void Fire(Vector3 spawnPos, Vector3 forward, Vector3 gunModel, Quaternion rot)
         {
             if (BaseInfo.EjectAmmoGameObject != null)
             {
@@ -27,7 +27,9 @@ namespace Brackeys.Weapons
                 {
                     var go = GameObject.Instantiate(BaseInfo.EjectAmmoGameObject, gunModel, Quaternion.identity);
 
-                    go.GetComponent<Rigidbody>().linearVelocity = (Quaternion.Euler(0f, -90f, 0f) * forward).normalized * Random.Range(2f, 5f);
+                    var t = forward;
+                    t.y = 0f;
+                    go.GetComponent<Rigidbody>().linearVelocity = (Quaternion.Euler(0f, -90f, 0f) * t).normalized * Random.Range(2f, 5f);
                 }
                 _currentAmmoCount = 0;
             }

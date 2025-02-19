@@ -1,3 +1,12 @@
 {
-    "lang": "Français"
+    "lang": "Français",
+
+    "pressInteract" : "Appuyez sur 'E' pour interagir",
+
+    "vendingTitle": "Rien ne peut mal se passer",
+    "pendingCoin": "Insérez une pièce",
+    "laserGunName": "SX-648 Pistolet laser",
+    "laserGunDesc": "Converti de l'électricité en une puissance boule d'énergie (batteries incluses, ne pas mettre au micro-onde)",
+    "pineappleGunName": "Lanceur de fruits (version ananas)",
+    "pineappleGunDesc": "Ré-utilisez votre ingrédient culinaires de tous les jours dans un délicieux (mais mortel) cocktail d'explosions"
 }
