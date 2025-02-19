@@ -17,6 +17,7 @@ namespace Brackeys.Player
         [SerializeField]
         private Transform _head;
         private float _headRotation;
+        public Transform Head => _head;
 
         [SerializeField]
         private GameObject _pressToInteract;

@@ -79,8 +79,7 @@ namespace Brackeys.Player
         {
             if (CurrentWeapon != null && _canShoot)
             {
-                var rot = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
-                CurrentWeapon.Fire(_gunEnd.position, _cam.transform.forward, _gunModelTransform.position, rot);
+                CurrentWeapon.Fire(_gunEnd.position, _cam.transform.forward, _gunModelTransform.position, _pc.Head.rotation);
                 if (CurrentWeapon.BaseInfo.EjectAmmoGameObject)
                 {
                     _ejectionTarget.SetActive(false);

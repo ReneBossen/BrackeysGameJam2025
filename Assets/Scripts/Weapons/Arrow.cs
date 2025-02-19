@@ -1,5 +1,4 @@
 using Brackeys.Interfaces;
-using Brackeys.Manager;
 using UnityEngine;
 
 namespace Brackeys.Weapons
@@ -14,6 +13,7 @@ namespace Brackeys.Weapons
             {
                 shootable.OnShot();
             }
+            transform.parent = collision.transform;
         }
     }
 }
