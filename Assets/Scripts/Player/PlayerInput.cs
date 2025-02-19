@@ -37,7 +37,7 @@ namespace Brackeys.Player
                 {
                     _weaponModelInstance = Instantiate(_currentWeapon.BaseInfo.WeaponModel, _handsWeaponTransform);
                     _weaponModelInstance.transform.localPosition = Vector3.zero;
-                    _ejectionTarget = _weaponModelInstance.GetComponentsInChildren<MeshRenderer>().FirstOrDefault(x => x.CompareTag("GunEffectTarget")).gameObject;
+                    _ejectionTarget = _weaponModelInstance.GetComponentsInChildren<MeshRenderer>().FirstOrDefault(x => x.CompareTag("GunEffectTarget"))?.gameObject;
                 }
             }
             get => _currentWeapon;
@@ -79,7 +79,8 @@ namespace Brackeys.Player
         {
             if (CurrentWeapon != null && _canShoot)
             {
-                CurrentWeapon.Fire(_gunEnd.position, _cam.transform.forward, _gunModelTransform.position);
+                var rot = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
+                CurrentWeapon.Fire(_gunEnd.position, _cam.transform.forward, _gunModelTransform.position, rot);
                 if (CurrentWeapon.BaseInfo.EjectAmmoGameObject)
                 {
                     _ejectionTarget.SetActive(false);
