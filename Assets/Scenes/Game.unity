@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 1086012342}
   - component: {fileID: 1086012341}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Aim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1093,50 +1093,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3073468311224478897, guid: 898a1359f22dd1246ae0c819875dd08b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4655004365030266792, guid: 898a1359f22dd1246ae0c819875dd08b, type: 3}
-      propertyPath: '_weaponsTier0.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 84780ab2aa0bfac41a2b85f10121fd8d, type: 2}
-    - target: {fileID: 4815815192506471382, guid: 898a1359f22dd1246ae0c819875dd08b, type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123208550272485374, guid: 898a1359f22dd1246ae0c819875dd08b, type: 3}
-      propertyPath: m_fontSize
-      value: 0.007
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123208550272485374, guid: 898a1359f22dd1246ae0c819875dd08b, type: 3}
-      propertyPath: m_margin.x
-      value: 0.0021528776
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123208550272485374, guid: 898a1359f22dd1246ae0c819875dd08b, type: 3}
-      propertyPath: m_margin.z
-      value: 0.00212606
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123208550272485374, guid: 898a1359f22dd1246ae0c819875dd08b, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 0.007
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123208550272485374, guid: 898a1359f22dd1246ae0c819875dd08b, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6991089585522182093, guid: 898a1359f22dd1246ae0c819875dd08b, type: 3}
-      propertyPath: m_margin.w
-      value: -0.0030806847
-      objectReference: {fileID: 0}
-    - target: {fileID: 6991089585522182093, guid: 898a1359f22dd1246ae0c819875dd08b, type: 3}
-      propertyPath: m_margin.x
-      value: 0.0021109406
-      objectReference: {fileID: 0}
-    - target: {fileID: 6991089585522182093, guid: 898a1359f22dd1246ae0c819875dd08b, type: 3}
-      propertyPath: m_margin.z
-      value: 0.002074498
-      objectReference: {fileID: 0}
-    - target: {fileID: 6991089585522182093, guid: 898a1359f22dd1246ae0c819875dd08b, type: 3}
-      propertyPath: m_enableAutoSizing
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

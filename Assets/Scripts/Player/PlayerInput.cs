@@ -85,7 +85,7 @@ namespace Brackeys.Player
         {
             if (CurrentWeapon != null && _canShoot)
             {
-                CurrentWeapon.Fire(_gunEnd.position, _cam.transform.forward, _gunModelTransform.position, _pc.Head.rotation);
+                CurrentWeapon.Fire(_gunEnd.position, _cam.transform, _gunModelTransform.position, _pc.Head.rotation);
                 if (CurrentWeapon.BaseInfo.EjectAmmoGameObject)
                 {
                     _ejectionTarget.SetActive(false);
