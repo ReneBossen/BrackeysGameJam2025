@@ -15,18 +15,11 @@ namespace Brackeys.Props
 
         private Animator _animator;
         private bool _isOn = false;
-        private string _idleDown = "IdleDown";
-        private string _pullLever = "PullLever";
+        private string _toggle = "Toggle";
 
         private void Awake()
         {
             _animator = GetComponent<Animator>();
-        }
-
-        private void Start()
-        {
-            _animator.SetBool(_idleDown, false);
-            _animator.SetBool(_pullLever, false);
         }
 
         public void Interact(PlayerController pc)
@@ -42,21 +35,16 @@ namespace Brackeys.Props
         private void PullLever()
         {
             _isOn = !_isOn;
-            _animator.SetBool(_pullLever, true);
-            _animator.Play(_isOn ? AnimationNames.LeverUp : AnimationNames.LeverDown);
+            _animator.SetTrigger(_toggle);
         }
 
         private void OnLeverDown()
         {
-            _animator.SetBool(_idleDown, true);
-            _animator.SetBool(_pullLever, false);
             InvokeCallbacks();
         }
 
         private void OnLeverUp()
         {
-            _animator.SetBool(_idleDown, false);
-            _animator.SetBool(_pullLever, false);
             InvokeCallbacks();
         }
 
