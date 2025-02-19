@@ -14,26 +14,30 @@ namespace Brackeys.Weapons
 
             base.Fire(spawnPos, forwardT, gunModel, rot);
 
-            var bullet = GameObject.Instantiate(Info.Bullet, spawnPos, rot);
-            bullet.GetComponent<Rigidbody>().linearVelocity = forwardT.forward * Info.PropulsionForce;
-            bullet.GetComponent<Bullet>().Info = Info;
-
-            for (int i = 0; i < BaseInfo.MultShootIncr; i++)
+            if (BaseInfo.MultShootIncr == 0)
             {
+                var bullet = GameObject.Instantiate(Info.Bullet, spawnPos, rot);
+                bullet.GetComponent<Rigidbody>().linearVelocity = forwardT.forward * Info.PropulsionForce;
+                bullet.GetComponent<Bullet>().Info = Info;
+            }
+            else
+            {
+                for (int i = 0; i < BaseInfo.MultShootIncr; i++)
                 {
-                    var bL = GameObject.Instantiate(Info.Bullet, spawnPos, rot);
-                    bL.transform.Rotate(0f, BaseInfo.AdditiveAngle * (i + 1), 0f, Space.Self);
-                    bL.GetComponent<Rigidbody>().linearVelocity = bL.transform.forward * Info.PropulsionForce;
-                    bL.GetComponent<Bullet>().Info = Info;
-                }
-                {
-                    var bR = GameObject.Instantiate(Info.Bullet, spawnPos, rot);
-                    bR.transform.Rotate(0f, -BaseInfo.AdditiveAngle * (i + 1), 0f, Space.Self);
-                    bR.GetComponent<Rigidbody>().linearVelocity = bR.transform.forward * Info.PropulsionForce;
-                    bR.GetComponent<Bullet>().Info = Info;
+                    {
+                        var bL = GameObject.Instantiate(Info.Bullet, spawnPos, rot);
+                        bL.transform.Rotate(0f, BaseInfo.AdditiveAngle * (i + 1), 0f, Space.Self);
+                        bL.GetComponent<Rigidbody>().linearVelocity = bL.transform.forward * Info.PropulsionForce;
+                        bL.GetComponent<Bullet>().Info = Info;
+                    }
+                    {
+                        var bR = GameObject.Instantiate(Info.Bullet, spawnPos, rot);
+                        bR.transform.Rotate(0f, -BaseInfo.AdditiveAngle * (i + 1), 0f, Space.Self);
+                        bR.GetComponent<Rigidbody>().linearVelocity = bR.transform.forward * Info.PropulsionForce;
+                        bR.GetComponent<Bullet>().Info = Info;
+                    }
                 }
             }
-
         }
     }
 }
