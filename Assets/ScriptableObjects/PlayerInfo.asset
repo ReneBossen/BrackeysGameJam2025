@@ -20,5 +20,5 @@ MonoBehaviour:
   JumpForce: 0.4
   GravityMultiplicator: 0.13
   ApplyHeadbob: 0
-  FootstepDelay: 1
-  FootstepDelayRunMultiplier: 0.5
+  FootstepDelay: 0.05
+  FootstepDelayRunMultiplier: 0.8
