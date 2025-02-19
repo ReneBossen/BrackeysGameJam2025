@@ -9,6 +9,8 @@
     "laserGunDesc": "Convert electricity into a powerful plasma ball (battery included, do not microwave)",
     "pineappleGunName": "Fruit launcher (pineapple version)",
     "pineappleGunDesc": "Re-use everyday kitchen ingredient into a delicious (but deadly) cocktail of explosion",
+    "bowName": "",
+    "bowDesc": "",
 
     "robot_dispenser_pendingWeapon": "Grab your weapon in the dispenser and let's get started!",
     "robot_dispenser_weaponTaken": "Let's find a way to get out of here!",
