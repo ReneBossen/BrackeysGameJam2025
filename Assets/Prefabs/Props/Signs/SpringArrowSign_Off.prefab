@@ -54,7 +54,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 29a7a01a3e0dc5a49a638be0f84cae7d, type: 3}
       propertyPath: m_Name
-      value: springArrowSignDoubleSided
+      value: SpringArrowSign_Off
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29a7a01a3e0dc5a49a638be0f84cae7d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2029579620781457352, guid: 29a7a01a3e0dc5a49a638be0f84cae7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
