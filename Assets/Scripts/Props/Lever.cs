@@ -14,7 +14,6 @@ namespace Brackeys.Props
         public GameObject GameObject => gameObject;
 
         private Animator _animator;
-        private bool _isOn = false;
         private string _toggle = "Toggle";
 
         private void Awake()
@@ -34,18 +33,7 @@ namespace Brackeys.Props
 
         private void PullLever()
         {
-            _isOn = !_isOn;
             _animator.SetTrigger(_toggle);
-        }
-
-        private void OnLeverDown()
-        {
-            InvokeCallbacks();
-        }
-
-        private void OnLeverUp()
-        {
-            InvokeCallbacks();
         }
 
         private void InvokeCallbacks()

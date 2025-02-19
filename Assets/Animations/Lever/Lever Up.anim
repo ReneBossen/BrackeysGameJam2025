@@ -1179,8 +1179,8 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 1.2083334
-    functionName: OnLeverUp
+  - time: 0.7916667
+    functionName: InvokeCallbacks
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
