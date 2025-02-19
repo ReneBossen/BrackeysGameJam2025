@@ -33,5 +33,8 @@ namespace Brackeys.SO
 
         [Tooltip("Gravity multiplier to make the player fall")]
         public float GravityMultiplicator;
+
+        [Tooltip("Apply headbob when character walking and sprinting")]
+        public bool ApplyHeadbob;
     }
 }

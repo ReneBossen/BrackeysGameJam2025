@@ -19,6 +19,10 @@ namespace Brackeys.SO
         [Tooltip("Object to spawn (usually particle effect) on hit (null if none)")] public GameObject SpawnOnImpact;
         [Tooltip("How much time before the SpawnOnImpact object spawned should be deleted")] public float DurationBeforeDelete;
 
+        [Header("Stun")]
+        public float StunDuration;
+        public float ForceThrowback;
+
         [Header("Explosion")]
         public bool DoesExplode;
         public float ExplosionRadius;

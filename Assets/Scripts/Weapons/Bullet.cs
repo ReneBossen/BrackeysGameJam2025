@@ -19,7 +19,7 @@ namespace Brackeys.Weapons
         }
         int _bounceLeft = 1;
 
-        private void OnCollisionEnter(Collision collision)
+        protected virtual void OnCollisionEnter(Collision collision)
         {
             _bounceLeft--;
             if (_bounceLeft <= 0)

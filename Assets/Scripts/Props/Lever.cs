@@ -1,3 +1,4 @@
+using Brackeys.Animations;
 using Brackeys.Interfaces;
 using Brackeys.Player;
 using Brackeys.Player.Interaction;
@@ -12,7 +13,13 @@ namespace Brackeys.Props
         public bool CanInteract => true;
         public GameObject GameObject => gameObject;
 
-        private bool _isOn = false;
+        private Animator _animator;
+        private string _toggle = "Toggle";
+
+        private void Awake()
+        {
+            _animator = GetComponent<Animator>();
+        }
 
         public void Interact(PlayerController pc)
         {
@@ -26,12 +33,7 @@ namespace Brackeys.Props
 
         private void PullLever()
         {
-            _isOn = !_isOn;
-
-            int rotationAngle = _isOn ? 30 : -30;
-            transform.Rotate(rotationAngle, 0, 0);
-
-            InvokeCallbacks();
+            _animator.SetTrigger(_toggle);
         }
 
         private void InvokeCallbacks()
