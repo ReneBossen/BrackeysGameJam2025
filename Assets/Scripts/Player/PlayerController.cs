@@ -106,7 +106,7 @@ namespace Brackeys.Player
             else
             {
                 // We are currently jumping, reduce our jump velocity by gravity and apply it
-                _verticalSpeed += Physics.gravity.y * _info.GravityMultiplicator;
+                _verticalSpeed += Physics.gravity.y * _info.GravityMultiplicator * Time.deltaTime;
                 moveDir.y += _verticalSpeed;
             }
 

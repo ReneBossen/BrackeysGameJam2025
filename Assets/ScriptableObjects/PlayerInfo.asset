@@ -18,5 +18,5 @@ MonoBehaviour:
   ForceMultiplier: 0.15
   SpeedRunningMultiplicator: 2
   JumpForce: 0.4
-  GravityMultiplicator: 0.0005
+  GravityMultiplicator: 0.13
   ApplyHeadbob: 0
