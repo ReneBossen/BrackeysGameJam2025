@@ -13,9 +13,9 @@ namespace Brackeys
         private void Awake()
         {
             Instance = this;
-            if (!SceneManager.GetAllScenes().Any(x => x.buildIndex == (int)SceneName.Map)) // Debug helper
+            if (!SceneManager.GetAllScenes().Any(x => x.buildIndex == (int)SceneName.Hall)) // Debug helper
             {
-                SceneManager.LoadScene((int)SceneName.Map, LoadSceneMode.Additive);
+                SceneManager.LoadScene((int)SceneName.Hall, LoadSceneMode.Additive);
             }
         }
 
@@ -25,8 +25,8 @@ namespace Brackeys
         }
         private IEnumerator ReloadSceneCoroutine()
         {
-            yield return SceneManager.UnloadSceneAsync((int)SceneName.Map);
-            yield return SceneManager.LoadSceneAsync((int)SceneName.Map, LoadSceneMode.Additive);
+            yield return SceneManager.UnloadSceneAsync((int)SceneName.Hall);
+            yield return SceneManager.LoadSceneAsync((int)SceneName.Hall, LoadSceneMode.Additive);
         }
     }
 }

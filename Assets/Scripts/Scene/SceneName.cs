@@ -3,6 +3,7 @@ namespace Brackeys.SceneLoader
     public enum SceneName
     {
         Game,
-        Map
+        Map,
+        Hall
     }
 }
