@@ -24,13 +24,11 @@ namespace Brackeys.Props
         public void Interact(PlayerController pc)
         {
             PullLever();
-            InvokeCallbacks();
         }
 
         public void OnShot()
         {
             PullLever();
-            InvokeCallbacks();
         }
 
         private void PullLever()
