@@ -20,7 +20,7 @@ namespace Brakeys.Robot
             {
                 return "speak_battery_alreadyFull";
             }
-            while (input.CurrentWeapon.NeedAmmo()) input.CurrentWeapon.AddAmmo();
+            while (input.CurrentWeapon.NeedAmmo()) input.AddAmmo();
             return "speak_battery_ok";
         }
     }
