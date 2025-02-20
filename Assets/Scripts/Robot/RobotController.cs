@@ -53,7 +53,6 @@ namespace Brakeys.Robot
             _anim = GetComponent<Animator>();
             _display.OnDone.AddListener(() =>
             {
-                Debug.Log("done");
                 _anim.SetBool("IsSpeaking", false);
             });
         }

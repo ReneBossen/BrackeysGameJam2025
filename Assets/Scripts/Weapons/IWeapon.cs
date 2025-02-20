@@ -10,5 +10,6 @@ namespace Brackeys.Weapons
 
         /// <returns>Is the weapon full of ammo</returns>
         public bool AddAmmo();
+        public bool NeedAmmo();
     }
 }

@@ -17,5 +17,19 @@
     "robot_button_needWeapon": "We will need a weapon from the dispenser to do that",
     "robot_buttonMove_notDoneMoving": "Shooting at this will be hard! Maybe we should find a way to stop it",
     "robot_buttonMove_notDoneNotMoving": "Let's see if we can hit it now, if not we can just make it move again",
-    "robot_buttonMove_done": "Good shot!"
+    "robot_buttonMove_done": "Good shot!",
+
+    "speak_seller": "We sell food and souvenirs! Oil that will fill your belly for only 10$!",
+    "speak_ballThrow": "Try to break all the bottles for a special prize!.... No I'm not moving, yes they are all glued together",
+    "speak_ballon": "You want a ballon? ...I kind of want to keep them...",
+    "speak_empty": "My stall is not totally set up yet, but you better be ready! It'll be the best one!",
+    "speak_credits": "This circus was set up in only one week! Check the board next to me for full details of all our behind-the-scene employees!",
+
+    "speak_battery_noWeapon": "I sell delicious batteries, you'll need a weapon if you want some!",
+    "speak_battery_noGoodWeapon": "I sell delicious batteries but I don't think your weapon have any slot of them!",
+    "speak_battery_alreadyFull": "I sell delicious batteries but... your weapon is already full, go blast some things and come back later on!",
+    "speak_battery_ok": "Need some battery? For such a good looking person it's free, enjoy!",
+
+    "speak_pinkObj_isOff": "Can you believe it I was tasked to stay here!? Just me and this... big... red... button...",
+    "speak_pinkObj_isOn": "I somehow feel... fulfilled"
 }

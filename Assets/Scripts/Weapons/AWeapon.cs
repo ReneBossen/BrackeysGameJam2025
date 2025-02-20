@@ -35,13 +35,19 @@ namespace Brackeys.Weapons
             }
         }
 
+        public bool NeedAmmo()
+        {
+            return _currentAmmoCount < BaseInfo.RequiresExternalAmmosCount;
+        }
+
         public bool AddAmmo()
         {
-            if (_currentAmmoCount < BaseInfo.RequiresExternalAmmosCount)
+            if (NeedAmmo())
             {
                 _currentAmmoCount++;
+                return !NeedAmmo();
             }
-            return _currentAmmoCount >= BaseInfo.RequiresExternalAmmosCount;
+            return true;
         }
     }
 }

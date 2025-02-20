@@ -23,6 +23,7 @@ namespace Brackeys.VN
             {
                 _index = 0;
                 _timer = _displaySpeedRef;
+                if (_text == null) Awake();
                 _text.text = string.Empty;
                 if (value != null)
                 {

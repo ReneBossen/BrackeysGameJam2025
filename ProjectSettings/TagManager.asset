@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - GunEffectTarget
+  - TriggerHazard
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - Player
   - Projectile
   - Prop
-  - 
-  - 
+  - Interactable
+  - Hazard
   - 
   - 
   - 
