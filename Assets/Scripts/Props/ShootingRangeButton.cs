@@ -13,6 +13,8 @@ namespace Brackeys.Props
 
         private Rigidbody _rb;
 
+        private bool _isDone;
+
         private void Awake()
         {
             _rb = GetComponent<Rigidbody>();
@@ -30,12 +32,13 @@ namespace Brackeys.Props
 
             FollowPath path = GetComponent<FollowPath>();
             _rb.isKinematic = false;
-            _rb.linearVelocity = (ResourceManager.Instance.PlayerController.transform.position - transform.position).normalized * 10f;
+            _rb.linearVelocity = (transform.position - ResourceManager.Instance.PlayerController.transform.position).normalized * 10f;
         }
 
         private void InvokeCallbacks()
         {
-            _callbacks.Invoke();
+            if (!_isDone) _callbacks.Invoke();
+            _isDone = true;
         }
 
         private void OnDrawGizmosSelected()
