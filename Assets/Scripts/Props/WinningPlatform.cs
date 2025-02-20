@@ -5,9 +5,10 @@ namespace Brackeys.Props
 {
     public class WinningPlatform : MonoBehaviour
     {
+        private bool _didWin;
         private void OnTriggerEnter(Collider collider)
         {
-            if (!collider.TryGetComponent<PlayerController>(out var controller))
+            if (!collider.TryGetComponent<PlayerController>(out var controller) || _didWin)
             {
                 return;
             }
@@ -16,6 +17,7 @@ namespace Brackeys.Props
             controller.ResetPosition();
             VendingMachine.Instance.ResetMachine();
             LevelManager.Instance.ReloadScene();
+            _didWin = true;
         }
     }
 }

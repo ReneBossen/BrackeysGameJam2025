@@ -36,6 +36,7 @@ namespace Brackeys.Player
 
         private Vector2 _mov;
         private Vector3 _startingPos;
+        private Quaternion _startingRot;
 
         private List<IInteractable> _interactions = new();
 
@@ -66,6 +67,7 @@ namespace Brackeys.Player
             });
 
             _startingPos = transform.position;
+            _startingRot = transform.rotation;
         }
 
         public void Unregister(IInteractable i)
@@ -87,7 +89,13 @@ namespace Brackeys.Player
         {
             _controller.enabled = false;
             transform.position = _startingPos;
+            transform.rotation = _startingRot;
+            _verticalSpeed = 0f;
             SetWeapon(null);
+        }
+
+        public void ReadyUpPlayer()
+        {
             _controller.enabled = true;
         }
 

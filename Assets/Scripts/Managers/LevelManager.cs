@@ -1,3 +1,4 @@
+using Brackeys.Manager;
 using Brackeys.SceneLoader;
 using System.Collections;
 using System.Linq;
@@ -26,7 +27,9 @@ namespace Brackeys
         private IEnumerator ReloadSceneCoroutine()
         {
             yield return SceneManager.UnloadSceneAsync((int)SceneName.Hall);
+            yield return Resources.UnloadUnusedAssets();
             yield return SceneManager.LoadSceneAsync((int)SceneName.Hall, LoadSceneMode.Additive);
+            ResourceManager.Instance.PlayerController.ReadyUpPlayer();
         }
     }
 }
