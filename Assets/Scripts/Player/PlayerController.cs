@@ -1,4 +1,5 @@
 using Brackeys.Player.Interaction;
+using Brackeys.Props;
 using Brackeys.SO;
 using Brackeys.Weapons;
 using System.Collections;
@@ -138,6 +139,15 @@ namespace Brackeys.Player
                     _audioSource.PlayOneShot(clip);
                     _footstepDelay += _info.FootstepDelay * (_isSprinting ? _info.FootstepDelayRunMultiplier : 1f);
                 }
+            }
+        }
+
+        private void OnControllerColliderHit(ControllerColliderHit hit)
+        {
+            hit.gameObject.TryGetComponent<StrengthGame>(out StrengthGame game);
+            if (game != null && game.GetIsReady())
+            {
+                game.ProcessCollision(hit, _controller.velocity);
             }
         }
 

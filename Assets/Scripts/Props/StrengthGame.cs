@@ -5,37 +5,38 @@ namespace Brackeys.Props
 {
     public class StrengthGame : MonoBehaviour
     {
-        private CharacterController _characterController;
-        private Rigidbody _rigidbody;
-        private Vector3 _velocity;
         private bool _isReady = true;
 
-        private void OnTriggerEnter(Collider collider)
+        public bool GetIsReady() => _isReady;
+
+        public void ProcessCollision(ControllerColliderHit other, Vector3 velocity)
         {
             if (!_isReady)
             {
                 return;
             }
 
-            GameObject collidedObject = collider.gameObject;
+            CharacterController controller = other.controller;
 
-            collidedObject.TryGetComponent<CharacterController>(out _characterController);
-            if (_characterController != null)
+            Debug.Log($"CharacterController: {controller}");
+
+            if (controller == null)
             {
-                _velocity = _characterController.velocity;
+                return;
             }
 
-            switch (_velocity.magnitude)
+            switch (velocity.magnitude)
             {
                 case < 2:
-                    return;
+                    _isReady = false;
+                    StartCoroutine(StartCooldown());
+                    break;
                 case > 2:
-                    Debug.Log($"{collider} - Velocity: {_velocity.magnitude}");
+                    Debug.Log($"{other} - Velocity: {velocity.magnitude}");
+                    _isReady = false;
+                    StartCoroutine(StartCooldown());
                     break;
             }
-
-            _isReady = false;
-            StartCoroutine(StartCooldown());
         }
 
         private IEnumerator StartCooldown()
