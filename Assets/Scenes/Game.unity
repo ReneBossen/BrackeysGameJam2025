@@ -1165,10 +1165,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3104125665641379749, guid: d833479aa53495f47bddee9004f50acb, type: 3}
-      propertyPath: m_Volume
-      value: 0.25
-      objectReference: {fileID: 0}
     - target: {fileID: 3802658133771417516, guid: d833479aa53495f47bddee9004f50acb, type: 3}
       propertyPath: _aimImage
       value: 
@@ -1181,6 +1177,10 @@ PrefabInstance:
       propertyPath: _pressToInteract
       value: 
       objectReference: {fileID: 1315062538}
+    - target: {fileID: 8336481765440232535, guid: d833479aa53495f47bddee9004f50acb, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
