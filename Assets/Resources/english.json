@@ -19,5 +19,9 @@
     "robot_buttonMove_notDoneNotMoving": "Let's see if we can hit it now, if not we can just make it move again",
     "robot_buttonMove_done": "Good shot!",
 
-    "speak_sample": "Hello I am a NPC"
+    "speak_seller": "We sell food and souvenirs! Oil that will fill your belly for only 10$!",
+    "speak_ballThrow": "Try to break all the bottles for a special prize!.... No I'm not moving, yes they are all glued together",
+    "speak_ballon": "You want a ballon? ...I kind of want to keep them...",
+    "speak_empty": "My stall is not totally set up yet, but you better be ready! It'll be the best one!",
+    "speak_trash": "Don't forget, broken bones go in the green trashcan"
 }
