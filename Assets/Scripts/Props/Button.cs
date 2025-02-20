@@ -25,7 +25,8 @@ namespace Brackeys.Props
 
         private void ActivateConnectedObject()
         {
-            if (IsActivated) return;
+            if (IsActivated)
+                return;
 
             InvokeCallbacks();
 
