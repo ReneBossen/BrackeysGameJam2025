@@ -32,7 +32,7 @@ namespace Brackeys.Weapons
                 if (Info.DoesExplode)
                 {
                     DebugManager.Instance.AddSphere(Info.ExplosionRadius, Color.red, 1f, collision.contacts[0].point);
-                    foreach (var s in Physics.OverlapSphere(collision.contacts[0].point, Info.ExplosionRadius, LayerMask.GetMask("Prop")))
+                    foreach (var s in Physics.OverlapSphere(collision.contacts[0].point, Info.ExplosionRadius, LayerMask.GetMask("Prop", "SpeProp")))
                     {
                         if (s.TryGetComponent<IShootable>(out var shootable))
                         {
