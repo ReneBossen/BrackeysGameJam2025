@@ -144,6 +144,7 @@ namespace Brackeys.Player
 
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
+            //Todo: Clean this code
             hit.gameObject.TryGetComponent<StrengthGame>(out StrengthGame game);
             if (game != null && game.GetIsReady())
             {
