@@ -2136,16 +2136,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5721557134587911698, guid: 532d4df48c0ca024bb4be43f0c34a690, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
-    - target: {fileID: 5721557134587911698, guid: 532d4df48c0ca024bb4be43f0c34a690, type: 3}
       propertyPath: m_Name
       value: trapdoor
-      objectReference: {fileID: 0}
-    - target: {fileID: 6850950503227080298, guid: 532d4df48c0ca024bb4be43f0c34a690, type: 3}
-      propertyPath: _startsOpen
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
