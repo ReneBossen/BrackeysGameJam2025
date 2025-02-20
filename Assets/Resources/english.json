@@ -28,5 +28,8 @@
     "speak_battery_noWeapon": "I sell delicious batteries, you'll need a weapon if you want some!",
     "speak_battery_noGoodWeapon": "I sell delicious batteries but I don't think your weapon have any slot of them!",
     "speak_battery_alreadyFull": "I sell delicious batteries but... your weapon is already full, go blast some things and come back later on!",
-    "speak_battery_ok": "Need some battery? For such a good looking person it's free, enjoy!"
+    "speak_battery_ok": "Need some battery? For such a good looking person it's free, enjoy!",
+
+    "speak_pinkObj_isOff": "Can you believe it I was tasked to stay here!? Just me and this... big... red... button...",
+    "speak_pinkObj_isOn": "I somehow feel... fulfilled"
 }
