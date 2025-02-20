@@ -18884,7 +18884,7 @@ PrefabInstance:
     - target: {fileID: 2727759885777644494, guid: e59168520eaf740479edac9cbc264136, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1456898798}
+      objectReference: {fileID: 0}
     - target: {fileID: 2727759885777644494, guid: e59168520eaf740479edac9cbc264136, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -33480,6 +33480,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 521229851}
     m_Modifications:
+    - target: {fileID: 2732225761500289747, guid: 74af0aff8b665ee479d631f929226c84, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4641311843168356895, guid: 74af0aff8b665ee479d631f929226c84, type: 3}
       propertyPath: m_Name
       value: Ferris Wheel
@@ -33523,6 +33527,10 @@ PrefabInstance:
     - target: {fileID: 5414048217709760677, guid: 74af0aff8b665ee479d631f929226c84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170405846206049418, guid: 74af0aff8b665ee479d631f929226c84, type: 3}
+      propertyPath: _torqueSpeed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
