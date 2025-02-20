@@ -17,5 +17,7 @@
     "robot_button_needWeapon": "We will need a weapon from the dispenser to do that",
     "robot_buttonMove_notDoneMoving": "Shooting at this will be hard! Maybe we should find a way to stop it",
     "robot_buttonMove_notDoneNotMoving": "Let's see if we can hit it now, if not we can just make it move again",
-    "robot_buttonMove_done": "Good shot!"
+    "robot_buttonMove_done": "Good shot!",
+
+    "speak_sample": "Hello I am a NPC"
 }
