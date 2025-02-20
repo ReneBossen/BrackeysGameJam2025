@@ -5,11 +5,18 @@ namespace Brackeys.Props
 {
     public class Jail : MonoBehaviour
     {
+        public static Jail Instance { private set; get; }
+
         [SerializeField]
         private GameObject _door;
 
         [SerializeField]
         private Transform _jailPos;
+
+        private void Awake()
+        {
+            Instance = this;
+        }
 
         public void SetToJail()
         {
