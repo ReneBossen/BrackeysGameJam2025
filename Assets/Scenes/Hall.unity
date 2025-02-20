@@ -4295,6 +4295,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1721364843983546319, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721364843983546319, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721364843983546319, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 351094930}
+    - target: {fileID: 1721364843983546319, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721364843983546319, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DecreaseValidation
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721364843983546319, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Brackeys.Exit, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721364843983546319, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2268806778232053977, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
       propertyPath: m_Icon
       value: 
@@ -4591,6 +4619,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c2c82a10bde2c334097922be7143841c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 351094928}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c2c82a10bde2c334097922be7143841c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 351094930}
   m_SourcePrefab: {fileID: 100100000, guid: c2c82a10bde2c334097922be7143841c, type: 3}
 --- !u!1 &351094927 stripped
 GameObject:
@@ -4623,6 +4654,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c2c82a10bde2c334097922be7143841c, type: 3}
   m_PrefabInstance: {fileID: 351094926}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &351094930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351094927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db3485dc86cb2340bcc7c2601bac5dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _validationCount: 4
 --- !u!1001 &352123278
 PrefabInstance:
   m_ObjectHideFlags: 0
