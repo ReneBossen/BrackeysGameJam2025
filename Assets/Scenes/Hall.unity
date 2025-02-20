@@ -13287,31 +13287,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1631382054505716978, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.749
+      value: 4.7940006
       objectReference: {fileID: 0}
     - target: {fileID: 1631382054505716978, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.404
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1631382054505716978, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.981
+      value: 2.0240002
       objectReference: {fileID: 0}
     - target: {fileID: 1631382054505716978, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.3904538
+      value: 0.363895
       objectReference: {fileID: 0}
     - target: {fileID: 1631382054505716978, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.3904538
+      value: -0.363895
       objectReference: {fileID: 0}
     - target: {fileID: 1631382054505716978, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.58953017
+      value: 0.6062842
       objectReference: {fileID: 0}
     - target: {fileID: 1631382054505716978, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.58953017
+      value: 0.6062842
       objectReference: {fileID: 0}
     - target: {fileID: 1631382054505716978, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13323,7 +13323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1631382054505716978, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -67.034
+      value: -61.945007
       objectReference: {fileID: 0}
     - target: {fileID: 1631382054505716978, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -33494,25 +33494,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 1979183245}
     m_Modifications:
     - target: {fileID: 2727759885777644494, guid: e59168520eaf740479edac9cbc264136, type: 3}
-      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2727759885777644494, guid: e59168520eaf740479edac9cbc264136, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 284230790}
-    - target: {fileID: 2727759885777644494, guid: e59168520eaf740479edac9cbc264136, type: 3}
-      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnActivate
-      objectReference: {fileID: 0}
-    - target: {fileID: 2727759885777644494, guid: e59168520eaf740479edac9cbc264136, type: 3}
-      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Brackeys.Props.Hazard, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2727759885777644494, guid: e59168520eaf740479edac9cbc264136, type: 3}
-      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 6303254234374282989, guid: e59168520eaf740479edac9cbc264136, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25

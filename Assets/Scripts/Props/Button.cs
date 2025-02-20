@@ -39,6 +39,7 @@ namespace Brackeys.Props
 
         private void InvokeCallbacks()
         {
+            Debug.Log("clicked");
             _callbacks.Invoke();
         }
     }
