@@ -33488,6 +33488,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ferris Wheel
       objectReference: {fileID: 0}
+    - target: {fileID: 4641311843168356895, guid: 74af0aff8b665ee479d631f929226c84, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5414048217709760677, guid: 74af0aff8b665ee479d631f929226c84, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.103064
