@@ -1,4 +1,5 @@
 using Brackeys.Interfaces;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -41,6 +42,16 @@ namespace Brackeys.Props
         {
             Debug.Log("clicked");
             _callbacks.Invoke();
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.green;
+
+            for (int i = 0; i < _callbacks.GetPersistentEventCount(); i++)
+            {
+                Gizmos.DrawLine(_callbacks.GetPersistentTarget(i).GameObject().gameObject.transform.position, transform.position);
+            }
         }
     }
 }
