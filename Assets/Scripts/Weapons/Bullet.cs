@@ -19,8 +19,27 @@ namespace Brackeys.Weapons
         }
         int _bounceLeft = 1;
 
+        private void Awake()
+        {
+            _last = transform.position;
+        }
+
+        private Vector3 _last;
+        private void Update()
+        {
+            var curr = transform.position;
+
+            if (Physics.Linecast(curr, _last, out var hit, LayerMask.GetMask("Prop", "SpeProp", "Map")))
+            {
+                transform.position = hit.point;
+            }
+
+            _last = transform.position;
+        }
+
         protected virtual void OnCollisionEnter(Collision collision)
         {
+            Debug.Log($"[BUL] Touched {collision.collider.name}");
             _bounceLeft--;
             if (_bounceLeft <= 0)
             {
