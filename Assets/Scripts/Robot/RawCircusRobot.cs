@@ -1,15 +1,19 @@
+using Brackeys.Translation;
 using UnityEngine;
 
 namespace Brakeys.Robot
 {
     public class RawCiscusRobot : ASpeakableRobot
     {
-        [SerializeField, TextArea]
-        private string[] _targetTranslationKey;
+        [SerializeField]
+        private string _mainKeyName;
+
+        [SerializeField]
+        private int _keyCount;
 
         public override string GetTranslationKey()
         {
-            return _targetTranslationKey[Random.Range(0, _targetTranslationKey.Length)];
+            return Translate.Instance.Tr($"{_mainKeyName}_{Random.Range(1, _keyCount + 1):00}");
         }
     }
 }
