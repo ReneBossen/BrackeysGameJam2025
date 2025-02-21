@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8336223089852952130
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 323300187339129100, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e16f476806bb2fd4d8da1f1da3c92750, type: 2}
+    - target: {fileID: 1456838690901162595, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456838690901162595, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456838690901162595, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456838690901162595, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.02108
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456838690901162595, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.02283
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456838690901162595, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00936
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456838690901162595, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.72540146
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456838690901162595, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.18441911
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456838690901162595, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.628329
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456838690901162595, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.21209638
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456838690901162595, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -32.282
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456838690901162595, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 80.304
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456838690901162595, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 5.155
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268806778232053977, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      propertyPath: m_Name
+      value: BlueButton Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1721364843983546319, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2268806778232053977, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2711790934011848318}
+  m_SourcePrefab: {fileID: 100100000, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+--- !u!1 &7839743328066014875 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2268806778232053977, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
+  m_PrefabInstance: {fileID: 8336223089852952130}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2711790934011848318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7839743328066014875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03eeb89d47b39ba48a1a5ee24e5869a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _validationMat: {fileID: 2100000, guid: 352c8401a17e8a84d8d028a9e0e1c619, type: 2}

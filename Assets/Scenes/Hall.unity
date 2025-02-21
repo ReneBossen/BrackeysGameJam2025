@@ -4016,6 +4016,8 @@ MonoBehaviour:
   _objShoot1: {fileID: 8599675367796823018}
   _objShoot2: {fileID: 3155758171651317447}
   _objShootEnable: {fileID: 1634674768}
+  _blueButtons:
+  - {fileID: 1923046461}
 --- !u!1 &163959341
 GameObject:
   m_ObjectHideFlags: 0
@@ -43983,8 +43985,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4732226946776628155, guid: 5b34ecb604da04242a5c42d166157aa2, type: 3}
       propertyPath: _isRequiredToExit
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5274789248969473197, guid: 5b34ecb604da04242a5c42d166157aa2, type: 3}
+      propertyPath: m_Name
+      value: BlueButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923127068533480824, guid: 5b34ecb604da04242a5c42d166157aa2, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e16f476806bb2fd4d8da1f1da3c92750, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43995,6 +44005,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1635913564429858657, guid: 5b34ecb604da04242a5c42d166157aa2, type: 3}
   m_PrefabInstance: {fileID: 1923046459}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1923046461 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 26382396045939784, guid: 5b34ecb604da04242a5c42d166157aa2, type: 3}
+  m_PrefabInstance: {fileID: 1923046459}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03eeb89d47b39ba48a1a5ee24e5869a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1928810104
 PrefabInstance:
   m_ObjectHideFlags: 0

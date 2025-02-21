@@ -1,4 +1,6 @@
 using Brackeys.Props;
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Brackeys.Manager
@@ -16,9 +18,18 @@ namespace Brackeys.Manager
         [SerializeField]
         private Lever _objShootEnable;
 
+        [SerializeField]
+        private List<BlueButton> _blueButtons;
+
         private void Awake()
         {
             Instance = this;
+
+            for (int i = 0; i < 3; i++)
+            {
+                _blueButtons.RemoveAt(Random.Range(0, _blueButtons.Count));
+            }
+            foreach (var bt in _blueButtons) bt.gameObject.SetActive(false);
         }
 
         public bool IsObjMoveDone => _objMove.IsActivated;
