@@ -1,4 +1,5 @@
 using Brackeys.Interfaces;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,8 +11,18 @@ namespace Brackeys.Props
 
         [SerializeField] private Material _validationMat;
 
+        [SerializeField] private bool _isRequiredToExit;
+
         public bool IsActivated { private set; get; }
         public bool IsMoving => GetComponent<FollowPath>().enabled;
+
+        private void Start()
+        {
+            if (_isRequiredToExit)
+            {
+                Exit.Instance.AddRequiredObject(gameObject);
+            }
+        }
 
         public void OnShot()
         {
@@ -21,11 +32,17 @@ namespace Brackeys.Props
             mats[1] = _validationMat;
             r.materials = mats;
             IsActivated = true;
+
+            if (!_isRequiredToExit)
+                return;
+
+            Exit.Instance.DecreaseValidation();
         }
 
         private void ActivateConnectedObject()
         {
-            if (IsActivated) return;
+            if (IsActivated)
+                return;
 
             InvokeCallbacks();
 
@@ -38,7 +55,18 @@ namespace Brackeys.Props
 
         private void InvokeCallbacks()
         {
+            Debug.Log("clicked");
             _callbacks.Invoke();
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.green;
+
+            for (int i = 0; i < _callbacks.GetPersistentEventCount(); i++)
+            {
+                Gizmos.DrawLine(_callbacks.GetPersistentTarget(i).GameObject().gameObject.transform.position, transform.position);
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 using Brackeys.Player.Interaction;
+using Brackeys.Props;
 using Brackeys.SO;
 using Brackeys.Weapons;
 using System.Collections;
@@ -22,6 +23,11 @@ namespace Brackeys.Player
         [SerializeField]
         private GameObject _pressToInteract;
 
+        [SerializeField]
+        private List<AudioClip> _footstepsWalk;
+        private AudioSource _audioSource;
+        private float _footstepDelay;
+
         private Rigidbody _rb;
         private CharacterController _controller;
         private Headbob _headbob;
@@ -30,6 +36,7 @@ namespace Brackeys.Player
 
         private Vector2 _mov;
         private Vector3 _startingPos;
+        private Quaternion _startingRot;
 
         private List<IInteractable> _interactions = new();
 
@@ -39,6 +46,7 @@ namespace Brackeys.Player
             _rb = GetComponent<Rigidbody>();
             _controller = GetComponent<CharacterController>();
             _headbob = GetComponentInChildren<Headbob>();
+            _audioSource = GetComponentInChildren<AudioSource>();
 
             Cursor.lockState = CursorLockMode.Locked;
 
@@ -59,6 +67,7 @@ namespace Brackeys.Player
             });
 
             _startingPos = transform.position;
+            _startingRot = transform.rotation;
         }
 
         public void Unregister(IInteractable i)
@@ -80,12 +89,20 @@ namespace Brackeys.Player
         {
             _controller.enabled = false;
             transform.position = _startingPos;
+            transform.rotation = _startingRot;
+            _verticalSpeed = 0f;
             SetWeapon(null);
+        }
+
+        public void ReadyUpPlayer()
+        {
             _controller.enabled = true;
         }
 
         private void Update()
         {
+            if (!_controller.enabled) return;
+
             var pos = _mov;
             Vector3 desiredMove = transform.forward * pos.y + transform.right * pos.x;
 
@@ -110,6 +127,7 @@ namespace Brackeys.Player
                 moveDir.y += _verticalSpeed;
             }
 
+            var p = transform.position;
             _controller.Move(moveDir * _info.MovementSpeed * Time.deltaTime);
             if (_info.ApplyHeadbob)
             {
@@ -117,6 +135,31 @@ namespace Brackeys.Player
             }
 
             _pressToInteract.SetActive(_interactions.Any(x => x.CanInteract));
+
+            if (_controller.isGrounded)
+            {
+                _footstepDelay -= Vector3.SqrMagnitude(p - transform.position);
+                if (_footstepDelay < 0f)
+                {
+                    var clipIndex = Random.Range(1, _footstepsWalk.Count);
+                    var clip = _footstepsWalk[clipIndex];
+                    _footstepsWalk.RemoveAt(clipIndex);
+                    _footstepsWalk.Insert(0, clip);
+
+                    _audioSource.PlayOneShot(clip);
+                    _footstepDelay += _info.FootstepDelay * (_isSprinting ? _info.FootstepDelayRunMultiplier : 1f);
+                }
+            }
+        }
+
+        private void OnControllerColliderHit(ControllerColliderHit hit)
+        {
+            //Todo: Clean this code
+            hit.gameObject.TryGetComponent<StrengthGame>(out StrengthGame game);
+            if (game != null && game.GetIsReady())
+            {
+                game.ProcessCollision(hit, _controller.velocity);
+            }
         }
 
         public void Stun(float stunDuration, float throwForce)

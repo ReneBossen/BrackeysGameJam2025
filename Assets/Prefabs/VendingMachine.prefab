@@ -129,10 +129,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.01
-  m_fontSizeBase: 0.01
+  m_fontSize: 0.007
+  m_fontSizeBase: 0.007
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 0.005
   m_fontSizeMax: 0.01
   m_fontStyle: 1
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.0017158987, y: 0.00028454326, z: 0.0017429728, w: 0.008413854}
+  m_margin: {x: 0.0021528776, y: 0.00028454326, z: 0.00212606, w: 0.008413854}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -497,7 +497,7 @@ MonoBehaviour:
   m_fontSize: 0.005
   m_fontSizeBase: 0.005
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 0.001
   m_fontSizeMax: 0.005
   m_fontStyle: 0
@@ -532,7 +532,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.0019041505, y: 0.008338882, z: 0.0018856467, w: -0.0031486563}
+  m_margin: {x: 0.0021109406, y: 0.008338882, z: 0.002074498, w: -0.0030806847}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -712,6 +712,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fa76661675a480748b535f479e10f509, type: 2}
   _weaponsTier1:
   - {fileID: 11400000, guid: 96009a179146e4c4994d2f80f91d71fd, type: 2}
+  - {fileID: 11400000, guid: 84780ab2aa0bfac41a2b85f10121fd8d, type: 2}
   _weaponNameText: {fileID: 6123208550272485374}
   _weaponNameDescription: {fileID: 6991089585522182093}
 --- !u!95 &6198427664370987181

@@ -11,6 +11,10 @@ namespace Brackeys.SO
         public string NameKey;
         public string DescriptionKey;
 
+        [Header("Multiple shoot")]
+        [Tooltip("If >0, shoot an additional amount of projectiles")] public int MultShootIncr;
+        public float AdditiveAngle;
+
         [Header("Ammos")]
         [Tooltip("Does this weapon need an external source of ammo to shoot, 0 to disable")] public int RequiresExternalAmmosCount;
         [Tooltip("If not null, the ammo will be ejected fromthe gun on every shoot")] public GameObject EjectAmmoGameObject;

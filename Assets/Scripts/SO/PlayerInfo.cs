@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Brackeys.SO
@@ -36,5 +35,10 @@ namespace Brackeys.SO
 
         [Tooltip("Apply headbob when character walking and sprinting")]
         public bool ApplyHeadbob;
+
+        [Tooltip("Delay between 2 footsteps")]
+        public float FootstepDelay;
+        [Tooltip("Delay modifier when the player is runnning")]
+        public float FootstepDelayRunMultiplier;
     }
 }

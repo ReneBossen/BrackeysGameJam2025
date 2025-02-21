@@ -20,6 +20,9 @@ namespace Brackeys.Player
         [SerializeField]
         private Transform _gunModelTransform;
 
+        [SerializeField]
+        private GameObject _aimImage;
+
         private GameObject _weaponModelInstance;
         private GameObject _ejectionTarget;
         private PlayerController _pc;
@@ -33,6 +36,7 @@ namespace Brackeys.Player
                     Destroy(_weaponModelInstance);
                 }
                 _currentWeapon = value;
+                _aimImage.SetActive(_currentWeapon != null);
                 if (_currentWeapon != null)
                 {
                     _weaponModelInstance = Instantiate(_currentWeapon.BaseInfo.WeaponModel, _handsWeaponTransform);
@@ -50,6 +54,8 @@ namespace Brackeys.Player
         private void Awake()
         {
             _cam = Camera.main;
+
+            _aimImage.SetActive(false);
 
             _inputSystem = new InputSystem();
             _inputSystem.Player.Fire.performed += OnFire;
@@ -79,7 +85,7 @@ namespace Brackeys.Player
         {
             if (CurrentWeapon != null && _canShoot)
             {
-                CurrentWeapon.Fire(_gunEnd.position, _cam.transform.forward, _gunModelTransform.position, _pc.Head.rotation);
+                CurrentWeapon.Fire(_gunEnd.position, _cam.transform, _gunModelTransform.position, _pc.Head.rotation);
                 if (CurrentWeapon.BaseInfo.EjectAmmoGameObject)
                 {
                     _ejectionTarget.SetActive(false);

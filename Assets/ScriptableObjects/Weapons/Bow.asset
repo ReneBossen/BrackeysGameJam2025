@@ -16,6 +16,8 @@ MonoBehaviour:
   WeaponModel: {fileID: 919132149155446097, guid: d78021f90bacd2740b63f28769d55299, type: 3}
   NameKey: bowName
   DescriptionKey: bowDesc
+  MultShootIncr: 1
+  AdditiveAngle: 5
   RequiresExternalAmmosCount: 0
   EjectAmmoGameObject: {fileID: 0}
   SpawnOnImpact: {fileID: 0}

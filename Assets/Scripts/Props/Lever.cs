@@ -2,6 +2,7 @@ using Brackeys.Animations;
 using Brackeys.Interfaces;
 using Brackeys.Player;
 using Brackeys.Player.Interaction;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,19 +15,11 @@ namespace Brackeys.Props
         public GameObject GameObject => gameObject;
 
         private Animator _animator;
-        private bool _isOn = false;
-        private string _idleDown = "IdleDown";
-        private string _pullLever = "PullLever";
+        private string _toggle = "Toggle";
 
         private void Awake()
         {
             _animator = GetComponent<Animator>();
-        }
-
-        private void Start()
-        {
-            _animator.SetBool(_idleDown, false);
-            _animator.SetBool(_pullLever, false);
         }
 
         public void Interact(PlayerController pc)
@@ -41,28 +34,22 @@ namespace Brackeys.Props
 
         private void PullLever()
         {
-            _isOn = !_isOn;
-            _animator.SetBool(_pullLever, true);
-            _animator.Play(_isOn ? AnimationNames.LeverUp : AnimationNames.LeverDown);
-        }
-
-        private void OnLeverDown()
-        {
-            _animator.SetBool(_idleDown, true);
-            _animator.SetBool(_pullLever, false);
-            InvokeCallbacks();
-        }
-
-        private void OnLeverUp()
-        {
-            _animator.SetBool(_idleDown, false);
-            _animator.SetBool(_pullLever, false);
-            InvokeCallbacks();
+            _animator.SetTrigger(_toggle);
         }
 
         private void InvokeCallbacks()
         {
             _callbacks.Invoke();
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.green;
+
+            for (int i = 0; i < _callbacks.GetPersistentEventCount(); i++)
+            {
+                Gizmos.DrawLine(_callbacks.GetPersistentTarget(i).GameObject().gameObject.transform.position, transform.position);
+            }
         }
     }
 }

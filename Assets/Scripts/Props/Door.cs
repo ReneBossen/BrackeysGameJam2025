@@ -7,18 +7,26 @@ namespace Brackeys.Props
     {
         public bool CanActivate { private set; get; } = true;
 
-        [SerializeField] private bool _appears;
+        private Animator _animator;
+        private BoxCollider _collider;
+        private string _toggle = "Toggle";
 
         private void Start()
         {
-            gameObject.SetActive(!_appears);
+            _animator = GetComponent<Animator>();
+            _collider = GetComponent<BoxCollider>();
         }
 
         public void OnActivate()
         {
             CanActivate = false;
+            Toggle();
+        }
 
-            gameObject.SetActive(_appears);
+        public void Toggle()
+        {
+            _animator.SetTrigger(_toggle);
+            _collider.enabled = !_collider.enabled;
         }
     }
 }

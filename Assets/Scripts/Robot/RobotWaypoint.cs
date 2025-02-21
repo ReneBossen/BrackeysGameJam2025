@@ -17,7 +17,17 @@ namespace Brackeys.Robot
 
     public enum Emplacement
     {
-        Dispenser,
-        ButtonMove
+        Entrance,
+        Stands,
+        SampleStand,
+        MoveStand,
+        Jail,
+        Scene,
+        ShootingRange,
+        Benches,
+        Basketball,
+        FerrisWell,
+        Toilet,
+        Storage
     }
 }

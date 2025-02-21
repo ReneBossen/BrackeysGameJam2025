@@ -26,22 +26,47 @@ namespace Brakeys.Robot
 
         private Animator _anim;
 
+        private bool _didSpeak;
+
         public void Interact(PlayerController pc)
         {
             _display.ToDisplay = Translate.Instance.Tr(
                 _targetWaypoint.Emplacement switch
                 {
-                    Emplacement.Dispenser when LevelStateManager.Instance.HasWeaponEquipped => "robot_dispenser_weaponTaken",
-                    Emplacement.Dispenser => "robot_dispenser_pendingWeapon",
+                    Emplacement.Entrance when LevelStateManager.Instance.HasWeaponEquipped && !_didSpeak => "robot_entrance_hasWeaponFirstTime",
+                    Emplacement.Entrance when LevelStateManager.Instance.HasWeaponEquipped => "robot_entrance_hasWeaponNormal",
+                    Emplacement.Entrance => "robot_entrance_noWeapon",
+                    
+                    Emplacement.Stands => "robot_stands_normal",
+                    
+                    Emplacement.SampleStand => "robot_sampleStand_normal",
 
-                    Emplacement.ButtonMove when !LevelStateManager.Instance.HasWeaponEquipped => "robot_button_needWeapon",
-                    Emplacement.ButtonMove when LevelStateManager.Instance.IsObjMoveDone => "robot_buttonMove_done",
-                    Emplacement.ButtonMove when LevelStateManager.Instance.IsObjMoveMoving => "robot_buttonMove_notDoneMoving",
-                    Emplacement.ButtonMove => "robot_buttonMove_notDoneNotMoving",
+                    Emplacement.MoveStand when LevelStateManager.Instance.IsObjMoveDone => "robot_moveStand_complete",
+                    Emplacement.MoveStand when LevelStateManager.Instance.IsObjMoveMoving => "robot_moveStand_moving",
+                    Emplacement.MoveStand => "robot_moveStand_notMoving",
+
+                    Emplacement.Jail => "robot_jail_normal",
+
+                    Emplacement.Scene => "robot_scene_normal",
+
+                    Emplacement.ShootingRange when LevelStateManager.Instance.IsShoot1Done && LevelStateManager.Instance.IsShoot2Done => "robot_shooting_2done",
+                    Emplacement.ShootingRange when LevelStateManager.Instance.IsShoot1Done || LevelStateManager.Instance.IsShoot2Done => "robot_shooting_1done",
+                    Emplacement.ShootingRange => "robot_shooting_none",
+
+                    Emplacement.Benches => "robot_benches_normal",
+
+                    Emplacement.Basketball => "robot_basketball_normal",
+
+                    Emplacement.FerrisWell => "robot_ferrisWheel_normal",
+
+                    Emplacement.Toilet => "robot_toilet_normal",
+
+                    Emplacement.Storage => "robot_storage_normal",
 
                     _ => throw new System.NotImplementedException()
                 }
             );
+            _didSpeak = true;
             _anim.SetBool("IsSpeaking", true);
         }
 
@@ -53,7 +78,6 @@ namespace Brakeys.Robot
             _anim = GetComponent<Animator>();
             _display.OnDone.AddListener(() =>
             {
-                Debug.Log("done");
                 _anim.SetBool("IsSpeaking", false);
             });
         }
