@@ -9,12 +9,16 @@ namespace Brackeys
     {
         public static Exit Instance { get; private set; }
 
+        [SerializeField] private GameObject _ventCover;
+
         private int _validationCount;
         private readonly List<GameObject> _exitObjects = new();
+        private BoxCollider _collider;
 
         private void Awake()
         {
             Instance = this;
+            _collider = GetComponent<BoxCollider>();
             _validationCount = 0;
         }
 
@@ -29,7 +33,8 @@ namespace Brackeys
             _validationCount--;
             if (_validationCount <= 0)
             {
-                Destroy(gameObject);
+                _collider.enabled = false;
+                Destroy(_ventCover);
             }
         }
 

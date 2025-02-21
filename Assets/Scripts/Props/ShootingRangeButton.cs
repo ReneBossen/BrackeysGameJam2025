@@ -10,8 +10,8 @@ namespace Brackeys.Props
     public class ShootingRangeButton : MonoBehaviour, IShootable
     {
         [SerializeField] private UnityEvent _callbacks;
-
         [SerializeField] private ShootingGallery _shootingGallery;
+        [SerializeField] private bool _isRequiredToExit;
 
         private Rigidbody _rb;
 
@@ -23,10 +23,27 @@ namespace Brackeys.Props
             _rb.isKinematic = true;
         }
 
+        private void Start()
+        {
+            if (_isRequiredToExit)
+            {
+                Exit.Instance.AddRequiredObject(gameObject);
+            }
+        }
+
         public void OnShot()
         {
-            if (_shootingGallery.IsActive)
-                ActivateConnectedObject();
+            if (!_shootingGallery.IsActive)
+            {
+                return;
+            }
+
+            ActivateConnectedObject();
+
+            if (!_isRequiredToExit)
+                return;
+
+            Exit.Instance.DecreaseValidation();
         }
 
         private void ActivateConnectedObject()

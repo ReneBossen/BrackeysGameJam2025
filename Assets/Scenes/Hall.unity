@@ -5206,7 +5206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c82a10bde2c334097922be7143841c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.13
+      value: 3.525
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c82a10bde2c334097922be7143841c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5314,6 +5314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db3485dc86cb2340bcc7c2601bac5dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ventCover: {fileID: 1376706796}
 --- !u!1001 &352123278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24079,6 +24080,11 @@ Transform:
   - {fileID: 1921202581}
   m_Father: {fileID: 1654890782}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1376706796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5046692775495281897, guid: c2c82a10bde2c334097922be7143841c, type: 3}
+  m_PrefabInstance: {fileID: 351094926}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1378131627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39630,19 +39636,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 351094930}
-        m_TargetAssemblyTypeName: Brackeys.Exit, Assembly-CSharp
-        m_MethodName: DecreaseValidation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 1
 --- !u!54 &3155758171651317448
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -40688,6 +40683,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &5384583606621926584
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -41372,6 +41368,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &6409867494881635318
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -41561,6 +41558,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &6475810839565921078
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -41713,6 +41711,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &6694949995333491614
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -41832,6 +41831,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &6765621961885160424
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -41947,6 +41947,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &7038331371416704362
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -42058,6 +42059,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &7042242652333290345
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -42169,6 +42171,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &7059768446624435669
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -42241,6 +42244,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &7088055728319834948
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -42440,6 +42444,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &7468666949289758630
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -42659,6 +42664,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &7652172236492129872
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -42744,6 +42750,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &7732742730231184837
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -42855,6 +42862,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &7795869471640933475
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -43182,6 +43190,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &7970535524775087634
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -43293,6 +43302,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &8019765315011386154
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -43372,6 +43382,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &8077694761149155233
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -43520,6 +43531,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &8337217650974103772
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -43599,6 +43611,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &8411359906401507545
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -43649,6 +43662,33 @@ MonoBehaviour:
   _spotlights:
   - {fileID: 1118599846}
   - {fileID: 1146657108}
+  _targets:
+  - {fileID: 4203601544495032600}
+  - {fileID: 70910592890996466}
+  - {fileID: 8690096043057913797}
+  - {fileID: 1354800758910140815}
+  - {fileID: 5991850232570962374}
+  - {fileID: 5384583606621926581}
+  - {fileID: 7732742730231184834}
+  - {fileID: 5952022572281815799}
+  - {fileID: 8599675367796823016}
+  - {fileID: 3155758171651317445}
+  - {fileID: 6475776245552135364}
+  - {fileID: 2240580591151545667}
+  - {fileID: 3645487026937069288}
+  - {fileID: 6146429785529672804}
+  - {fileID: 3937997570752231492}
+  - {fileID: 9095315236485353449}
+  - {fileID: 8978271246295948497}
+  - {fileID: 247010460876594074}
+  - {fileID: 2617696393623134678}
+  - {fileID: 1482772144455946026}
+  - {fileID: 5093608402286223793}
+  - {fileID: 4044132050730403085}
+  - {fileID: 5476852641467261683}
+  - {fileID: 2606167547847606548}
+  - {fileID: 8337217650974103769}
+  - {fileID: 6934979343841299332}
 --- !u!1001 &8487655529206639384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43823,19 +43863,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 351094930}
-        m_TargetAssemblyTypeName: Brackeys.Exit, Assembly-CSharp
-        m_MethodName: DecreaseValidation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 1
 --- !u!54 &8599675367796823019
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -43936,6 +43965,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &8690096043057913800
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -44008,6 +44038,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &8704144996340128318
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -44180,6 +44211,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &8893672255514745278
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -44265,6 +44297,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &8978271246295948500
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -44425,6 +44458,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &9095315236485353452
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -44568,6 +44602,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _shootingGallery: {fileID: 8436367631996116852}
+  _isRequiredToExit: 0
 --- !u!54 &9149019113178505284
 Rigidbody:
   m_ObjectHideFlags: 0
