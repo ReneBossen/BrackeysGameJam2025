@@ -22,6 +22,7 @@ namespace Brackeys.Robot
         SampleStand,
         MoveStand,
         Jail,
-        Scene
+        Scene,
+        ShootingRange
     }
 }

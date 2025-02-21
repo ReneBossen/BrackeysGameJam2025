@@ -15,7 +15,7 @@ namespace Brackeys.Props
 
         private Rigidbody _rb;
 
-        private bool _isDone;
+        public bool IsActivated { private set; get; }
 
         private void Awake()
         {
@@ -57,9 +57,9 @@ namespace Brackeys.Props
 
         private void InvokeCallbacks()
         {
-            if (!_isDone)
+            if (!IsActivated)
                 _callbacks.Invoke();
-            _isDone = true;
+            IsActivated = true;
         }
 
         private void OnDrawGizmosSelected()

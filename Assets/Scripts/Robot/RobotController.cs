@@ -49,6 +49,10 @@ namespace Brakeys.Robot
 
                     Emplacement.Scene => "robot_scene_normal",
 
+                    Emplacement.ShootingRange when LevelStateManager.Instance.IsShoot1Done && LevelStateManager.Instance.IsShoot2Done => "robot_shooting_2done",
+                    Emplacement.ShootingRange when LevelStateManager.Instance.IsShoot1Done || LevelStateManager.Instance.IsShoot2Done => "robot_shooting_1done",
+                    Emplacement.ShootingRange => "robot_shooting_none",
+
                     _ => throw new System.NotImplementedException()
                 }
             );
