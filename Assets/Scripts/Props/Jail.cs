@@ -18,6 +18,8 @@ namespace Brackeys.Props
         [SerializeField]
         private Transform _jailPos;
 
+        [SerializeField] private Animator _enclosureAnimator;
+
         private Animator _animator;
         private string _toggle = "Toggle";
 
@@ -28,6 +30,11 @@ namespace Brackeys.Props
             _animator = GetComponent<Animator>();
         }
 
+        private void Start()
+        {
+            _enclosureAnimator.Play("Enclosure Idle Closed");
+        }
+
         public void SetToJail()
         {
             GameObject player = ResourceManager.Instance.PlayerController.gameObject;
@@ -36,6 +43,8 @@ namespace Brackeys.Props
             player.transform.position = _jailPos.position;
 
             player.GetComponent<CharacterController>().enabled = true;
+
+            _enclosureAnimator.Play("Enclosure Idle Open");
         }
 
         private void OpenDoor()
@@ -51,6 +60,7 @@ namespace Brackeys.Props
             _animator.SetTrigger(_toggle);
             _door.GetComponent<BoxCollider>().enabled = true;
             CanActivate = true;
+            _enclosureAnimator.SetTrigger(_toggle);
         }
 
         public void OnActivate()
