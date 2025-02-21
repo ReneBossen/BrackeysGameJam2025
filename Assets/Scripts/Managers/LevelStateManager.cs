@@ -20,6 +20,10 @@ namespace Brackeys.Manager
 
         [SerializeField]
         private List<BlueButton> _blueButtons;
+        private int _bluePressed;
+
+        [SerializeField]
+        private Exit _exit;
 
         private void Awake()
         {
@@ -30,6 +34,12 @@ namespace Brackeys.Manager
                 _blueButtons.RemoveAt(Random.Range(0, _blueButtons.Count));
             }
             foreach (var bt in _blueButtons) bt.gameObject.SetActive(false);
+        }
+
+        public void IncrBluePressed()
+        {
+            _bluePressed++;
+            if (_bluePressed == 3) _exit.DecreaseValidation();
         }
 
         public bool IsObjMoveDone => _objMove.IsActivated;

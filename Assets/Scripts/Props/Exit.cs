@@ -19,13 +19,13 @@ namespace Brackeys
         {
             Instance = this;
             _collider = GetComponent<BoxCollider>();
-            _validationCount = 0;
+            _validationCount = 1;
         }
 
         public void AddRequiredObject(GameObject requiredObject)
         {
             _exitObjects.Add(requiredObject);
-            _validationCount = _exitObjects.Count;
+            _validationCount = _exitObjects.Count + 1; // Blue buttons are not registered
         }
 
         public void DecreaseValidation()

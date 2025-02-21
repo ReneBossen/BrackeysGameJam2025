@@ -1,4 +1,5 @@
 using Brackeys.Interfaces;
+using Brackeys.Manager;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -30,6 +31,8 @@ namespace Brackeys.Props
         {
             if (IsActivated)
                 return;
+
+            LevelStateManager.Instance.IncrBluePressed();
 
             FollowPath path = GetComponent<FollowPath>();
             if (path != null)
