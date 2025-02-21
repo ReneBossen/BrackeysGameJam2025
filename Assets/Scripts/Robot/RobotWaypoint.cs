@@ -18,6 +18,8 @@ namespace Brackeys.Robot
     public enum Emplacement
     {
         Entrance,
-        Stands
+        Stands,
+        SampleStand,
+        MoveStand
     }
 }
