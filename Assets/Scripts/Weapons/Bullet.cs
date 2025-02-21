@@ -2,6 +2,7 @@ using Brackeys.Interfaces;
 using Brackeys.Manager;
 using Brackeys.SO;
 using UnityEngine;
+using UnityEngine.Splines;
 
 namespace Brackeys.Weapons
 {
@@ -17,54 +18,92 @@ namespace Brackeys.Weapons
             }
             private get => _info;
         }
-        int _bounceLeft = 1;
+
+        [SerializeField] private Transform _impactPoint;
+
+        private int _bounceLeft = 1;
+        private Vector3 _last;
+        private bool _isHit;
 
         private void Awake()
         {
-            _last = transform.position;
+            _last = _impactPoint.position;
+            _isHit = false;
         }
 
-        private Vector3 _last;
         private void Update()
         {
-            var curr = transform.position;
+            if (_isHit)
+                return;
 
-            if (Physics.Linecast(curr, _last, out var hit, LayerMask.GetMask("Prop", "SpeProp", "Map")))
+            Vector3 curr = _impactPoint.position;
+
+            if (Physics.Linecast(curr, _last, out RaycastHit hit, LayerMask.GetMask("Prop", "SpeProp", "Map")))
             {
+                _isHit = true;
                 transform.position = hit.point;
+                OnHit(hit.collider, hit.transform.position);
             }
 
-            _last = transform.position;
+            _last = curr;
         }
 
-        protected virtual void OnCollisionEnter(Collision collision)
+        private void OnCollisionEnter(Collision collision)
         {
-            Debug.Log($"[BUL] Touched {collision.collider.name}");
-            _bounceLeft--;
-            if (_bounceLeft <= 0)
-            {
-                if (Info.SpawnOnImpact != null)
-                {
-                    Destroy(Instantiate(Info.SpawnOnImpact, collision.contacts[0].point, Quaternion.identity), Info.DurationBeforeDelete);
-                }
+            OnHit(collision.collider, collision.GetContact(0).point);
+        }
 
-                if (Info.DoesExplode)
-                {
-                    DebugManager.Instance.AddSphere(Info.ExplosionRadius, Color.red, 1f, collision.contacts[0].point);
-                    foreach (var s in Physics.OverlapSphere(collision.contacts[0].point, Info.ExplosionRadius, LayerMask.GetMask("Prop", "SpeProp")))
-                    {
-                        if (s.TryGetComponent<IShootable>(out var shootable))
-                        {
-                            shootable.OnShot();
-                        }
-                    }
-                }
-                else if (collision.gameObject.TryGetComponent<IShootable>(out var shootable))
+        protected virtual void OnHit(Collider collision, Vector3 hitPosition)
+        {
+            Debug.Log($"[BUL] Touched {collision.name}");
+            HandleBounce();
+            SpawnImpactEffect(hitPosition);
+            HandleExplosion(hitPosition);
+            TriggerOnShot(collision);
+
+            Destroy(gameObject);
+        }
+
+        private bool HandleBounce()
+        {
+            _bounceLeft--;
+
+            return _bounceLeft > 0;
+        }
+
+        private void SpawnImpactEffect(Vector3 hitPosition)
+        {
+            if (Info.SpawnOnImpact == null)
+                return;
+
+            GameObject effect = Instantiate(Info.SpawnOnImpact, hitPosition, Quaternion.identity);
+            Destroy(effect, Info.DurationBeforeDelete);
+        }
+
+        private void HandleExplosion(Vector3 hitPosition)
+        {
+            if (!Info.DoesExplode)
+                return;
+
+            DebugManager.Instance.AddSphere(Info.ExplosionRadius, Color.red, 1f, hitPosition);
+
+            foreach (Collider s in Physics.OverlapSphere(hitPosition, Info.ExplosionRadius, LayerMask.GetMask("Prop", "SpeProp")))
+            {
+                if (s.TryGetComponent(out IShootable shootable))
                 {
                     shootable.OnShot();
                 }
+            }
+        }
 
-                Destroy(gameObject);
+        private void TriggerOnShot(Collider collision)
+        {
+            if (Info.DoesExplode)
+                return;
+
+            if (collision.TryGetComponent(out IShootable shootable))
+            {
+                shootable.OnShot();
             }
         }
     }
