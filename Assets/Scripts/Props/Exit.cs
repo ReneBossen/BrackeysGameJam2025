@@ -32,5 +32,15 @@ namespace Brackeys
                 Destroy(gameObject);
             }
         }
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.green;
+
+            for (int i = 0; i < _exitObjects.Count; i++)
+            {
+                Gizmos.DrawLine(_exitObjects[i].gameObject.transform.position, transform.position);
+            }
+        }
     }
 }
