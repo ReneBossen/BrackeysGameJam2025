@@ -45,6 +45,10 @@ namespace Brakeys.Robot
                     Emplacement.MoveStand when LevelStateManager.Instance.IsObjMoveMoving => "robot_moveStand_moving",
                     Emplacement.MoveStand => "robot_moveStand_notMoving",
 
+                    Emplacement.Jail => "robot_jail_normal",
+
+                    Emplacement.Scene => "robot_scene_normal",
+
                     _ => throw new System.NotImplementedException()
                 }
             );

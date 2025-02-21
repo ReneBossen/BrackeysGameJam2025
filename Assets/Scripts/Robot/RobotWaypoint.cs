@@ -20,6 +20,8 @@ namespace Brackeys.Robot
         Entrance,
         Stands,
         SampleStand,
-        MoveStand
+        MoveStand,
+        Jail,
+        Scene
     }
 }

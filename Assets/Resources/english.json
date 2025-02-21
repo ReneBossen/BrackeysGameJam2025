@@ -20,6 +20,8 @@
     "robot_moveStand_complete": "Great shot!",
     "robot_moveStand_notMoving": "Should be easier to aim now",
     "robot_moveStand_moving": "If it's hard to aim, there is probably a way to stop it",
+    "robot_jail_normal": "This is where we put animals that can't behave",
+    "robot_scene_normal": "And this is my spot as the main character!",
 
     "speak_seller": "We sell food and souvenirs! Oil that will fill your belly for only 10$!",
     "speak_ballThrow": "Try to break all the bottles for a special prize!.... No I'm not moving, yes they are all glued together",
