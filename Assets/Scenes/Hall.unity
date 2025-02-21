@@ -47790,13 +47790,61 @@ PrefabInstance:
       value: Shooting Gallery
       objectReference: {fileID: 0}
     - target: {fileID: 4048271694592364339, guid: afe3061c282f98e4696b877d9fb845f9, type: 3}
+      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048271694592364339, guid: afe3061c282f98e4696b877d9fb845f9, type: 3}
+      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048271694592364339, guid: afe3061c282f98e4696b877d9fb845f9, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 756865545}
+    - target: {fileID: 4048271694592364339, guid: afe3061c282f98e4696b877d9fb845f9, type: 3}
+      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048271694592364339, guid: afe3061c282f98e4696b877d9fb845f9, type: 3}
+      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetValidationColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048271694592364339, guid: afe3061c282f98e4696b877d9fb845f9, type: 3}
+      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Brackeys.Props.ColorLight, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048271694592364339, guid: afe3061c282f98e4696b877d9fb845f9, type: 3}
+      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534701748345192553, guid: afe3061c282f98e4696b877d9fb845f9, type: 3}
+      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534701748345192553, guid: afe3061c282f98e4696b877d9fb845f9, type: 3}
+      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5534701748345192553, guid: afe3061c282f98e4696b877d9fb845f9, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1494589944}
+    - target: {fileID: 5534701748345192553, guid: afe3061c282f98e4696b877d9fb845f9, type: 3}
+      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534701748345192553, guid: afe3061c282f98e4696b877d9fb845f9, type: 3}
+      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetValidationColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534701748345192553, guid: afe3061c282f98e4696b877d9fb845f9, type: 3}
+      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Brackeys.Props.ColorLight, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534701748345192553, guid: afe3061c282f98e4696b877d9fb845f9, type: 3}
+      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6843860757153032202, guid: afe3061c282f98e4696b877d9fb845f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -51.13
