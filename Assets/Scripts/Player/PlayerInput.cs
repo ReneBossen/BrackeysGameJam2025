@@ -3,6 +3,7 @@ using System.Collections;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using InputSystem = Brackeys.Settings.InputSystem.InputSystem;
 
 namespace Brackeys.Player
@@ -21,7 +22,7 @@ namespace Brackeys.Player
         private Transform _gunModelTransform;
 
         [SerializeField]
-        private GameObject _aimImage;
+        private Image _aimImage;
 
         private GameObject _weaponModelInstance;
         private GameObject _ejectionTarget;
@@ -36,7 +37,7 @@ namespace Brackeys.Player
                     Destroy(_weaponModelInstance);
                 }
                 _currentWeapon = value;
-                _aimImage.SetActive(_currentWeapon != null);
+                _aimImage.gameObject.SetActive(_currentWeapon != null);
                 if (_currentWeapon != null)
                 {
                     _weaponModelInstance = Instantiate(_currentWeapon.BaseInfo.WeaponModel, _handsWeaponTransform);
@@ -55,7 +56,7 @@ namespace Brackeys.Player
         {
             _cam = Camera.main;
 
-            _aimImage.SetActive(false);
+            _aimImage.gameObject.SetActive(false);
 
             _inputSystem = new InputSystem();
             _inputSystem.Player.Fire.performed += OnFire;
@@ -109,8 +110,10 @@ namespace Brackeys.Player
 
         private IEnumerator Reload()
         {
+            _aimImage.color = Color.red;
             yield return new WaitForSeconds(CurrentWeapon.BaseInfo.ReloadTime);
             _canShoot = true;
+            _aimImage.color = Color.white;
         }
     }
 }

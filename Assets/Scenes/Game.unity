@@ -1482,7 +1482,7 @@ PrefabInstance:
     - target: {fileID: 3802658133771417516, guid: d833479aa53495f47bddee9004f50acb, type: 3}
       propertyPath: _aimImage
       value: 
-      objectReference: {fileID: 1086012339}
+      objectReference: {fileID: 1086012341}
     - target: {fileID: 3802658133771417516, guid: d833479aa53495f47bddee9004f50acb, type: 3}
       propertyPath: _handsWeaponTransform
       value: 
