@@ -13,15 +13,10 @@
     "bowDesc": "Il est dit qu'il est plus simple de lancer une blague qu'une flèche",
 
     "speak_seller": "Une petite faim? Nous vendons de nourriture et huile pour remplir votre ventre ! Un petit souvenir de votre visite? Seulement 10€ !",
-    "speak_ballThrow": "Essaie de casser toutes les bouteilles pour un prix spécial!.... Non je ne bougerai pas, oui elles sont toutes collées ensemble",
+
     "speak_ballon": "Vous voulez un ballon ? Tu devrais aller en chercher un, ceux-là sont à moi.",
     "speak_empty": "Mon échoppe est pas encore prête mais prépare toi ! Ca sera la meilleur de toutes !",
     "speak_credits": "Cette foire à été mise en place en seulement une semaine ! Jette un oeil au tableau à coté pour tous les détails sur nos employées qui ont travailler dessus !",
-
-    "speak_battery_noWeapon": "Je vends des piles délicieuses ! Mais on dirait que tu manques d'un endroit pour les mettre, peut-être sur une de tes armes ?",
-    "speak_battery_noGoodWeapon": "Je vends des piles délicieuses mais je ne pense pas que ton arme à un emplacement pour ça !",
-    "speak_battery_alreadyFull": "Je vends des piles délicieuses mais... ton arme est déjà pleine, va tirer sur des trucs et reviens me voir plus tard !",
-    "speak_battery_ok": "Besoin de piles ? Pour quelqu'un d'aussi ravissant c'est gratuit !",
 
     "robot_entrance_hasWeaponFirstTime": "Salut ! Je suis là pour t'aider. Si tu pouvais utiliser cette machine ça te permettrais de récupérer une arme.",
     "robot_entrance_hasWeaponNormal": "En quoi puis-je t'aider ?",
@@ -41,9 +36,6 @@
     "robot_ferrisWheel_normal": "Quel grande roue impressionante ! Je ne suis jamais monté dans une.",
     "robot_toilet_normal": "Excuse moi, c'est un moment privé.",
     "robot_scene_normal": "Quand j'étais un petit robot avec des grand rèves, je voulais jouer dans Roméo et Juliette 2.0",
-
-    "speak_pinkObj_isOff": "T'arrive à y croire ? On m'a demandé de juste rester ici !? A coté de ce bouton, bien... gros et... rouge...",
-    "speak_pinkObj_isOn": "C'était satisfaisant !",
 
     "credits1": "Sound design & Musiques",
     "credits2": "Concepte & Art 2D",

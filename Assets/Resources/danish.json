@@ -13,18 +13,10 @@
     "bowDesc": "Det siges, at det er nemmere at lande en joke end en pil.",
 
     "speak_seller": "Sulten? Vi sælger mad og olie til at fylde din mave! Har du brug for en souvenir fra dit besøg? 10$!",
-    "speak_ballThrow": "Prøv at vælte alle flaskerne for en helt speciel præmie!... Nej, jeg flytter mig ikke, ja, de er alle limet fast.",
+
     "speak_ballon": "Vil du have en ballon? Så må du finde din egen. Disse er mine.",
     "speak_empty": "Min bod er ikke helt klar endnu, men du må hellere være parat! Det bliver den bedste!",
     "speak_credits": "Denne forlystelsespark blev sat op på kun én uge! Tjek tavlen ved siden af mig for at se en liste over alle vores medarbejdere!",
-
-    "speak_battery_noWeapon": "Jeg sælger lækre batterier! Det ser dog ikke ud til, at du bruger batterier. Måske gør en af dine våben?",
-    "speak_battery_noGoodWeapon": "Jeg sælger lækre batterier, men det ser ikke ud til at dit våben har plads til dem!",
-    "speak_battery_alreadyFull": "Jeg sælger lækre batterier, men... dit våben er allerede fuldt opladt. Gå ud og skyd lidt og kom tilbage senere!",
-    "speak_battery_ok": "Har du brug for et batteri eller to? Til så flot en robot er det gratis, nyd det!",
-
-    "speak_pinkObj_isOff": "Kan du tro det? Jeg blev bedt om at stå lige her!? Ved siden af denne... store... røde... knap...",
-    "speak_pinkObj_isOn": "Orh, det var sådan man gjorde!",
 
     "credits1": "Lyddesign & Musik",
     "credits2": "Koncept & 2D-artist",
