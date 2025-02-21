@@ -6703,11 +6703,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4025323321262108538, guid: 1c28ba82fc914fd48a9693d59ae9baf6, type: 3}
       propertyPath: _targetTranslationKey.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4025323321262108538, guid: 1c28ba82fc914fd48a9693d59ae9baf6, type: 3}
       propertyPath: '_targetTranslationKey.Array.data[0]'
-      value: "B\xEA\xEA\xEA\xEA\xEA\xEA\xEA\xEAhhh"
+      value: "B\xEA\xEA\xEA\xEA\xEA\xEA\xEA\xEAhhh, ah pardon vous disiez?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025323321262108538, guid: 1c28ba82fc914fd48a9693d59ae9baf6, type: 3}
+      propertyPath: '_targetTranslationKey.Array.data[1]'
+      value: "N'importe quel mouton sait comment rocket-jump au dessus d'une barri\xE8re"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -4,7 +4,7 @@ namespace Brakeys.Robot
 {
     public class RawCiscusRobot : ASpeakableRobot
     {
-        [SerializeField]
+        [SerializeField, TextArea]
         private string[] _targetTranslationKey;
 
         public override string GetTranslationKey()
