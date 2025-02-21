@@ -11824,6 +11824,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8642166781546897868, guid: d76ab2c011a428f4aa67386d6769a4c9, type: 3}
   m_PrefabInstance: {fileID: 1118599844}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &756865545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756865544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5835c2bcf49133e488bf2dff91505c40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &762053732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19671,7 +19683,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8642166781546897868, guid: d76ab2c011a428f4aa67386d6769a4c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 756865545}
   m_SourcePrefab: {fileID: 100100000, guid: d76ab2c011a428f4aa67386d6769a4c9, type: 3}
 --- !u!4 &1118599845 stripped
 Transform:
@@ -20057,7 +20072,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8642166781546897868, guid: d76ab2c011a428f4aa67386d6769a4c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1494589944}
   m_SourcePrefab: {fileID: 100100000, guid: d76ab2c011a428f4aa67386d6769a4c9, type: 3}
 --- !u!4 &1146657107 stripped
 Transform:
@@ -26400,6 +26418,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8642166781546897868, guid: d76ab2c011a428f4aa67386d6769a4c9, type: 3}
   m_PrefabInstance: {fileID: 1146657106}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1494589944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494589943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5835c2bcf49133e488bf2dff91505c40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1500507508
 GameObject:
   m_ObjectHideFlags: 0
@@ -39624,10 +39654,10 @@ MonoBehaviour:
   _callbacks:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1494589943}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1494589944}
+        m_TargetAssemblyTypeName: Brackeys.Props.ColorLight, Assembly-CSharp
+        m_MethodName: SetValidationColor
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -40380,7 +40410,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -43851,10 +43881,10 @@ MonoBehaviour:
   _callbacks:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 756865544}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 756865545}
+        m_TargetAssemblyTypeName: Brackeys.Props.ColorLight, Assembly-CSharp
+        m_MethodName: SetValidationColor
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
