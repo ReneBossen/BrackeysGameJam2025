@@ -55,6 +55,14 @@ namespace Brakeys.Robot
 
                     Emplacement.Benches => "robot_benches_normal",
 
+                    Emplacement.Basketball => "robot_basketball_normal",
+
+                    Emplacement.FerrisWell => "robot_ferrisWheel_normal",
+
+                    Emplacement.Toilet => "robot_toilet_normal",
+
+                    Emplacement.Storage => "robot_storage_normal",
+
                     _ => throw new System.NotImplementedException()
                 }
             );

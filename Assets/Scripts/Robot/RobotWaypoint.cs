@@ -24,6 +24,10 @@ namespace Brackeys.Robot
         Jail,
         Scene,
         ShootingRange,
-        Benches
+        Benches,
+        Basketball,
+        FerrisWell,
+        Toilet,
+        Storage
     }
 }

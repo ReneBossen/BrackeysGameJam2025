@@ -26,6 +26,10 @@
     "robot_shooting_1done": "You got one wow",
     "robot_shooting_2done": "Congrats you got both!",
     "robot_benches_normal": "This is where you'll be able to see our spectacle",
+    "robot_basketball_normal": "This is where basketball play itself",
+    "robot_ferrisWheel_normal": "This is the ferris wheel",
+    "robot_toilet_normal": "Even robots need oil change",
+    "robot_storage_normal": "Wow what is this place",
 
     "speak_seller": "We sell food and souvenirs! Oil that will fill your belly for only 10$!",
     "speak_ballThrow": "Try to break all the bottles for a special prize!.... No I'm not moving, yes they are all glued together",
