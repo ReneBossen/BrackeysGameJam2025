@@ -11,6 +11,8 @@ namespace Brackeys.Props
     {
         [SerializeField] private UnityEvent _callbacks;
 
+        [SerializeField] private ShootingGallery _shootingGallery;
+
         private Rigidbody _rb;
 
         private bool _isDone;
@@ -23,7 +25,8 @@ namespace Brackeys.Props
 
         public void OnShot()
         {
-            ActivateConnectedObject();
+            if (_shootingGallery.IsActive)
+                ActivateConnectedObject();
         }
 
         private void ActivateConnectedObject()
@@ -37,7 +40,8 @@ namespace Brackeys.Props
 
         private void InvokeCallbacks()
         {
-            if (!_isDone) _callbacks.Invoke();
+            if (!_isDone)
+                _callbacks.Invoke();
             _isDone = true;
         }
 

@@ -13,7 +13,8 @@ namespace Brackeys.Props.PropManagers
             var good = Random.Range(0, _houses.Count);
             _houses[good].EnableGoodPart();
             _houses.RemoveAt(good);
-            foreach (var h in _houses) h.EnableBadPart();
+            foreach (var h in _houses)
+                h.EnableBadPart();
         }
     }
 }

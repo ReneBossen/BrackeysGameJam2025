@@ -11,8 +11,18 @@ namespace Brackeys.Props
 
         [SerializeField] private Material _validationMat;
 
+        [SerializeField] private bool _isRequiredToExit;
+
         public bool IsActivated { private set; get; }
         public bool IsMoving => GetComponent<FollowPath>().enabled;
+
+        private void Start()
+        {
+            if (_isRequiredToExit)
+            {
+                Exit.Instance.AddLever(gameObject);
+            }
+        }
 
         public void OnShot()
         {
@@ -22,6 +32,11 @@ namespace Brackeys.Props
             mats[1] = _validationMat;
             r.materials = mats;
             IsActivated = true;
+
+            if (!_isRequiredToExit)
+                return;
+
+            Exit.Instance.DecreaseValidation();
         }
 
         private void ActivateConnectedObject()
