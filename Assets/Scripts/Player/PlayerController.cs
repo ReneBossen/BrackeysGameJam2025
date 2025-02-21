@@ -101,7 +101,8 @@ namespace Brackeys.Player
 
         private void Update()
         {
-            if (!_controller.enabled) return;
+            if (!_controller.enabled)
+                return;
 
             var pos = _mov;
             Vector3 desiredMove = transform.forward * pos.y + transform.right * pos.x;
@@ -154,12 +155,19 @@ namespace Brackeys.Player
 
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
-            //Todo: Clean this code
-            hit.gameObject.TryGetComponent<StrengthGame>(out StrengthGame game);
+            hit.gameObject.TryGetComponent(out StrengthGame game);
             if (game != null && game.GetIsReady())
             {
                 game.ProcessCollision(hit, _controller.velocity);
+                return;
             }
+
+            hit.gameObject.TryGetComponent(out Hazard hazard);
+            if (hazard == null)
+            {
+                return;
+            }
+            hazard.PlayerHit();
         }
 
         public void Stun(float stunDuration, float throwForce)

@@ -22,12 +22,9 @@ namespace Brackeys.Props
             transform.position = new Vector3(transform.position.x, _isOn ? 0f : -1f, transform.position.z);
         }
 
-        private void OnCollisionEnter(Collision collision)
+        public void PlayerHit()
         {
-            if (collision.collider.CompareTag("Player"))
-            {
-                Jail.Instance.SetToJail();
-            }
+            Jail.Instance.SetToJail();
         }
     }
 }
