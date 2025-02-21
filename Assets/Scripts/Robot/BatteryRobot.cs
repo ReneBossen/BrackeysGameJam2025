@@ -1,4 +1,5 @@
 using Brackeys.Manager;
+using Brackeys.Translation;
 
 namespace Brakeys.Robot
 {
@@ -10,18 +11,18 @@ namespace Brakeys.Robot
 
             if (input.CurrentWeapon == null)
             {
-                return "speak_battery_noWeapon";
+                return Translate.Instance.Tr("speak_battery_noWeapon");
             }
             if (input.CurrentWeapon.BaseInfo.RequiresExternalAmmosCount == 0)
             {
-                return "speak_battery_noGoodWeapon";
+                return Translate.Instance.Tr("speak_battery_noGoodWeapon");
             }
             if (!input.CurrentWeapon.NeedAmmo())
             {
-                return "speak_battery_alreadyFull";
+                return Translate.Instance.Tr("speak_battery_alreadyFull");
             }
             while (input.CurrentWeapon.NeedAmmo()) input.AddAmmo();
-            return "speak_battery_ok";
+            return Translate.Instance.Tr("speak_battery_ok");
         }
     }
 }

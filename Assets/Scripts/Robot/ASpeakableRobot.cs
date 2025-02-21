@@ -21,7 +21,7 @@ namespace Brakeys.Robot
 
         public void Interact(PlayerController pc)
         {
-            _display.ToDisplay = Translate.Instance.Tr(GetTranslationKey());
+            _display.ToDisplay = GetTranslationKey();
             _anim.SetBool("IsSpeaking", true);
         }
 
