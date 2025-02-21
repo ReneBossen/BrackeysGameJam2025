@@ -2,6 +2,7 @@ using Brackeys.Interfaces;
 using Brackeys.Manager;
 using Brackeys.SO;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Splines;
 
 namespace Brackeys.Weapons
@@ -38,11 +39,14 @@ namespace Brackeys.Weapons
 
             Vector3 curr = _impactPoint.position;
 
-            if (Physics.Linecast(curr, _last, out RaycastHit hit, LayerMask.GetMask("Prop", "SpeProp", "Map", "OutsideWall")))
+            if (Info.MaxBounceCount.Max == 1)
             {
-                _isHit = true;
-                transform.position = hit.point;
-                OnHit(hit.collider, hit.transform.position);
+                if (Physics.Linecast(curr, _last, out RaycastHit hit, LayerMask.GetMask("Prop", "SpeProp", "Map", "OutsideWall")))
+                {
+                    _isHit = true;
+                    transform.position = hit.point;
+                    OnHit(hit.collider, hit.transform.position);
+                }
             }
 
             _last = curr;
@@ -55,13 +59,15 @@ namespace Brackeys.Weapons
 
         protected virtual void OnHit(Collider collision, Vector3 hitPosition)
         {
-            Debug.Log($"[BUL] Touched {collision.name}");
-            HandleBounce();
-            SpawnImpactEffect(hitPosition);
-            HandleExplosion(hitPosition);
-            TriggerOnShot(collision);
+            if (!HandleBounce())
+            {
+                Debug.Log($"[BUL] Touched {collision.name}");
+                SpawnImpactEffect(hitPosition);
+                HandleExplosion(hitPosition);
+                TriggerOnShot(collision);
 
-            Destroy(gameObject);
+                Destroy(gameObject);
+            }
         }
 
         private bool HandleBounce()
