@@ -11,9 +11,9 @@ namespace Brackeys.Translation
         {
             "english",
             "french",
-            "polish",
+            /*"polish",
             "danish",
-            "spanish"
+            "spanish"*/
         };
 
         private Translate()
