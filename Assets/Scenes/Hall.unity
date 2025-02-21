@@ -171,6 +171,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueBasketball
       objectReference: {fileID: 0}
+    - target: {fileID: 7839743328066014875, guid: b48cf622b61e6b54598e6b5ed9a2d6b1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2308,6 +2312,10 @@ PrefabInstance:
     - target: {fileID: 7839743328066014875, guid: b48cf622b61e6b54598e6b5ed9a2d6b1, type: 3}
       propertyPath: m_Name
       value: BlueWeapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 7839743328066014875, guid: b48cf622b61e6b54598e6b5ed9a2d6b1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8083,7 +8091,6 @@ Transform:
   - {fileID: 2006152837}
   - {fileID: 1715711733}
   - {fileID: 952805315}
-  - {fileID: 994867390}
   m_Father: {fileID: 1812312957}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &343467623
@@ -22853,7 +22860,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 341998476}
+    m_TransformParent: {fileID: 1812312957}
     m_Modifications:
     - target: {fileID: 7460087067925369889, guid: b48cf622b61e6b54598e6b5ed9a2d6b1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22877,11 +22884,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7460087067925369889, guid: b48cf622b61e6b54598e6b5ed9a2d6b1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7460087067925369889, guid: b48cf622b61e6b54598e6b5ed9a2d6b1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7460087067925369889, guid: b48cf622b61e6b54598e6b5ed9a2d6b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -22898,6 +22905,10 @@ PrefabInstance:
     - target: {fileID: 7839743328066014875, guid: b48cf622b61e6b54598e6b5ed9a2d6b1, type: 3}
       propertyPath: m_Name
       value: BlueMedium
+      objectReference: {fileID: 0}
+    - target: {fileID: 7839743328066014875, guid: b48cf622b61e6b54598e6b5ed9a2d6b1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32273,6 +32284,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BluePopcorn
       objectReference: {fileID: 0}
+    - target: {fileID: 7839743328066014875, guid: b48cf622b61e6b54598e6b5ed9a2d6b1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41587,6 +41602,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 994867390}
   - {fileID: 84781022}
   - {fileID: 15529254}
   - {fileID: 1387679695}
@@ -44363,6 +44379,10 @@ PrefabInstance:
     - target: {fileID: 5274789248969473197, guid: 5b34ecb604da04242a5c42d166157aa2, type: 3}
       propertyPath: m_Name
       value: BluePig
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274789248969473197, guid: 5b34ecb604da04242a5c42d166157aa2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5923127068533480824, guid: 5b34ecb604da04242a5c42d166157aa2, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'

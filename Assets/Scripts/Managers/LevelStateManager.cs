@@ -29,11 +29,11 @@ namespace Brackeys.Manager
         {
             Instance = this;
 
-            for (int i = 0; i < 3; i++)
+            /*for (int i = 0; i < 3; i++)
             {
                 _blueButtons.RemoveAt(Random.Range(0, _blueButtons.Count));
             }
-            foreach (var bt in _blueButtons) bt.gameObject.SetActive(false);
+            foreach (var bt in _blueButtons) bt.gameObject.SetActive(false);*/
         }
 
         public void IncrBluePressed()
