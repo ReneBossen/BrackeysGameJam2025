@@ -101,6 +101,8 @@ namespace Brackeys.Player
 
         private void Update()
         {
+            if (!_controller.enabled) return;
+
             var pos = _mov;
             Vector3 desiredMove = transform.forward * pos.y + transform.right * pos.x;
 

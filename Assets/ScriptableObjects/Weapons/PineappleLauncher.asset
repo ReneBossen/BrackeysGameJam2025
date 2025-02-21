@@ -16,12 +16,14 @@ MonoBehaviour:
   WeaponModel: {fileID: 919132149155446097, guid: 219dbb4f005e419489f6335c43605ace, type: 3}
   NameKey: pineappleGunName
   DescriptionKey: pineappleGunDesc
+  MultShootIncr: 0
+  AdditiveAngle: 0
   RequiresExternalAmmosCount: 0
   EjectAmmoGameObject: {fileID: 0}
   SpawnOnImpact: {fileID: 8554889161274158733, guid: 7493edf8ceee3ce42aa1d13f0c7c3fbe, type: 3}
   DurationBeforeDelete: 0.5
   StunDuration: 0.5
-  ForceThrowback: 30
+  ForceThrowback: 1000
   DoesExplode: 1
   ExplosionRadius: 2
   Bullet: {fileID: 1711871811491423034, guid: 813b1c7e7b95e3642b6f9576e04b9ded, type: 3}
