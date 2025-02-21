@@ -38,7 +38,7 @@ namespace Brackeys.Weapons
 
             Vector3 curr = _impactPoint.position;
 
-            if (Physics.Linecast(curr, _last, out RaycastHit hit, LayerMask.GetMask("Prop", "SpeProp", "Map")))
+            if (Physics.Linecast(curr, _last, out RaycastHit hit, LayerMask.GetMask("Prop", "SpeProp", "Map", "OutsideWall")))
             {
                 _isHit = true;
                 transform.position = hit.point;
