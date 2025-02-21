@@ -64,10 +64,26 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[2]'
       value: 
       objectReference: {fileID: 2100000, guid: d66be1322f6b7e148aee077936e7aad2, type: 2}
+    - target: {fileID: 3680981601139933275, guid: 39fd1bee090a37e4c9d18eb2fa954eb1, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 9c3af5321c668ef4ebe878916ba4a6dc, type: 2}
+    - target: {fileID: 3680981601139933275, guid: 39fd1bee090a37e4c9d18eb2fa954eb1, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 9c3af5321c668ef4ebe878916ba4a6dc, type: 2}
+    - target: {fileID: 3680981601139933275, guid: 39fd1bee090a37e4c9d18eb2fa954eb1, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6158354547055405131, guid: 39fd1bee090a37e4c9d18eb2fa954eb1, type: 3}
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
+    - target: {fileID: 8626171880960776134, guid: 39fd1bee090a37e4c9d18eb2fa954eb1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2180264, guid: 9c3af5321c668ef4ebe878916ba4a6dc, type: 2}
     m_RemovedComponents:
     - {fileID: 0}
     m_RemovedGameObjects:
