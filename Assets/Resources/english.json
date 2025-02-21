@@ -15,6 +15,7 @@
     "robot_entrance_hasWeaponFirstTime": "Welcome to the circus",
     "robot_entrance_hasWeaponNormal": "How is the progress",
     "robot_entrance_noWeapon": "You should take a weapon",
+    "robot_stands_normal": "You can buy anything here, oil, battery for your weapons...",
 
     "speak_seller": "We sell food and souvenirs! Oil that will fill your belly for only 10$!",
     "speak_ballThrow": "Try to break all the bottles for a special prize!.... No I'm not moving, yes they are all glued together",

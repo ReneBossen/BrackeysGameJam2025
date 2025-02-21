@@ -36,6 +36,7 @@ namespace Brakeys.Robot
                     Emplacement.Entrance when LevelStateManager.Instance.HasWeaponEquipped && !_didSpeak => "robot_entrance_hasWeaponFirstTime",
                     Emplacement.Entrance when LevelStateManager.Instance.HasWeaponEquipped => "robot_entrance_hasWeaponNormal",
                     Emplacement.Entrance => "robot_entrance_noWeapon",
+                    Emplacement.Stands => "robot_stands_normal",
 
                     _ => throw new System.NotImplementedException()
                 }
