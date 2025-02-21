@@ -27,20 +27,35 @@ namespace Brackeys.Props
         public GameObject GameObject => gameObject;
         private Animator _animator;
 
+        private string _nameKey, _descKey;
+
         private void Awake()
         {
             Instance = this;
             _animator = GetComponent<Animator>();
 
-            _weaponNameText.text = Translate.Instance.Tr("pendingCoin");
-            _weaponNameDescription.text = string.Empty;
+            _nameKey = "pendingCoin";
+            _descKey = null;
+            ResetTranslation();
+        }
+
+        private void Start()
+        {
+            Translate.Instance.OnTranslationChange += (_a, _b) => { ResetTranslation(); };
         }
 
         public void ResetMachine()
         {
             CanInteract = true;
-            _weaponNameText.text = Translate.Instance.Tr("pendingCoin");
-            _weaponNameDescription.text = string.Empty;
+            _nameKey = "pendingCoin";
+            _descKey = null;
+            ResetTranslation();
+        }
+
+        private void ResetTranslation()
+        {
+            _weaponNameText.text = Translate.Instance.Tr(_nameKey);
+            _weaponNameDescription.text = _descKey == null ? string.Empty : Translate.Instance.Tr(_descKey);
         }
 
         private AWeaponInfo GetRandomWeapon(IList<AWeaponInfo> list)
@@ -56,8 +71,9 @@ namespace Brackeys.Props
             CanInteract = false;
             var weapon = GetRandomWeapon(_weaponsTier0.Any() ? _weaponsTier0 : _weaponsTier1);
 
-            _weaponNameText.text = Translate.Instance.Tr(weapon.NameKey);
-            _weaponNameDescription.text = Translate.Instance.Tr(weapon.DescriptionKey);
+            _nameKey = weapon.NameKey;
+            _descKey = weapon.DescriptionKey;
+            ResetTranslation();
 
             _animator.Play(AnimationNames.FlapOpen);
 
