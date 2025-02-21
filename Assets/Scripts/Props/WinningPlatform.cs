@@ -1,3 +1,4 @@
+using Brackeys.Manager;
 using Brackeys.Player;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ namespace Brackeys.Props
             Debug.Log("[WIN] Player won!");
             controller.ResetPosition();
             VendingMachine.Instance.ResetMachine();
+            RobotManager.Instance.ClearAll();
             LevelManager.Instance.ReloadScene();
             _didWin = true;
         }

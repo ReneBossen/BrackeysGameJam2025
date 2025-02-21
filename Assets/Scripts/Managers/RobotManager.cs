@@ -24,11 +24,16 @@ namespace Brackeys.Manager
             _waypoints.Add(waypoint);
         }
 
+        public void ClearAll()
+        {
+            _waypoints.Clear();
+        }
+
         public Transform PlayerTransform => _playerT;
 
         public RobotWaypoint GetClosestWaypoint()
         {
-            return _waypoints.OrderBy(x => Vector3.Distance(_playerT.position, x.transform.position)).First();
+            return _waypoints.OrderBy(x => Vector3.Distance(_playerT.position, x.transform.position)).FirstOrDefault();
         }
     }
 }

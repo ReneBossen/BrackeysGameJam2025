@@ -85,6 +85,11 @@ namespace Brakeys.Robot
         private void Update()
         {
             var target = RobotManager.Instance.GetClosestWaypoint();
+            if (target == null)
+            {
+                _rb.linearVelocity = Vector3.zero;
+                return;
+            }
 
             if (Vector3.Distance(transform.position, target.transform.position) < .1f)
             {
