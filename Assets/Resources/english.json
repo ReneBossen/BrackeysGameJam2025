@@ -10,7 +10,7 @@
     "pineappleGunName": "Fruit launcher (pineapple version)",
     "pineappleGunDesc": "Re-use everyday kitchen ingredient into a delicious (but deadly) cocktail of explosion",
     "bowName": "Straight bow",
-    "bowDesc": "It is say that it's easier to land a joke than an arrow",
+    "bowDesc": "It is said that it's easier to land a joke than an arrow.",
 
     "speak_seller": "Hungry? We sell food and oil to fill your belly! Need a souvenir of your visit? 10$!",
     "speak_ballThrow": "Try to break all the bottles for a special prize!.... No I'm not moving, yes they are all glued together",
@@ -30,7 +30,7 @@
     "robot_entrance_hasWeaponNormal": "How is the progress?",
     "robot_entrance_noWeapon": "Please, take a weapon.",
     "robot_stands_normal": "You can buy parts for your weapons here. Oil, batteries, whatever you need.",
-    "robot_sampleStand_normal": "You will find levers like that all around to operate the fair. I’m not sure who did the wiring though.",
+    "robot_sampleStand_normal": "You will find levers like that all around to operate the fair. I'm not sure who did the wiring though.",
     "robot_moveStand_complete": "Great shot!",
     "robot_moveStand_notMoving": "Should be easier to aim now",
     "robot_moveStand_moving": "If it's hard to aim, there is probably a way to stop it",

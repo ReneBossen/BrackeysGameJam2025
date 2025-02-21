@@ -6,9 +6,32 @@
     "vendingTitle": "Rien ne peut mal se passer",
     "pendingCoin": "Insérez une pièce",
     "laserGunName": "SX-648 Pistolet laser",
-    "laserGunDesc": "Converti de l'électricité en une puissance boule d'énergie (batteries incluses, ne pas mettre au micro-onde)",
+    "laserGunDesc": "Converti de l'électricité en une puissance boule d'énergie (piles incluses, ne pas mettre au micro-onde)",
     "pineappleGunName": "Lanceur de fruits (version ananas)",
     "pineappleGunDesc": "Ré-utilisez votre ingrédient culinaires de tous les jours dans un délicieux (mais mortel) cocktail d'explosions",
+    "bowName": "Arc droit",
+    "bowDesc": "Il est dit qu'il est plus simple de lancer une blague qu'une flèche",
+
+    "speak_seller": "Une petite faim? Nous vendons de nourriture et huile pour remplir votre ventre ! Un petit souvenir de votre visite? Seulement 10€ !",
+    "speak_ballThrow": "Essaie de casser toutes les bouteilles pour un prix spécial!.... Non je ne bougerai pas, oui elles sont toutes collées ensemble",
+    "speak_ballon": "Vous voulez un ballon ? Tu devrais aller en chercher un, ceux-là sont à moi.",
+    "speak_empty": "Mon échoppe est pas encore prête mais prépare toi ! Ca sera la meilleur de toutes !",
+    "speak_credits": "Cette foire à été mise en place en seulement une semaine ! Jette un oeil au tableau à coté pour tous les détails sur nos employées qui ont travailler dessus !",
+
+    "speak_battery_noWeapon": "Je vends des piles délicieuses ! Mais on dirait que tu manques d'un endroit pour les mettre, peut-être sur une de tes armes ?",
+    "speak_battery_noGoodWeapon": "Je vends des piles délicieuses mais je ne pense pas que ton arme à un emplacement pour ça !",
+    "speak_battery_alreadyFull": "Je vends des piles délicieuses mais... ton arme est déjà pleine, va tirer sur des trucs et reviens me voir plus tard !",
+    "speak_battery_ok": "Besoin de piles ? Pour quelqu'un d'aussi ravissant c'est gratuit !",
+
+    "speak_pinkObj_isOff": "T'arrive à y croire ? On m'a demandé de juste rester ici !? A coté de ce bouton, bien... gros et... rouge...",
+    "speak_pinkObj_isOn": "C'était satisfaisant !",
+
+    "credits1": "Sound design & Musiques",
+    "credits2": "Concepte & Art 2D",
+    "credits3": "Modélisation 3D et animations",
+    "credits4": "Art 2D",
+    "credits5": "Développeur & Level Design",
+    "credits6": "Développeur",
 
     "jadith_01": "Caféine ! C'est parti !",
     "jadith_02": "Ooh, ça brille !",
