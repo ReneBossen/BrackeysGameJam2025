@@ -35,7 +35,7 @@
     "robot_moveStand_notMoving": "So clever! You made quick work of that.",
     "robot_moveStand_moving": "Oh my. That button doesn't want to sit still. Perhaps we can stop it somehow?",
     "robot_jail_normal": "I'm shocked they can cage someone of your standing!",
-    "robot_scene_normal": "At your leisure.",
+    "robot_storage_normal": "At your leisure.",
     "robot_shooting_none": "A shooting range? I heard you were a crackshot.",
     "robot_shooting_1done": "Good show!",
     "robot_shooting_2done": "Such talent!",
@@ -43,7 +43,7 @@
     "robot_basketball_normal": "Are you a fan of Basketball?",
     "robot_ferrisWheel_normal": "What a marvelous Ferris Wheel. I have never ridden one.",
     "robot_toilet_normal": "Pardon me. This is for a private moment.",
-    "robot_storage_normal": "When I was a young bot with big dreams I wanted to star in Romeo and Juliet 2.0",
+    "robot_scene_normal": "When I was a young bot with big dreams I wanted to star in Romeo and Juliet 2.0",
 
     "credits1": "Sound Design & Music",
     "credits2": "Concept & 2D Art",
