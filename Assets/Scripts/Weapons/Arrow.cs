@@ -5,11 +5,12 @@ namespace Brackeys.Weapons
 {
     public class Arrow : Bullet
     {
-        protected override void OnCollisionEnter(Collision collision)
+        protected override void OnHit(Collider collision, Vector3 _)
         {
-            Debug.Log($"[BUL] Touched {collision.collider.name}");
+            Debug.Log($"[ARR] Touched {collision.name}");
             GetComponent<Rigidbody>().isKinematic = true;
-            GetComponent<Collider>().enabled = false;
+            GetComponent<BoxCollider>().enabled = false;
+
             if (collision.gameObject.TryGetComponent<IShootable>(out var shootable))
             {
                 shootable.OnShot();
