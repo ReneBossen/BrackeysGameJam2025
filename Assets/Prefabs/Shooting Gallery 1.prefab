@@ -11,8 +11,14 @@ GameObject:
   - component: {fileID: 6843860757153032202}
   - component: {fileID: 7940604758594990061}
   - component: {fileID: 9050823761185086464}
-  - component: {fileID: 1287094525304755127}
   - component: {fileID: 8066307187316730948}
+  - component: {fileID: 8328374134364269221}
+  - component: {fileID: 4551755475226782070}
+  - component: {fileID: 2226118080545015365}
+  - component: {fileID: 8920143542061202048}
+  - component: {fileID: 2495147803858353228}
+  - component: {fileID: 1788366854847603640}
+  - component: {fileID: 7214422099918900609}
   m_Layer: 9
   m_Name: Shooting Gallery 1
   m_TagString: Untagged
@@ -104,28 +110,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1287094525304755127
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 795436229711155749}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 774789454472465853, guid: e261a614c50ff884285313993bd8f77f, type: 3}
 --- !u!114 &8066307187316730948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +152,153 @@ MonoBehaviour:
   - {fileID: 3540569856841468944}
   - {fileID: 4861014061455118142}
   - {fileID: 2312135839080727044}
+--- !u!65 &8328374134364269221
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795436229711155749}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0038727426, y: 0.033303045, z: 0.009017226}
+  m_Center: {x: 0.03477672, y: -0.010006225, z: 0.004122932}
+--- !u!65 &4551755475226782070
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795436229711155749}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.07318824, y: 0.0044178804, z: 0.009129883}
+  m_Center: {x: 0.00010556392, y: -0.024450395, z: 0.004179246}
+--- !u!65 &2226118080545015365
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795436229711155749}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0038157415, y: 0.021066792, z: 0.008930686}
+  m_Center: {x: -0.034531694, y: -0.016117577, z: 0.0040796585}
+--- !u!65 &8920143542061202048
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795436229711155749}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.07373892, y: 0.003192357, z: 0.02829753}
+  m_Center: {x: -0.00009397356, y: 0.027300892, z: 0.013763065}
+--- !u!65 &2495147803858353228
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795436229711155749}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0012038159, y: 0.02194379, z: 0.028498044}
+  m_Center: {x: -0.036399733, y: 0.017925095, z: 0.013863323}
+--- !u!65 &1788366854847603640
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795436229711155749}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0012038159, y: 0.02194379, z: 0.028498044}
+  m_Center: {x: 0.036, y: 0.017925095, z: 0.013863323}
+--- !u!65 &7214422099918900609
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795436229711155749}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.07758993, y: 0.0575447, z: 0.0041426383}
+  m_Center: {x: 0.0000000023766031, y: 0.00012474299, z: 0.02982798}
 --- !u!1 &1365961670246464376
 GameObject:
   m_ObjectHideFlags: 0
@@ -3722,19 +3853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _callbacks:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Brackeys.Props.ColorLight, Assembly-CSharp
-        m_MethodName: SetValidationColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   _shootingGallery: {fileID: 8066307187316730948}
   _isRequiredToExit: 1
 --- !u!65 &1469124662882126361
@@ -4444,19 +4563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _callbacks:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Brackeys.Props.ColorLight, Assembly-CSharp
-        m_MethodName: SetValidationColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   _shootingGallery: {fileID: 8066307187316730948}
   _isRequiredToExit: 1
 --- !u!65 &7224005872783675251
