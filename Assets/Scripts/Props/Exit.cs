@@ -30,6 +30,7 @@ namespace Brackeys
 
         public void DecreaseValidation()
         {
+            Debug.Log($"Exit validation triggered with {_validationCount} targets left");
             _validationCount--;
             if (_validationCount <= 0)
             {
