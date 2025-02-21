@@ -29277,6 +29277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pullLever
       objectReference: {fileID: 0}
+    - target: {fileID: 2884336864520023768, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
+      propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

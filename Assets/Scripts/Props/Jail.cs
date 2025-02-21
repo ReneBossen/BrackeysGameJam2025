@@ -20,8 +20,13 @@ namespace Brackeys.Props
 
         public void SetToJail()
         {
-            ResourceManager.Instance.PlayerController.transform.position = _jailPos.position;
-            _door.SetActive(false);
+            GameObject player = ResourceManager.Instance.PlayerController.gameObject;
+            player.GetComponent<CharacterController>().enabled = false;
+
+            player.transform.position = _jailPos.position;
+
+            player.GetComponent<CharacterController>().enabled = true;
+            _door.SetActive(false); //Should be true
         }
 
         public void OpenDoor()
