@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4615051845975099460, guid: 85dc1449410087c4eb925382faae1f91, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.6514232
       objectReference: {fileID: 0}
     - target: {fileID: 4615051845975099460, guid: 85dc1449410087c4eb925382faae1f91, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4615051845975099460, guid: 85dc1449410087c4eb925382faae1f91, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.3877118
       objectReference: {fileID: 0}
     - target: {fileID: 4615051845975099460, guid: 85dc1449410087c4eb925382faae1f91, type: 3}
       propertyPath: m_LocalRotation.w
@@ -50,16 +50,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5422375317558465278, guid: 85dc1449410087c4eb925382faae1f91, type: 3}
       propertyPath: m_Name
-      value: robot Variant
+      value: robotZirk
       objectReference: {fileID: 0}
     - target: {fileID: 7509648787788645314, guid: 85dc1449410087c4eb925382faae1f91, type: 3}
       propertyPath: 'm_Materials.Array.data[2]'
       value: 
-      objectReference: {fileID: 2100000, guid: 8d81e2ac8b391204cb053b9e6e96a951, type: 2}
+      objectReference: {fileID: 2100000, guid: d35a74061dec6224182a331341f62195, type: 2}
     - target: {fileID: 8874248558456084073, guid: 85dc1449410087c4eb925382faae1f91, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 8d81e2ac8b391204cb053b9e6e96a951, type: 2}
+      objectReference: {fileID: 2100000, guid: d35a74061dec6224182a331341f62195, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7377089003242478553, guid: 85dc1449410087c4eb925382faae1f91, type: 3}
