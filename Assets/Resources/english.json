@@ -43,5 +43,12 @@
     "speak_battery_ok": "Need some battery? For such a good looking person it's free, enjoy!",
 
     "speak_pinkObj_isOff": "Can you believe it I was tasked to stay here!? Just me and this... big... red... button...",
-    "speak_pinkObj_isOn": "I somehow feel... fulfilled"
+    "speak_pinkObj_isOn": "I somehow feel... fulfilled",
+
+    "credits1": "Sound Design & Music",
+    "credits2": "Concept & 2D Art",
+    "credits3": "3D Modeling and Animation",
+    "credits4": "2D Art",
+    "credits5": "Developer & Level Design",
+    "credits6": "Developer"
 }
