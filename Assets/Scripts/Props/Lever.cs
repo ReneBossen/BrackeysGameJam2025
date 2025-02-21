@@ -11,25 +11,15 @@ namespace Brackeys.Props
     public class Lever : MonoBehaviour, IInteractable, IShootable
     {
         [SerializeField] private UnityEvent _callbacks;
-        [SerializeField] private bool _isRequiredToExit;
         public bool CanInteract => true;
         public GameObject GameObject => gameObject;
 
         private Animator _animator;
         private string _toggle = "Toggle";
-        private bool _isPulled = false;
 
         private void Awake()
         {
             _animator = GetComponent<Animator>();
-        }
-
-        private void Start()
-        {
-            if (_isRequiredToExit)
-            {
-                Exit.Instance.AddRequiredObject(gameObject);
-            }
         }
 
         public void Interact(PlayerController pc)
@@ -45,19 +35,6 @@ namespace Brackeys.Props
         private void PullLever()
         {
             _animator.SetTrigger(_toggle);
-            _isPulled = !_isPulled;
-
-            if (!_isRequiredToExit)
-                return;
-
-            if (_isPulled)
-            {
-                Exit.Instance.DecreaseValidation();
-            }
-            else
-            {
-                Exit.Instance.IncreaseValidation();
-            }
         }
 
         private void InvokeCallbacks()

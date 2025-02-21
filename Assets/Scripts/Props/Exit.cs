@@ -32,10 +32,5 @@ namespace Brackeys
                 Destroy(gameObject);
             }
         }
-
-        public void IncreaseValidation()
-        {
-            _validationCount++;
-        }
     }
 }
