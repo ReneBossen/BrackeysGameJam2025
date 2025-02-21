@@ -23,6 +23,13 @@ namespace Brackeys.Player
 
         [SerializeField]
         private Image _aimImage;
+        private Sprite _baseSprite;
+
+        [SerializeField]
+        private Sprite _energySprite;
+
+        [SerializeField]
+        private GameObject _outOfBatteries;
 
         private GameObject _weaponModelInstance;
         private GameObject _ejectionTarget;
@@ -56,7 +63,10 @@ namespace Brackeys.Player
         {
             _cam = Camera.main;
 
+            _baseSprite = _aimImage.sprite;
+
             _aimImage.gameObject.SetActive(false);
+            _outOfBatteries.SetActive(false);
 
             _inputSystem = new InputSystem();
             _inputSystem.Player.Fire.performed += OnFire;
@@ -96,6 +106,7 @@ namespace Brackeys.Player
                     _pc.Stun(CurrentWeapon.BaseInfo.StunDuration, CurrentWeapon.BaseInfo.ForceThrowback);
                 }
                 _canShoot = false;
+                if (CurrentWeapon.NeedAmmo()) _aimImage.sprite = _energySprite;
                 StartCoroutine(Reload());
             }
         }
@@ -105,13 +116,16 @@ namespace Brackeys.Player
             if (CurrentWeapon.AddAmmo())
             {
                 _ejectionTarget.SetActive(true);
+                _aimImage.sprite = _baseSprite;
             }
         }
 
         private IEnumerator Reload()
         {
             _aimImage.color = Color.red;
+            if (CurrentWeapon.NeedAmmo()) _outOfBatteries.SetActive(true);
             yield return new WaitForSeconds(CurrentWeapon.BaseInfo.ReloadTime);
+            _outOfBatteries.SetActive(false);
             _canShoot = true;
             _aimImage.color = Color.white;
         }
