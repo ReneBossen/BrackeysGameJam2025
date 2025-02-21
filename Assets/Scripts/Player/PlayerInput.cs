@@ -96,6 +96,7 @@ namespace Brackeys.Player
         {
             if (CurrentWeapon != null && _canShoot)
             {
+                bool outOfBatteries = CurrentWeapon.NeedAmmo();
                 CurrentWeapon.Fire(_gunEnd.position, _cam.transform, _gunModelTransform.position, _pc.Head.rotation);
                 if (CurrentWeapon.BaseInfo.EjectAmmoGameObject)
                 {
@@ -106,8 +107,7 @@ namespace Brackeys.Player
                     _pc.Stun(CurrentWeapon.BaseInfo.StunDuration, CurrentWeapon.BaseInfo.ForceThrowback);
                 }
                 _canShoot = false;
-                if (CurrentWeapon.NeedAmmo()) _aimImage.sprite = _energySprite;
-                StartCoroutine(Reload());
+                StartCoroutine(Reload(outOfBatteries));
             }
         }
 
@@ -120,11 +120,12 @@ namespace Brackeys.Player
             }
         }
 
-        private IEnumerator Reload()
+        private IEnumerator Reload(bool outOfBatteries)
         {
             _aimImage.color = Color.red;
-            if (CurrentWeapon.NeedAmmo()) _outOfBatteries.SetActive(true);
+            if (outOfBatteries) _outOfBatteries.SetActive(true);
             yield return new WaitForSeconds(CurrentWeapon.BaseInfo.ReloadTime);
+            if (CurrentWeapon.NeedAmmo()) _aimImage.sprite = _energySprite;
             _outOfBatteries.SetActive(false);
             _canShoot = true;
             _aimImage.color = Color.white;
