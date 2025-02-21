@@ -23,7 +23,7 @@ namespace Brackeys.Props
             _rb.isKinematic = true;
         }
 
-        private void Start()
+        public void InitShootingRangeButton()
         {
             if (_isRequiredToExit)
             {

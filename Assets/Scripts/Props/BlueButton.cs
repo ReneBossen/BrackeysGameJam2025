@@ -32,7 +32,7 @@ namespace Brackeys.Props
             if (IsActivated)
                 return;
 
-            LevelStateManager.Instance.IncrBluePressed();
+            //LevelStateManager.Instance.IncrBluePressed();
 
             FollowPath path = GetComponent<FollowPath>();
             if (path != null)

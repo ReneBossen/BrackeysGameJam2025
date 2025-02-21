@@ -1995,7 +1995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1721364843983546319, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1721364843983546319, guid: f58b7a6100656c84eac7200552bd0d80, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Mode

@@ -36,11 +36,11 @@ namespace Brackeys.Manager
             foreach (var bt in _blueButtons) bt.gameObject.SetActive(false);*/
         }
 
-        public void IncrBluePressed()
-        {
-            _bluePressed++;
-            if (_bluePressed == 3) _exit.DecreaseValidation();
-        }
+        //public void IncrBluePressed()
+        //{
+        //    _bluePressed++;
+        //    if (_bluePressed == 3) _exit.DecreaseValidation();
+        //}
 
         public bool IsObjMoveDone => _objMove.IsActivated;
         public bool IsObjMoveMoving => _objMove.IsMoving;

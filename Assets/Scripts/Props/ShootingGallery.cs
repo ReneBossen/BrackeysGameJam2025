@@ -13,8 +13,13 @@ namespace Brackeys.Props
         private void Start()
         {
             _spotlights.ForEach(spotlight => spotlight.SetActive(IsActive));
-            _targets.ForEach(target => target.gameObject.SetActive(IsActive));
+            _targets.ForEach(target =>
+            {
+                target.GetComponent<ShootingRangeButton>().InitShootingRangeButton();
+                target.gameObject.SetActive(IsActive);
+            });
         }
+
         public void Toggle()
         {
             IsActive = !IsActive;
