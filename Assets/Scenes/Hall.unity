@@ -225,8 +225,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18998454}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 0.33674172, z: -0, w: 0.9415971}
+  m_LocalPosition: {x: -5.26, y: 0, z: -18.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -244,8 +244,9 @@ Transform:
   - {fileID: 1492100079}
   - {fileID: 1262135154}
   - {fileID: 940238994}
+  - {fileID: 1793538693}
   m_Father: {fileID: 1257501091}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 39.357, z: 0}
 --- !u!1001 &19327672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17227,8 +17228,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 806483426}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.4282303, z: -0, w: 0.90366966}
+  m_LocalPosition: {x: -10.06, y: 0, z: 23.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17248,8 +17249,9 @@ Transform:
   - {fileID: 776630755}
   - {fileID: 105999552}
   - {fileID: 2031447779}
+  - {fileID: 2851349313125274600}
   m_Father: {fileID: 1257501091}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -50.711, z: 0}
 --- !u!1001 &810016475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29320,10 +29322,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2851349313125274600}
   - {fileID: 1597843080}
   - {fileID: 1428418189}
-  - {fileID: 1793538693}
   - {fileID: 1369313934}
   - {fileID: 551280564}
   - {fileID: 562197243}
@@ -41643,7 +41643,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1257501091}
+    m_TransformParent: {fileID: 18998455}
     m_Modifications:
     - target: {fileID: 996811328347720632, guid: ceaa7ecb440655445b33cbe0001670ae, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -49607,7 +49607,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1257501091}
+    m_TransformParent: {fileID: 806483427}
     m_Modifications:
     - target: {fileID: 996811328347720632, guid: ceaa7ecb440655445b33cbe0001670ae, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
