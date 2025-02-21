@@ -1,11 +1,16 @@
+using Brackeys.Interfaces;
 using Brackeys.Manager;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Brackeys.Props
 {
-    public class Jail : MonoBehaviour
+    public class Jail : MonoBehaviour, IActivateable
     {
         public static Jail Instance { private set; get; }
+
+        public bool CanActivate { private set; get; }
 
         [SerializeField]
         private GameObject _door;
@@ -13,9 +18,14 @@ namespace Brackeys.Props
         [SerializeField]
         private Transform _jailPos;
 
+        private Animator _animator;
+        private string _toggle = "Toggle";
+
         private void Awake()
         {
             Instance = this;
+
+            _animator = GetComponent<Animator>();
         }
 
         public void SetToJail()
@@ -26,12 +36,26 @@ namespace Brackeys.Props
             player.transform.position = _jailPos.position;
 
             player.GetComponent<CharacterController>().enabled = true;
-            _door.SetActive(false); //Should be true
         }
 
-        public void OpenDoor()
+        private void OpenDoor()
         {
-            _door.SetActive(false);
+            _animator.SetTrigger(_toggle);
+            _door.GetComponent<BoxCollider>().enabled = false;
+            CanActivate = false;
+        }
+
+        private IEnumerator CloseDoor()
+        {
+            yield return new WaitForSeconds(5f);
+            _animator.SetTrigger(_toggle);
+            _door.GetComponent<BoxCollider>().enabled = true;
+            CanActivate = true;
+        }
+
+        public void OnActivate()
+        {
+            OpenDoor();
         }
     }
 }

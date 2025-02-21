@@ -18,7 +18,7 @@ namespace Brackeys
             _validationCount = 0;
         }
 
-        public void AddLever(GameObject requiredObject)
+        public void AddRequiredObject(GameObject requiredObject)
         {
             _exitObjects.Add(requiredObject);
             _validationCount = _exitObjects.Count;

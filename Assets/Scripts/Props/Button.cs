@@ -20,7 +20,7 @@ namespace Brackeys.Props
         {
             if (_isRequiredToExit)
             {
-                Exit.Instance.AddLever(gameObject);
+                Exit.Instance.AddRequiredObject(gameObject);
             }
         }
 
