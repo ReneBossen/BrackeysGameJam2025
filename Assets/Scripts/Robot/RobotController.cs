@@ -26,22 +26,21 @@ namespace Brakeys.Robot
 
         private Animator _anim;
 
+        private bool _didSpeak;
+
         public void Interact(PlayerController pc)
         {
             _display.ToDisplay = Translate.Instance.Tr(
                 _targetWaypoint.Emplacement switch
                 {
-                    Emplacement.Dispenser when LevelStateManager.Instance.HasWeaponEquipped => "robot_dispenser_weaponTaken",
-                    Emplacement.Dispenser => "robot_dispenser_pendingWeapon",
-
-                    Emplacement.ButtonMove when !LevelStateManager.Instance.HasWeaponEquipped => "robot_button_needWeapon",
-                    Emplacement.ButtonMove when LevelStateManager.Instance.IsObjMoveDone => "robot_buttonMove_done",
-                    Emplacement.ButtonMove when LevelStateManager.Instance.IsObjMoveMoving => "robot_buttonMove_notDoneMoving",
-                    Emplacement.ButtonMove => "robot_buttonMove_notDoneNotMoving",
+                    Emplacement.Entrance when LevelStateManager.Instance.HasWeaponEquipped && !_didSpeak => "robot_entrance_hasWeaponFirstTime",
+                    Emplacement.Entrance when LevelStateManager.Instance.HasWeaponEquipped => "robot_entrance_hasWeaponNormal",
+                    Emplacement.Entrance => "robot_entrance_noWeapon",
 
                     _ => throw new System.NotImplementedException()
                 }
             );
+            _didSpeak = true;
             _anim.SetBool("IsSpeaking", true);
         }
 

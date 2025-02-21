@@ -12,12 +12,9 @@
     "bowName": "",
     "bowDesc": "",
 
-    "robot_dispenser_pendingWeapon": "Grab your weapon in the dispenser and let's get started!",
-    "robot_dispenser_weaponTaken": "Let's find a way to get out of here!",
-    "robot_button_needWeapon": "We will need a weapon from the dispenser to do that",
-    "robot_buttonMove_notDoneMoving": "Shooting at this will be hard! Maybe we should find a way to stop it",
-    "robot_buttonMove_notDoneNotMoving": "Let's see if we can hit it now, if not we can just make it move again",
-    "robot_buttonMove_done": "Good shot!",
+    "robot_entrance_hasWeaponFirstTime": "Welcome to the circus",
+    "robot_entrance_hasWeaponNormal": "How is the progress",
+    "robot_entrance_noWeapon": "You should take a weapon",
 
     "speak_seller": "We sell food and souvenirs! Oil that will fill your belly for only 10$!",
     "speak_ballThrow": "Try to break all the bottles for a special prize!.... No I'm not moving, yes they are all glued together",

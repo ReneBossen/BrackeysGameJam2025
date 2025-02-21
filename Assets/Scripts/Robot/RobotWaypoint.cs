@@ -17,7 +17,6 @@ namespace Brackeys.Robot
 
     public enum Emplacement
     {
-        Dispenser,
-        ButtonMove
+        Entrance
     }
 }
