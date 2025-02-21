@@ -1,3 +1,67 @@
 {
-    "lang": "Dansk"
+    "lang": "Dansk",
+
+    "pressInteract": "Tryk 'E' for at interagere",
+
+    "vendingTitle": "Intet Kan Gå Galt",
+    "pendingCoin": "Indsæt en mønt",
+    "laserGunName": "SX-648 Laserpistol",
+    "laserGunDesc": "Konverterer elektricitet til en kraftfuld plasmakugle (batteri inkluderet, må ikke puttes i mikrobølgeovnen)",
+    "pineappleGunName": "Frugtbazooka (ananas version)",
+    "pineappleGunDesc": "Genanvender almindelige grøntsager til en lækker (men dødelig) eksplosion",
+    "bowName": "Lige bue",
+    "bowDesc": "Det siges, at det er nemmere at lande en joke end en pil.",
+
+    "speak_seller": "Sulten? Vi sælger mad og olie til at fylde din mave! Har du brug for en souvenir fra dit besøg? 10$!",
+    "speak_ballThrow": "Prøv at vælte alle flaskerne for en helt speciel præmie!... Nej, jeg flytter mig ikke, ja, de er alle limet fast.",
+    "speak_ballon": "Vil du have en ballon? Så må du finde din egen. Disse er mine.",
+    "speak_empty": "Min bod er ikke helt klar endnu, men du må hellere være parat! Det bliver den bedste!",
+    "speak_credits": "Denne forlystelsespark blev sat op på kun én uge! Tjek tavlen ved siden af mig for at se en liste over alle vores medarbejdere!",
+
+    "speak_battery_noWeapon": "Jeg sælger lækre batterier! Det ser dog ikke ud til, at du bruger batterier. Måske gør en af dine våben?",
+    "speak_battery_noGoodWeapon": "Jeg sælger lækre batterier, men det ser ikke ud til at dit våben har plads til dem!",
+    "speak_battery_alreadyFull": "Jeg sælger lækre batterier, men... dit våben er allerede fuldt opladt. Gå ud og skyd lidt og kom tilbage senere!",
+    "speak_battery_ok": "Har du brug for et batteri eller to? Til så flot en robot er det gratis, nyd det!",
+
+    "speak_pinkObj_isOff": "Kan du tro det? Jeg blev bedt om at stå lige her!? Ved siden af denne... store... røde... knap...",
+    "speak_pinkObj_isOn": "Orh, det var sådan man gjorde!",
+
+    "robot_entrance_hasWeaponFirstTime": "Velkommen til forlystelsesparken! Jeg er her for at assistere dig.",
+    "robot_entrance_hasWeaponNormal": "Hvordan går det med fremskridtet?",
+    "robot_entrance_noWeapon": "Tag venligst et våben.",
+    "robot_stands_normal": "Du kan købe dele til dine våben her. Olie, batterier, hvad end du har brug for.",
+    "robot_sampleStand_normal": "Du vil finde håndtag som dette overalt for at styre forlystelsesparken. Jeg er dog ikke sikker på, hvem der har stået for ledningerne.",
+    "robot_moveStand_complete": "Godt skud!",
+    "robot_moveStand_notMoving": "Det burde være nemmere at sigte nu",
+    "robot_moveStand_moving": "Hvis det er svært at sigte, er der nok en måde at stoppe det på",
+    "robot_jail_normal": "Dette er, hvor vi sætter dyr, der ikke kan opføre sig ordentligt",
+    "robot_scene_normal": "Og dette er min plads som hovedpersonen!",
+    "robot_shooting_none": "Dette er skydebanen",
+    "robot_shooting_1done": "Det var godt ramt!",
+    "robot_shooting_2done": "Tillykke, du fik begge!",
+    "robot_benches_normal": "Her sidder vi og ser showet.",
+    "robot_basketball_normal": "Kan du lide basketball?",
+    "robot_ferrisWheel_normal": "Dette er pariserhjulet.",
+    "robot_toilet_normal": "Selv robotter har brug for et olieskift.",
+    "robot_storage_normal": "Wow, hvad er det her for et sted?",
+
+    "credits1": "Lyddesign & Musik",
+    "credits2": "Koncept & 2D-artist",
+    "credits3": "3D-modellering og animation",
+    "credits4": "2D-artist",
+    "credits5": "Udvikler & Level Design",
+    "credits6": "Udvikler",
+
+    "jadith_01": "Koffein! Så er det afsted!",
+    "jadith_02": "Ooh, skinnende!",
+    "jadith_03": "Mit hoved føles mærkeligt",
+    "jadith_04": "Jeg har en indgravering, men jeg kan ikke vise den til dig",
+    "jadith_05": "Weeee!",
+    "zirk_01": "Beeeeeehhh, ah undskyld, sagde du noget?",
+    "zirk_02": "Enhver får kan finde ud af at rocketjump over et hegn",
+    "zirk_03": "Vil du spille en omgang Mahjong? Her bruger vi får i stedet for drager, husets regler",
+    "swave_01": "Kunne du tænke dig en ridetur?",
+    "swave_02": "Jeg er ikke helt sikker på, hvor denne hestehale sidder fast",
+    "swave_03": "Can I get you a horseshoe?.. Woops, jeg tror min oversætter gik i stykker",
+    "swave_04": "Sikke et tilfælde! Mit navn står på væggen derovre!"
 }
