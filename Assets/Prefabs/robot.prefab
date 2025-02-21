@@ -220,7 +220,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7536137384526961195}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 32.798}
---- !u!1001 &1316200539192817209
+--- !u!1001 &3323618007007661002
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -233,12 +233,16 @@ PrefabInstance:
       value: robotRings
       objectReference: {fileID: 0}
     - target: {fileID: 7921007207922365603, guid: 19f9aea8eb5eb3a4ba3e52bb00df42da, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 99.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: 7921007207922365603, guid: 19f9aea8eb5eb3a4ba3e52bb00df42da, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7921007207922365603, guid: 19f9aea8eb5eb3a4ba3e52bb00df42da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.988
+      value: 0.979
       objectReference: {fileID: 0}
     - target: {fileID: 7921007207922365603, guid: 19f9aea8eb5eb3a4ba3e52bb00df42da, type: 3}
       propertyPath: m_LocalPosition.z
@@ -246,19 +250,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7921007207922365603, guid: 19f9aea8eb5eb3a4ba3e52bb00df42da, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.0000020546586
       objectReference: {fileID: 0}
     - target: {fileID: 7921007207922365603, guid: 19f9aea8eb5eb3a4ba3e52bb00df42da, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.0000020546586
       objectReference: {fileID: 0}
     - target: {fileID: 7921007207922365603, guid: 19f9aea8eb5eb3a4ba3e52bb00df42da, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7921007207922365603, guid: 19f9aea8eb5eb3a4ba3e52bb00df42da, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 8.659561e-17
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7921007207922365603, guid: 19f9aea8eb5eb3a4ba3e52bb00df42da, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -277,10 +281,10 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19f9aea8eb5eb3a4ba3e52bb00df42da, type: 3}
---- !u!4 &9198891943781106330 stripped
+--- !u!4 &4896203211998625641 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7921007207922365603, guid: 19f9aea8eb5eb3a4ba3e52bb00df42da, type: 3}
-  m_PrefabInstance: {fileID: 1316200539192817209}
+  m_PrefabInstance: {fileID: 3323618007007661002}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8007123578513800640
 PrefabInstance:
@@ -292,7 +296,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 96d19d52d2559514bae994fa6955b98d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 96d19d52d2559514bae994fa6955b98d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -300,7 +304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 96d19d52d2559514bae994fa6955b98d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 96d19d52d2559514bae994fa6955b98d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -351,6 +355,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 96d19d52d2559514bae994fa6955b98d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6488431194962163377}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 96d19d52d2559514bae994fa6955b98d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4896203211998625641}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 96d19d52d2559514bae994fa6955b98d, type: 3}
       insertIndex: -1
