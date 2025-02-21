@@ -25,6 +25,12 @@ namespace Brackeys.Manager
         [SerializeField]
         private Exit _exit;
 
+        [SerializeField]
+        private Animator _openDoor;
+
+        [SerializeField]
+        private Collider _openColl;
+
         private void Awake()
         {
             Instance = this;
@@ -34,6 +40,12 @@ namespace Brackeys.Manager
                 _blueButtons.RemoveAt(Random.Range(0, _blueButtons.Count));
             }
             foreach (var bt in _blueButtons) bt.gameObject.SetActive(false);*/
+        }
+
+        public void OpenDoor()
+        {
+            _openDoor.SetTrigger("Open");
+            _openColl.enabled = false;
         }
 
         public void IncrBluePressed()

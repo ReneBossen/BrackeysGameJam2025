@@ -1,4 +1,5 @@
 using Brackeys.Animations;
+using Brackeys.Manager;
 using Brackeys.Player;
 using Brackeys.Player.Interaction;
 using Brackeys.SO;
@@ -75,6 +76,7 @@ namespace Brackeys.Props
             _descKey = weapon.DescriptionKey;
             ResetTranslation();
 
+            LevelStateManager.Instance.OpenDoor();
             _animator.Play(AnimationNames.FlapOpen);
 
             if (weapon is ProjectileWeaponInfo wInfo)
