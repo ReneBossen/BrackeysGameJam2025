@@ -1,5 +1,6 @@
 using Brackeys.Manager;
 using Brackeys.Props;
+using Brackeys.Translation;
 using UnityEngine;
 
 namespace Brakeys.Robot
@@ -14,7 +15,7 @@ namespace Brakeys.Robot
 
         public override string GetTranslationKey()
         {
-            return _button.IsActivated ? _keyOn : _keyOff;
+            return Translate.Instance.Tr(_button.IsActivated ? _keyOn : _keyOff);
         }
     }
 }
