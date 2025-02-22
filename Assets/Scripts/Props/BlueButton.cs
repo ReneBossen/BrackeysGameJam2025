@@ -10,6 +10,8 @@ namespace Brackeys.Props
     {
         [SerializeField] private Material _validationMat;
 
+        [SerializeField] private UnityEvent _evt;
+
         public bool IsActivated { private set; get; }
         public bool IsMoving => GetComponent<FollowPath>().enabled;
 
@@ -33,6 +35,7 @@ namespace Brackeys.Props
                 return;
 
             //LevelStateManager.Instance.IncrBluePressed();
+            _evt.Invoke();
 
             FollowPath path = GetComponent<FollowPath>();
             if (path != null)

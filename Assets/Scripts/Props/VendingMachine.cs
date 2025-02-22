@@ -69,7 +69,11 @@ namespace Brackeys.Props
 
         public void Interact(PlayerController pc)
         {
-            CanInteract = false;
+            if (ResourceManager.Instance.PlayerInput.CurrentWeapon != null)
+            {
+                while (ResourceManager.Instance.PlayerInput.CurrentWeapon.NeedAmmo()) ResourceManager.Instance.PlayerInput.CurrentWeapon.AddAmmo();
+                return;
+            }
             var weapon = GetRandomWeapon(_weaponsTier0.Any() ? _weaponsTier0 : _weaponsTier1);
 
             _nameKey = weapon.NameKey;

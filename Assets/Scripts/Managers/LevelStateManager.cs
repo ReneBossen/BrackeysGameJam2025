@@ -26,10 +26,10 @@ namespace Brackeys.Manager
         private Exit _exit;
 
         [SerializeField]
-        private Animator _openDoor;
+        private Animator _openDoor, _openDoor2;
 
         [SerializeField]
-        private Collider _openColl;
+        private Collider _openColl, _openColl2;
 
         private void Awake()
         {
@@ -46,6 +46,17 @@ namespace Brackeys.Manager
         {
             _openDoor.SetTrigger("Open");
             _openColl.enabled = false;
+        }
+
+        private int _triggerCount;
+        public void OpenDoorWithTriggers()
+        {
+            _triggerCount++;
+            if (_triggerCount == 2)
+            {
+                _openDoor2.SetTrigger("Open");
+                _openColl2.enabled = false;
+            }
         }
 
         public void IncrBluePressed()
