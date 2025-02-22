@@ -33,5 +33,9 @@ namespace Brackeys.SO
 
         [Header("SFX")]
         public AudioClip ShootClip;
+
+        [Header("Animations")]
+        public string BaseTriggerName;
+        public bool UseRightArm;
     }
 }

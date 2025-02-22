@@ -16,7 +16,7 @@ namespace Brackeys.Player
         private Transform _gunEnd;
 
         [SerializeField]
-        private Transform _handsWeaponTransform;
+        private Transform _handsWeaponTransformL, _handsWeaponTransformR;
 
         [SerializeField]
         private Transform _gunModelTransform;
@@ -30,6 +30,9 @@ namespace Brackeys.Player
 
         [SerializeField]
         private GameObject _outOfBatteries;
+
+        [SerializeField]
+        private Animator _hands;
 
         private AudioSource _audioSource;
         private GameObject _weaponModelInstance;
@@ -46,9 +49,11 @@ namespace Brackeys.Player
                 }
                 _currentWeapon = value;
                 _aimImage.gameObject.SetActive(_currentWeapon != null);
+                _hands.gameObject.SetActive(_currentWeapon != null);
                 if (_currentWeapon != null)
                 {
-                    _weaponModelInstance = Instantiate(_currentWeapon.BaseInfo.WeaponModel, _handsWeaponTransform);
+                    _hands.SetTrigger(CurrentWeapon.BaseInfo.BaseTriggerName);
+                    _weaponModelInstance = Instantiate(_currentWeapon.BaseInfo.WeaponModel, CurrentWeapon.BaseInfo.UseRightArm ? _handsWeaponTransformR : _handsWeaponTransformL);
                     _weaponModelInstance.transform.localPosition = Vector3.zero;
                     _ejectionTarget = _weaponModelInstance.GetComponentsInChildren<MeshRenderer>().FirstOrDefault(x => x.CompareTag("GunEffectTarget"))?.gameObject;
                 }
@@ -83,6 +88,8 @@ namespace Brackeys.Player
             _inputSystem.Player.Jump.performed += _pc.OnJump;
             _inputSystem.Player.Look.performed += _pc.OnLook;
             _inputSystem.Player.Interact.performed += _pc.OnInteract;
+
+            _hands.gameObject.SetActive(false);
         }
 
         private void OnEnable()

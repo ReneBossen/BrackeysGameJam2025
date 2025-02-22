@@ -27,6 +27,8 @@ MonoBehaviour:
   DoesExplode: 0
   ExplosionRadius: 0
   ShootClip: {fileID: 8300000, guid: 09007ff6dbac02e4da42194c965692b1, type: 3}
+  BaseTriggerName: TakeGun
+  UseRightArm: 1
   Bullet: {fileID: 435832457546945569, guid: 4bd302d130dcb674089c49e00b0b0254, type: 3}
   PropulsionForce: 20
   MaxBounceCount:

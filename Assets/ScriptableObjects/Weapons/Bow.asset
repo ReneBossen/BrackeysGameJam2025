@@ -27,6 +27,7 @@ MonoBehaviour:
   DoesExplode: 0
   ExplosionRadius: 0
   ShootClip: {fileID: 8300000, guid: cc74f8de8542b33499cf2832912ff78c, type: 3}
+  BaseTriggerName: TakeBow
   Bullet: {fileID: 881950712678528405, guid: 7f7f7369189c3524282e2924607d8f1f, type: 3}
   PropulsionForce: 50
   MaxBounceCount:
