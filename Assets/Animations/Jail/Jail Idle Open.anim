@@ -43,7 +43,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Armature/Bone/Armature.001/Bone
+    path: Armature.001/Bone
   m_CompressedRotationCurves: []
   m_EulerCurves: []
   m_PositionCurves:
@@ -78,7 +78,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Armature/Bone/Armature.001/Bone
+    path: Armature.001/Bone
   m_ScaleCurves:
   - curve:
       serializedVersion: 2
@@ -111,7 +111,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Armature/Bone/Armature.001/Bone
+    path: Armature.001/Bone
   m_FloatCurves: []
   m_PPtrCurves: []
   m_SampleRate: 60
@@ -424,7 +424,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Armature/Bone/Armature.001/Bone
+    path: Armature.001/Bone
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -445,7 +445,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Armature/Bone/Armature.001/Bone
+    path: Armature.001/Bone
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -466,7 +466,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Armature/Bone/Armature.001/Bone
+    path: Armature.001/Bone
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -487,7 +487,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalRotation.x
-    path: Armature/Bone/Armature.001/Bone
+    path: Armature.001/Bone
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -508,7 +508,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalRotation.y
-    path: Armature/Bone/Armature.001/Bone
+    path: Armature.001/Bone
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -529,7 +529,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalRotation.z
-    path: Armature/Bone/Armature.001/Bone
+    path: Armature.001/Bone
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -550,7 +550,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalRotation.w
-    path: Armature/Bone/Armature.001/Bone
+    path: Armature.001/Bone
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -571,7 +571,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.x
-    path: Armature/Bone/Armature.001/Bone
+    path: Armature.001/Bone
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -592,7 +592,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.y
-    path: Armature/Bone/Armature.001/Bone
+    path: Armature.001/Bone
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -613,7 +613,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.z
-    path: Armature/Bone/Armature.001/Bone
+    path: Armature.001/Bone
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -698,7 +698,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAngles.x
-    path: Armature/Bone/Armature.001/Bone
+    path: Armature.001/Bone
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -719,7 +719,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAngles.y
-    path: Armature/Bone/Armature.001/Bone
+    path: Armature.001/Bone
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -740,7 +740,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAngles.z
-    path: Armature/Bone/Armature.001/Bone
+    path: Armature.001/Bone
     classID: 4
     script: {fileID: 0}
     flags: 0

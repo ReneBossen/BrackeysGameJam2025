@@ -97,7 +97,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Armature/Bone/Armature.001/Bone
+    path: Armature.001/Bone
   m_CompressedRotationCurves: []
   m_EulerCurves: []
   m_PositionCurves:
@@ -150,7 +150,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Armature/Bone/Armature.001/Bone
+    path: Armature.001/Bone
   m_ScaleCurves:
   - curve:
       serializedVersion: 2
@@ -201,7 +201,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Armature/Bone/Armature.001/Bone
+    path: Armature.001/Bone
   m_FloatCurves: []
   m_PPtrCurves: []
   m_SampleRate: 24
