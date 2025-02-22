@@ -15895,7 +15895,7 @@ GameObject:
   - component: {fileID: 610385344}
   - component: {fileID: 610385343}
   - component: {fileID: 610385342}
-  m_Layer: 13
+  m_Layer: 6
   m_Name: Floor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38466,7 +38466,7 @@ GameObject:
   - component: {fileID: 1319003716}
   - component: {fileID: 1319003715}
   - component: {fileID: 1319003714}
-  m_Layer: 13
+  m_Layer: 6
   m_Name: 2nd floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
