@@ -71,7 +71,8 @@ namespace Brackeys.Props
         {
             if (ResourceManager.Instance.PlayerInput.CurrentWeapon != null)
             {
-                while (ResourceManager.Instance.PlayerInput.CurrentWeapon.NeedAmmo()) ResourceManager.Instance.PlayerInput.AddAmmo();
+                while (ResourceManager.Instance.PlayerInput.CurrentWeapon.NeedAmmo())
+                    ResourceManager.Instance.PlayerInput.AddAmmo();
                 return;
             }
             var weapon = GetRandomWeapon(_weaponsTier0.Any() ? _weaponsTier0 : _weaponsTier1);
@@ -90,5 +91,7 @@ namespace Brackeys.Props
             else
                 throw new NotImplementedException();
         }
+
+        public bool HasRemainingWeapons() => _weaponsTier0.Any() || _weaponsTier1.Any();
     }
 }

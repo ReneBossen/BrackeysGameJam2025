@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hall.unity
     guid: 3fa0d62453e9c5a42a5b0acb858dacbe
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: ac544774384656a4d94e7284cb169583
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

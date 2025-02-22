@@ -16,6 +16,9 @@ namespace Brackeys
         private void Awake()
         {
             Instance = this;
+
+            DontDestroyOnLoad(this);
+
             if (!SceneManager.GetAllScenes().Any(x => x.buildIndex == (int)SceneName.Hall)) // Debug helper
             {
                 SceneManager.LoadScene((int)SceneName.Hall, LoadSceneMode.Additive);
@@ -33,6 +36,17 @@ namespace Brackeys
             IsNewIteration = true;
             yield return SceneManager.LoadSceneAsync((int)SceneName.Hall, LoadSceneMode.Additive);
             ResourceManager.Instance.PlayerController.ReadyUpPlayer();
+        }
+
+        public void RestartGame()
+        {
+            SceneManager.LoadScene((int)SceneName.Game);
+        }
+
+        public void LoadVictoryScene()
+        {
+            Debug.Log("[LVMNG] LOAD VICTORY");
+            SceneManager.LoadScene((int)SceneName.Victory);
         }
     }
 }
