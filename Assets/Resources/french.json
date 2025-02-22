@@ -75,5 +75,13 @@
     "swave_02": "Je ne suis pas sûr où cette queue est attachée",
     "swave_03": "Kan jeg byde på en hestesko?.. Oops, je pense que mon traducteur est cassé",
     "swave_04": "Quelles étaient les chances ? Mon nom est marqué sur ce mur derrière !",
-    "dragonia_01": "Trouver le robot portant une couronne vous rempli de DETERMINATION"
+    "dragonia_01": "Trouver le robot portant une couronne vous rempli de DETERMINATION",
+
+    "restart": "Rejouer",
+    "victory": "Victoire",
+
+    "victory1": "Nous some heureux que la foire était géniale",
+    "victory2": "et que toutes les attractions étaient en grande qualitées !",
+    "victory3": "Si vous n'êtes pas sûr d'avoir vu toutes les attractions,",
+    "victory4": "n'hésitez pas à refaire une partie !"
 }
