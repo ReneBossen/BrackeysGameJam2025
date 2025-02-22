@@ -28,6 +28,9 @@ namespace Brackeys.Player
         private AudioSource _audioSource;
         private float _footstepDelay;
 
+        [SerializeField]
+        private AudioClip _clipObjective;
+
         private Rigidbody _rb;
         private CharacterController _controller;
         private Headbob _headbob;
@@ -39,6 +42,11 @@ namespace Brackeys.Player
         private Quaternion _startingRot;
 
         private List<IInteractable> _interactions = new();
+
+        public void PlayObjectiveNoise()
+        {
+            _audioSource.PlayOneShot(_clipObjective);
+        }
 
         private void Awake()
         {

@@ -1924,6 +1924,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 361486376}
     - target: {fileID: 4213081577477282244, guid: d833479aa53495f47bddee9004f50acb, type: 3}
+      propertyPath: _clipObjective
+      value: 
+      objectReference: {fileID: 8300000, guid: cb5ff1fb1191d5a4c8c5fbb726dbdf61, type: 3}
+    - target: {fileID: 4213081577477282244, guid: d833479aa53495f47bddee9004f50acb, type: 3}
       propertyPath: _pressToInteract
       value: 
       objectReference: {fileID: 1315062538}

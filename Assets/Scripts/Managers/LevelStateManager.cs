@@ -58,6 +58,7 @@ namespace Brackeys.Manager
         public void OpenDoorWithTriggers()
         {
             _triggerCount++;
+            ResourceManager.Instance.PlayerController.PlayObjectiveNoise();
             if (_triggerCount == 2)
             {
                 _openDoor2.SetTrigger("Open");

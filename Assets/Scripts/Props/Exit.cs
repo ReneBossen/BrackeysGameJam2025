@@ -1,3 +1,4 @@
+using Brackeys.Manager;
 using Brackeys.Props;
 using NUnit.Framework;
 using System.Collections.Generic;
@@ -34,6 +35,7 @@ namespace Brackeys
         public void DecreaseValidation()
         {
             Debug.Log($"Exit validation triggered with {_validationCount} targets left");
+            ResourceManager.Instance.PlayerController.PlayObjectiveNoise();
             _validationCount--;
             UpdateExitText();
             if (_validationCount <= 0)
