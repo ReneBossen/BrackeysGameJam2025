@@ -31,7 +31,7 @@
     "speak_pinkObj_isOff": "Ugh. Ils m'ont assigné sur ce stand. A côté de ce gros bouton rouge. Quel travail bizarre.",
     "speak_pinkObj_isOn": "Ah. C'est donc à ça que ça sert ?",
 
-    "robot_entrance_hasWeaponFirstTime": "Salut ! Je suis là pour t'aider. Si tu pouvais utiliser cette machine, ça te permettrais de récupérer une arme.",
+    "robot_entrance_hasWeaponFirstTime": "Salut ! Je suis là pour t'aider.",
     "robot_entrance_hasWeaponNormal": "En quoi puis-je t'aider ?",
     "robot_entrance_noWeapon": "Je t'en prie, prends une arme.",
     "robot_stands_normal": "Tu peux acheter ce qui te manque pour tes armes ici. Huile, piles, tout ce que tu veux.",
