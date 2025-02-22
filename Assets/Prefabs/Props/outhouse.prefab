@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5896162859167962964}
   - component: {fileID: 4290699853423545232}
   - component: {fileID: 6034581870974041449}
+  - component: {fileID: 4562656122957454324}
   m_Layer: 9
   m_Name: LightGood
   m_TagString: Untagged
@@ -121,6 +122,18 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &4562656122957454324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404805981768277149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3229c17858a60846ac10d45e3f198c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6823099378483034966
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +145,7 @@ GameObject:
   - component: {fileID: 1904035117330654770}
   - component: {fileID: 3608239689686365758}
   - component: {fileID: 1280021016317367593}
+  - component: {fileID: 8108467879121266237}
   m_Layer: 9
   m_Name: LightBad
   m_TagString: Untagged
@@ -242,6 +256,18 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &8108467879121266237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6823099378483034966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3229c17858a60846ac10d45e3f198c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7632767059616649356
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,7 +726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2884336864520023768, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2884336864520023768, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -709,14 +735,14 @@ PrefabInstance:
     - target: {fileID: 2884336864520023768, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 3404805981768277149}
+      objectReference: {fileID: 4562656122957454324}
     - target: {fileID: 2884336864520023768, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3404805981768277149}
     - target: {fileID: 2884336864520023768, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: Toggle
       objectReference: {fileID: 0}
     - target: {fileID: 2884336864520023768, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -724,7 +750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2884336864520023768, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: Brackeys.Props.ToggleActive, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2884336864520023768, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -818,7 +844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2884336864520023768, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2884336864520023768, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -827,14 +853,14 @@ PrefabInstance:
     - target: {fileID: 2884336864520023768, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 6823099378483034966}
+      objectReference: {fileID: 8108467879121266237}
     - target: {fileID: 2884336864520023768, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnActivate
       objectReference: {fileID: 0}
     - target: {fileID: 2884336864520023768, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
+      value: Toggle
       objectReference: {fileID: 0}
     - target: {fileID: 2884336864520023768, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -842,7 +868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2884336864520023768, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: Brackeys.Props.ToggleActive, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2884336864520023768, guid: 7236eaa6ff5754a4d849a2971c5fe672, type: 3}
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
