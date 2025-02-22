@@ -11,6 +11,8 @@ namespace Brackeys
     {
         public static LevelManager Instance { private set; get; }
 
+        public bool IsNewIteration { private set; get; }
+
         private void Awake()
         {
             Instance = this;
@@ -28,6 +30,7 @@ namespace Brackeys
         {
             yield return SceneManager.UnloadSceneAsync((int)SceneName.Hall);
             yield return Resources.UnloadUnusedAssets();
+            IsNewIteration = true;
             yield return SceneManager.LoadSceneAsync((int)SceneName.Hall, LoadSceneMode.Additive);
             ResourceManager.Instance.PlayerController.ReadyUpPlayer();
         }

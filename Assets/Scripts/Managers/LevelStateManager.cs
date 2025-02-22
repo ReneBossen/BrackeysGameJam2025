@@ -31,9 +31,15 @@ namespace Brackeys.Manager
         [SerializeField]
         private Collider _openColl, _openColl2;
 
+        [SerializeField]
+        private GameObject _restartObj;
+
         private void Awake()
         {
             Instance = this;
+
+            if (LevelManager.Instance.IsNewIteration)
+                _restartObj.SetActive(true);
 
             /*for (int i = 0; i < 3; i++)
             {
