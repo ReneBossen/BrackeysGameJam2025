@@ -23,14 +23,16 @@ namespace Brackeys.VN
             {
                 _index = 0;
                 _timer = _displaySpeedRef;
-                if (_text == null) Awake();
+                if (_text == null)
+                    Awake();
                 _text.text = string.Empty;
                 if (value != null)
                 {
                     _toDisplay = value.Replace("\r", ""); // Remove \r cause we don't care
                     SplitVertical();
                 }
-                else _toDisplay = null;
+                else
+                    _toDisplay = null;
             }
             private get => _toDisplay;
         }
@@ -90,13 +92,14 @@ namespace Brackeys.VN
                         _timer = _displaySpeedRef;
                         _text.text += _toDisplay[_index];
                         _index++;
-                        if (IsDisplayDone) OnDone.Invoke();
+                        if (IsDisplayDone)
+                            OnDone.Invoke();
                     }
                 }
-                else if (_timer > -2f)
+                else if (_timer > -4f)
                 {
                     _timer -= Time.deltaTime;
-                    if (_timer <= -2f)
+                    if (_timer <= -4f)
                     {
                         ToDisplay = null;
                     }
