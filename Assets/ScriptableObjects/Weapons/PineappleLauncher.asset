@@ -26,6 +26,7 @@ MonoBehaviour:
   ForceThrowback: 1000
   DoesExplode: 1
   ExplosionRadius: 2
+  ShootClip: {fileID: 8300000, guid: 5144fd644caf29042824f2c803ed47bb, type: 3}
   Bullet: {fileID: 1711871811491423034, guid: 813b1c7e7b95e3642b6f9576e04b9ded, type: 3}
   PropulsionForce: 8
   MaxBounceCount:

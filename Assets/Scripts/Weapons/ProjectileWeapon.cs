@@ -8,9 +8,9 @@ namespace Brackeys.Weapons
         public ProjectileWeapon(ProjectileWeaponInfo info) : base(info)
         { }
 
-        public override void Fire(Vector3 spawnPos, Transform forwardT, Vector3 gunModel, Quaternion rot)
+        public override bool Fire(Vector3 spawnPos, Transform forwardT, Vector3 gunModel, Quaternion rot)
         {
-            if (!CanShoot) return;
+            if (!CanShoot) return false;
 
             base.Fire(spawnPos, forwardT, gunModel, rot);
 
@@ -38,6 +38,8 @@ namespace Brackeys.Weapons
                     }
                 }
             }
+
+            return true;
         }
     }
 }

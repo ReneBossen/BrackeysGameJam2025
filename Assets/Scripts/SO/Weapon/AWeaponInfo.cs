@@ -30,5 +30,8 @@ namespace Brackeys.SO
         [Header("Explosion")]
         public bool DoesExplode;
         public float ExplosionRadius;
+
+        [Header("SFX")]
+        public AudioClip ShootClip;
     }
 }

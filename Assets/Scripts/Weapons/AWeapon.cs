@@ -19,7 +19,7 @@ namespace Brackeys.Weapons
 
         protected bool CanShoot => _currentAmmoCount >= BaseInfo.RequiresExternalAmmosCount;
 
-        public virtual void Fire(Vector3 spawnPos, Transform forwardT, Vector3 gunModel, Quaternion rot)
+        public virtual bool Fire(Vector3 spawnPos, Transform forwardT, Vector3 gunModel, Quaternion rot)
         {
             if (BaseInfo.EjectAmmoGameObject != null)
             {
@@ -33,6 +33,8 @@ namespace Brackeys.Weapons
                 }
                 _currentAmmoCount = 0;
             }
+
+            return true;
         }
 
         public bool NeedAmmo()

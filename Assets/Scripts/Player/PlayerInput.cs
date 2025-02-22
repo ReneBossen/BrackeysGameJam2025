@@ -31,6 +31,7 @@ namespace Brackeys.Player
         [SerializeField]
         private GameObject _outOfBatteries;
 
+        private AudioSource _audioSource;
         private GameObject _weaponModelInstance;
         private GameObject _ejectionTarget;
         private PlayerController _pc;
@@ -72,6 +73,8 @@ namespace Brackeys.Player
             _inputSystem.Player.Fire.performed += OnFire;
             // _inputSystem.Player.Reload.performed += OnReload; // TODO
 
+            _audioSource = GetComponentInChildren<AudioSource>();
+
             _pc = GetComponent<PlayerController>();
             _inputSystem.Player.Move.performed += _pc.OnMovement;
             _inputSystem.Player.Move.canceled += _pc.OnMovement; // For movements we need to know when we stopped moving too
@@ -97,14 +100,18 @@ namespace Brackeys.Player
             if (CurrentWeapon != null && _canShoot)
             {
                 bool outOfBatteries = CurrentWeapon.NeedAmmo();
-                CurrentWeapon.Fire(_gunEnd.position, _cam.transform, _gunModelTransform.position, _pc.Head.rotation);
-                if (CurrentWeapon.BaseInfo.EjectAmmoGameObject)
+
+                if (CurrentWeapon.Fire(_gunEnd.position, _cam.transform, _gunModelTransform.position, _pc.Head.rotation))
                 {
-                    _ejectionTarget.SetActive(false);
-                }
-                if (CurrentWeapon.BaseInfo.StunDuration > 0f)
-                {
-                    _pc.Stun(CurrentWeapon.BaseInfo.StunDuration, CurrentWeapon.BaseInfo.ForceThrowback);
+                    if (CurrentWeapon.BaseInfo.EjectAmmoGameObject)
+                    {
+                        _ejectionTarget.SetActive(false);
+                    }
+                    if (CurrentWeapon.BaseInfo.StunDuration > 0f)
+                    {
+                        _pc.Stun(CurrentWeapon.BaseInfo.StunDuration, CurrentWeapon.BaseInfo.ForceThrowback);
+                    }
+                    _audioSource.PlayOneShot(CurrentWeapon.BaseInfo.ShootClip);
                 }
                 _canShoot = false;
                 StartCoroutine(Reload(outOfBatteries));

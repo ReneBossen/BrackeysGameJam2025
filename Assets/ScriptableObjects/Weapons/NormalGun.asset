@@ -16,12 +16,17 @@ MonoBehaviour:
   WeaponModel: {fileID: 5634481841708876003, guid: 1485a6e9b6c6f4c46b412ce610d7d33b, type: 3}
   NameKey: laserGunName
   DescriptionKey: laserGunDesc
+  MultShootIncr: 0
+  AdditiveAngle: 0
   RequiresExternalAmmosCount: 2
   EjectAmmoGameObject: {fileID: 9018547533121435566, guid: 068f4abe8e2225b4b89325c0655ee46c, type: 3}
   SpawnOnImpact: {fileID: 0}
   DurationBeforeDelete: 0
+  StunDuration: 0
+  ForceThrowback: 0
   DoesExplode: 0
   ExplosionRadius: 0
+  ShootClip: {fileID: 8300000, guid: 09007ff6dbac02e4da42194c965692b1, type: 3}
   Bullet: {fileID: 435832457546945569, guid: 4bd302d130dcb674089c49e00b0b0254, type: 3}
   PropulsionForce: 20
   MaxBounceCount:
