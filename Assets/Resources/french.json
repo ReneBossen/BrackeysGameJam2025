@@ -79,6 +79,7 @@
 
     "restart": "Rejouer",
     "victory": "Victoire",
+    "quit": "Quitter",
 
     "victory1": "Nous some heureux que l'inspection des machines s'est passée sans problème",
     "victory2": "et que toutes les attractions étaient en grande qualitées !",
