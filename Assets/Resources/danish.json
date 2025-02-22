@@ -12,11 +12,45 @@
     "bowName": "Lige bue",
     "bowDesc": "Det siges, at det er nemmere at lande en joke end en pil.",
 
-    "speak_seller": "Sulten? Vi sælger mad og olie til at fylde din mave! Har du brug for en souvenir fra dit besøg? 10$!",
+    "battery_empty": "Ingen batterier tilbage",
 
+    "speak_seller": "Sulten? Vi sælger mad og olie til at fylde din mave! Har du brug for en souvenir fra dit besøg? 10$!",
+    "speak_ballThrow": "*hik* Prøv at vælt alle flaskerne for en helt særlig præmie! Nej, jeg flytter mig ikke. *hik* Ja, de er alle limet sammen.",
     "speak_ballon": "Vil du have en ballon? Så må du finde din egen. Disse er mine.",
     "speak_empty": "Min bod er ikke helt klar endnu, men du må hellere være parat! Det bliver den bedste!",
     "speak_credits": "Denne forlystelsespark blev sat op på kun én uge! Tjek tavlen ved siden af mig for at se en liste over alle vores medarbejdere!",
+
+    "speak_battery_noWeapon": "Howdy, makker. Jeg sælger lækre batterier! Du ser ikke ud til at have en batteriport. Måske har en af dine våben?",
+    "speak_battery_noGoodWeapon": "Jeg sælger lækre batterier, men jeg tror ikke, dit våben har en plads til dem!",
+    "speak_battery_alreadyFull": "Du ser ud til at være fuldt opladet, makker.",
+    "speak_battery_ok": "Har du brug for batterier? For sådan en charmør er de gratis, nyd dem!",
+
+    "speak_jailed_noWeapon": "Haha, hvad er du fængslet for? Du har jo ikke engang et våben",
+    "speak_jailed_noGoodWeapon": "Jeg smugler batterier, ikke rigtig smuglergods",
+    "speak_jailed_alreadyFull": "Jeg ved, mine batterier er lækre, men jeg har brug for nogle til næste gang, du kommer forbi",
+    "speak_jailed_ok": "Har du brug for batterier? Du må ikke smide dem væk, jeg er ved at løbe tør",
+
+    "speak_pinkObj_isOff": "*Suk*. De har sat mig til at stå lige her. Ved siden af denne store røde knap. Sikke et mærkeligt job.",
+    "speak_pinkObj_isOn": "Åh. Var det dét, den gjorde?",
+
+    "robot_entrance_hasWeaponFirstTime": "Hilsen! Jeg er din hjælper.",
+    "robot_entrance_hasWeaponNormal": "Kom tilbage til indgangen, når du har aktiveret alt i parken.",
+    "robot_entrance_noWeapon": "Vær venlig at tage et våben.",
+    "robot_stands_normal": "Du kan købe dele til dine våben her. Olie, batterier, alt hvad du har brug for.",
+    "robot_sampleStand_normal": "Du vil finde håndtag som dette rundt omkring til at styre forlystelserne. Med din skarpe sans vil det ikke være et problem.",
+    "robot_moveStand_complete": "Fantastisk skud!",
+    "robot_moveStand_notMoving": "Godt fundet! Du klarede det hurtigt.",
+    "robot_moveStand_moving": "Åh nej. Den knap vil ikke stå stille. Måske kan vi stoppe den på en eller anden måde?",
+    "robot_jail_normal": "Jeg er chokeret over, at de kan bure en som dig inde!",
+    "robot_storage_normal": "Tag dig god tid, der er mange vare på lager.",
+    "robot_shooting_none": "En skydebane? Jeg har hørt, du er en mester til at skyde.",
+    "robot_shooting_1done": "Godt klaret!",
+    "robot_shooting_2done": "Sikke et talent!",
+    "robot_benches_normal": "Dette er stedet, hvor tilskuere samles.",
+    "robot_basketball_normal": "Er du fan af basketball?",
+    "robot_ferrisWheel_normal": "Sikke et vidunderligt pariserhjul. Jeg har aldrig prøvet en tur.",
+    "robot_toilet_normal": "Undskyld mig. Dette er til et privat øjeblik.",
+    "robot_scene_normal": "Da jeg var en ung robot med store drømme, ville jeg spille hovedrollen i Romeo og Julie 2.0.",
 
     "credits1": "Lyddesign & Musik",
     "credits2": "Koncept & 2D-artist",
@@ -24,6 +58,12 @@
     "credits4": "2D-artist",
     "credits5": "Udvikler & Level Design",
     "credits6": "Udvikler",
+
+    "medium_01": "Kartofler og auberginer er fra samme familie",
+    "medium_02": "En hamburger indeholder faktisk ikke skinke",
+    "medium_03": "Brune køer producerer kakao... eller gør de?",
+    "medium_04": "Hvordan spiser robotter guacamole? Med computerchips.",
+    "medium_05": "Når du ser gul sne, betyder det, at den smager af citron.",
 
     "jadith_01": "Koffein! Så er det afsted!",
     "jadith_02": "Ooh, skinnende!",
@@ -36,5 +76,15 @@
     "swave_01": "Kunne du tænke dig en ridetur?",
     "swave_02": "Jeg er ikke helt sikker på, hvor denne hestehale sidder fast",
     "swave_03": "Can I get you a horseshoe?.. Woops, jeg tror min oversætter gik i stykker",
-    "swave_04": "Sikke et tilfælde! Mit navn står på væggen derovre!"
+    "swave_04": "Sikke et tilfælde! Mit navn står på væggen derovre!",
+    "dragonia_01": "At finde robotten med en krone fylder dig med VILJESTYRKE",
+
+    "restart": "Genstart",
+    "victory": "Sejr",
+    "quit": "Luk",
+
+    "victory1": "Vi er glade for, at inspektionen af forlystelsesparken gik uden problemer",
+    "victory2": "og at alle forlystelser var af topkvalitet!",
+    "victory3": "Hvis du ikke er sikker på, om du har prøvet alle forlystelser,",
+    "victory4": "er du velkommen til at vende tilbage til parken!"
 }
