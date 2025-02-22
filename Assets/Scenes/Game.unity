@@ -614,11 +614,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dfcb5468b8393c340969df7d1aa053ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.472
+      value: -1.748
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dfcb5468b8393c340969df7d1aa053ca, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.148
+      value: 0.1099987
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dfcb5468b8393c340969df7d1aa053ca, type: 3}
       propertyPath: m_LocalRotation.w
@@ -626,15 +626,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dfcb5468b8393c340969df7d1aa053ca, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dfcb5468b8393c340969df7d1aa053ca, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dfcb5468b8393c340969df7d1aa053ca, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dfcb5468b8393c340969df7d1aa053ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1409,7 +1409,7 @@ PrefabInstance:
     - target: {fileID: 4655004365030266792, guid: 898a1359f22dd1246ae0c819875dd08b, type: 3}
       propertyPath: '_weaponsTier0.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 84780ab2aa0bfac41a2b85f10121fd8d, type: 2}
+      objectReference: {fileID: 11400000, guid: 96009a179146e4c4994d2f80f91d71fd, type: 2}
     - target: {fileID: 4655004365030266792, guid: 898a1359f22dd1246ae0c819875dd08b, type: 3}
       propertyPath: '_weaponsTier1.Array.data[2]'
       value: 
@@ -1684,7 +1684,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -1713,7 +1713,7 @@ Transform:
   m_GameObject: {fileID: 2105305547}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 30, y: 0, z: 0}
+  m_LocalPosition: {x: 29.742, y: 0.276, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
