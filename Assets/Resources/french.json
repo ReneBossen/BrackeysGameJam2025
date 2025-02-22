@@ -12,11 +12,24 @@
     "bowName": "Arc droit",
     "bowDesc": "Il est dit qu'il est plus simple de lancer une blague qu'une flèche",
 
-    "speak_seller": "Une petite faim? Nous vendons de nourriture et huile pour remplir votre ventre ! Un petit souvenir de votre visite? Seulement 10€ !",
+    "battery_empty": "Piles manquantes",
 
+    "speak_seller": "Une petite faim? Nous vendons de nourriture et huile pour remplir votre ventre ! Un petit souvenir de votre visite? Seulement 10€ !",
+    "speak_ballThrow": "*hic* Casse tout et j'te file un prix spécial! Nan je bougerais pas. *hic* Ouais, elles sont toutes collées ensemble.",
     "speak_ballon": "Vous voulez un ballon ? Tu devrais aller en chercher un, ceux-là sont à moi.",
     "speak_empty": "Mon échoppe est pas encore prête mais prépare toi ! Ca sera la meilleur de toutes !",
     "speak_credits": "Cette foire à été mise en place en seulement une semaine ! Jette un oeil au tableau à coté pour tous les détails sur nos employées qui ont travailler dessus !",
+
+    "speak_battery_noGoodWeapon": "Je vends des piles délicieuses mais ton arme n'a pas de ports pour ça !",
+    "speak_battery_alreadyFull": "T'as déjà l'air entièrement chargé, part'nère.",
+    "speak_battery_ok": "Besoin de piles ? Pour quelqu'un d'aussi beau c'est gratuit, attrapes !",
+
+    "speak_jailed_noGoodWeapon": "Je fais que passer des piles, rien de vraiment illégal",
+    "speak_jailed_alreadyFull": "Je sais que mes piles sont délicieuses mais il faut que j'en garde quelqu'unes pour la prochaine fois que tu te retrouve ici",
+    "speak_jailed_ok": "Besoin de piles ? T'as interêt de pas les perdre, j'en ai presque plus",
+
+    "speak_pinkObj_isOff": "Ugh. Ils m'ont assigné sur ce stande. A côté de ce gros bouton rouge. Quel travaille bizarre.",
+    "speak_pinkObj_isOn": "Ah. C'est donc à ça que ça sert ?",
 
     "robot_entrance_hasWeaponFirstTime": "Salut ! Je suis là pour t'aider. Si tu pouvais utiliser cette machine ça te permettrais de récupérer une arme.",
     "robot_entrance_hasWeaponNormal": "En quoi puis-je t'aider ?",
@@ -47,7 +60,7 @@
     "medium_01": "Les pommes de terre et les aubergines sont de la même famille",
     "medium_02": "Une tartiflette n'est pas vraiment une tarte",
     "medium_03": "Les vaches marrons ne produisent pas vraiment du lait au chocolat... N'est ce pas ?",
-    "medium_04": "How do robots eat guacamole? With computer chips",
+    "medium_04": "Je voulais te dire quelque chose sur les robots mais je suis en panne d'idée",
     "medium_05": "Quand tu voies de la neige jaune, ça veut dire qu'elle est au citron",
 
     "jadith_01": "Caféine ! C'est parti !",
